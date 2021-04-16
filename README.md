@@ -3,8 +3,8 @@
 
 ## Inputs
 
-![https://codepen.io/u-guru/pen/PoowWRO](gifs/inputs.gifs)
+![https://codepen.io/u-guru/pen/PoowWRO](gifs/inputs.gif)
 
 ## Tooltips
 
-![https://codepen.io/u-guru/full/NWWPdYz](gifs/tooltips.gifs)
+![https://codepen.io/u-guru/full/NWWPdYz](gifs/tooltips.gif)
