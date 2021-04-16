@@ -1,0 +1,396 @@
+body, html {
+	height: 100%;
+	background: $charcoal;
+}
+body > div {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-flow: row-wrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: $font;
+	font-size: 24px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+* {
+	box-sizing: border-box;
+	backface-visibility: hidden;
+	-ms-overflow-style: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ul {
+	@include listless;
+	padding: 7.5px;
+	li {
+		display: flex;
+		padding: 7.5px;
+		.checkbox-container + .checkbox-container {
+			margin-left: 15px;
+		}
+	}
+}
+
+.checkbox-container {
+	@include flex;
+	@include flex-center-vertical;
+	div {
+		position: relative;
+		input:not([text]) {
+			@include opacity(0);
+			position: absolute;
+			z-index: 12;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+		> span {
+			display: block;
+			background: $slate;
+		}
+	}
+	label {
+		padding-left: 15px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+}
+// checkbox inputs
+.checkbox-container {
+	div {
+		> span {
+			border-radius: 3px;
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			span {
+				position: absolute;
+				top: 50%;
+				margin-top: -5px;
+				left: 50%;
+				margin-left: -5px;
+				width: 10px;
+				height: 10px;
+				border-radius: 1000px;
+				background: mix($moxie,$slate,60%);
+				transform-origin: center center;
+				transform: scale(0) translateZ(0);
+			}
+			svg {
+				position: relative;
+				z-index: 10;
+				fill: none;
+				width: 100%;
+				height: 100%;
+				circle {
+					fill: $moxie;
+					transform-origin: center center;
+					transform: scale(0);
+				}
+				path, polyline {
+					@include svg-stroke(lighten($slate, 20%), 2.5);
+				}
+			}
+		}
+		input:checked + span {
+			background: $shamrock;
+			svg {
+				path, polyline {
+					stroke: white;
+				}
+			}
+		}
+	}
+}
+
+// EDITS
+.checkbox {
+	div {
+		input:checked + span {
+			background: $slate!important;
+		}
+	}
+}
+.checkbox-container {
+	div {
+		overflow: hidden;
+		> span {
+			position: relative;
+			overflow: hidden;
+			border-radius: 2px;
+			svg {
+				line {
+					@include svg-stroke($slate, 2.5);
+				}
+			}
+		}
+	}
+}
+.state-onload {
+	div {
+		> span {
+			background: rgba($slate, 0);
+			svg {
+				polyline {
+					opacity: 0;
+				}
+				line {
+					stroke-dashoffset: 27;
+					stroke-dasharray: 27;
+					opacity: 0;
+					&.line-1 {
+						transition: all 250ms ease-out 450ms;
+					}
+					&.line-2 {
+						transition: all 250ms ease-out 300ms;
+					}
+					&.line-3 {
+						transition: all 250ms ease-out 150ms;
+					}
+					&.line-4 {
+						transition: all 250ms ease-out;
+					}
+				}
+			}
+		}
+	}
+	label {
+		opacity: 0.25;
+	}
+}
+.state-onenter {
+	div {
+		> span {
+			background: rgba($slate, 0);
+			transition: all 250ms cubic-bezier(.8,.1,1,.05);
+			svg {
+				line {
+					transition: all 350ms ease-in;
+				}
+				polyline {
+					opacity: 0;
+					transition: all 250ms cubic-bezier(.8,.1,1,.05);
+				}
+			}
+		}
+	}
+	label {
+		transform: translateX(300px);
+		opacity: 0;
+		transition: all 250ms cubic-bezier(.8,.1,1,.05) 250ms;
+	}
+}
+.state-onexit {
+	transition: all 450ms cubic-bezier(0,.53,.05,.98);
+}
+.state-unchecked-hover {
+	div {
+		> span {
+			transition: all 250ms cubic-bezier(.8,.1,1,.05);
+			svg {
+				polyline {
+					transition: all 250ms cubic-bezier(.8,.1,1,.05);
+				}
+			}
+		}
+	}
+}
+.state-unchecked-active {
+	div {
+		> span {
+			background: rgba($slate, 0.6);
+			transition: background 10ms ease 250ms;
+			span {
+				transition: transform 250ms ease-in-out, opacity 50ms ease 260ms;
+			}
+			svg {
+				polyline {
+					stroke: rgba(white, .7);
+					transition: stroke 250ms ease-in-out;
+				}
+			}
+		}
+	}
+}
+.state-checked {
+	div {
+		> span {
+			background: mix($moxie,$slate,60%);
+			svg {
+				.check-stroke {
+					stroke-dasharray: 24.8;
+					stroke-dashoffset: 24.8;
+					stroke: white!important;
+					opacity: 0;
+					transition: stroke-dashoffset 500ms ease-out;
+				}
+				.check-under {
+					transition: opacity 500ms ease-out;
+					stroke: rgba(white, .7);
+				}
+			}
+		}
+	}
+}
+.state-checked-hover {
+	div {
+		> span {
+			background: $moxie;
+			transition: all 250ms ease-out;
+			svg {
+				.check-stroke {
+					opacity: 1;
+					stroke: white;
+					transition: all 250ms ease-out;
+				}
+			}
+		}
+	}
+}
+.state-checked-active {
+	div {
+		> span {
+			background: mix($moxie,$slate,60%);
+			transition: all 250ms ease-out;
+			span {
+				transition: all 250ms ease-out;
+			}
+			svg {
+				.check-stroke {
+					opacity: 0.6;
+					stroke: white;
+					transition: all 250ms ease-out;
+				}
+			}
+		}
+	}
+}
+.state-disabled {
+	label {
+		opacity: 0.2;
+	}
+}
+
+
+.activate {
+	&.state-onload {
+		div {
+			> span {
+				svg {
+					line {
+						stroke-dashoffset: 0;
+						opacity: 1;
+						&.line-1 {
+							transition: all 250ms ease-out;
+						}
+						&.line-2 {
+							transition: all 250ms ease-out 150ms;
+						}
+						&.line-3 {
+							transition: all 250ms ease-out 300ms;
+						}
+						&.line-4 {
+							transition: all 250ms ease-out 450ms;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.state-onenter {
+		div {
+			> span {
+				background: $slate;
+				svg {
+					polyline {
+						opacity: 1;
+					}
+					line {
+						opacity: 0;
+					}
+				}
+			}
+		}
+		label {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	&.state-onexit {
+		transform: translateX(300px);
+		opacity: 0;
+	}
+	&.state-unchecked-hover {
+		div {
+			> span {
+				background: rgba($slate, 0.6);
+				svg {
+					polyline {
+						stroke: rgba(white, .7);
+					}
+				}
+			}
+		}
+	}
+	&.state-unchecked-active {
+		div {
+			> span {
+				background: mix($moxie,$slate,60%);
+				span {
+					transform: scale(5) translateZ(0);
+					opacity: 0;
+				}
+			}
+		}
+	}
+	&.state-checked {
+		div {
+			> span {
+				background: $moxie;
+				svg {
+					.check-under {
+						opacity: 0.2;
+					}
+					.check-stroke {
+						opacity: 1;
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+	}
+	&.state-checked-hover {
+		div {
+			> span {
+				background: mix($moxie,$slate,60%);
+				svg {
+					.check-stroke {
+						opacity: 0.6;
+						stroke: white;
+					}
+				}
+			}
+		}
+	}
+	&.state-checked-active {
+		div {
+			> span {
+				background: mix($moxie, $slate, 20%);
+				svg {
+					.check-stroke {
+						opacity: 0.2;
+						stroke: white;
+					}
+				}
+			}
+		}
+	}
+}
