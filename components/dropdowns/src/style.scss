@@ -1,0 +1,840 @@
+body, html {
+	height: 100%;
+	background: $charcoal;
+}
+body > div {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-flow: row-wrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: $font;
+	font-size: 24px;
+	> ul {
+		@include listless;
+		@include flex;
+		@include flex-wrap;
+		align-content: flex-start;
+		align-items: flex-start;
+		padding: 7.5px;
+		width: 100%;
+		height: 100%;
+		> li {
+			width: calc(100% / 3);
+			height: calc(100% / 3);
+			min-height: 272px;
+			padding: 7.5px;
+			> div {
+				@include flex;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				padding: 15px;
+				background: rgba($slate, .25);
+				.checkbox-container {
+					position: absolute;
+					bottom: 15px;
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+* {
+	box-sizing: border-box;
+	backface-visibility: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-ms-overflow-style: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// checkbox inputs
+.checkbox-container {
+	@include flex;
+	@include flex-center;
+	div {
+		position: relative;
+		input:not([text]) {
+			opacity: 0;
+			position: absolute;
+			z-index: 12;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		span {
+			display: block;
+			background: $slate;
+		}
+	}
+	label {
+		padding-left: 15px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	div {
+		span {
+			border-radius: 3px;
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			svg {
+				fill: none;
+				width: 100%;
+				height: 100%;
+				circle {
+					fill: $moxie;
+					transform-origin: center center;
+					transform: scale(0);
+				}
+				path, polyline {
+					@include svg-stroke(lighten($slate, 20%), 2.5);
+				}
+			}
+		}
+		input:checked + span {
+			background: $moxie;
+			svg {
+				path, polyline {
+					stroke: white;
+				}
+			}
+		}
+	}
+}
+
+// dropdown
+.dropdown {
+	position: relative;
+	width: 200px;
+	> div {
+		@include flex;
+		@include flex-center;
+		position: relative;
+		width: 100%;
+		span {
+			@include flex;
+			@include flex-center;
+			width: calc(100% - 48px);
+			height: 48px;
+			background: lighten($slate, 10%);
+			color: white;
+			font-size: 28px;
+			font-weight: 600;
+			text-align: center;
+		}
+		a {
+			display: block;
+			width: 48px;
+			height: 48px;
+			svg {
+				@include svg-stroke(white, 8);
+				transition: all 150ms ease-in-out;
+				background: $shamrock;
+				padding: 12px 10px 8px;
+				width: 48px;
+				height: 48px;
+				path {
+					transform-origin: center center;
+					transform: rotate(0deg);
+				}
+			}
+			&:hover, &:focus {
+				svg {
+					background: mix($shamrock, white);
+					* {
+						stroke: mix($shamrock, $slate);
+					}
+				}
+			}
+			&:active {
+				svg {
+					background: mix($shamrock, $slate);
+					* {
+						stroke: white;
+					}
+				}
+			}
+			&.active {
+				svg {
+					path {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+	> ul {
+		@include listless;
+		transition: all 150ms ease-in-out;
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		overflow: hidden;
+		text-align: center;
+		&.active {
+			opacity: 1;
+			z-index: 99;
+		}
+		li {
+			transition: all 150ms ease-in-out;
+			width: calc(100% - 48px);
+			background: rgba(lighten($slate, 5%), .95);
+			padding: 15px 0!important;
+			font-weight: 400;
+			&:hover, &:focus {
+				background: mix($slate, $shamrock);
+				color: white!important;
+				svg {
+					* {
+						stroke: white!important;
+					}
+				}
+			}
+			&:active {
+				background: mix(white, $shamrock);
+				color: mix($slate, $shamrock)!important;
+				svg {
+					* {
+						stroke: mix($slate, $shamrock)!important;
+					}
+				}
+			}
+		}
+	}
+	&.auto {
+		width: auto;
+		white-space: nowrap;
+		> div {
+			span, input {
+				padding: 0 15px;
+			}
+		}
+		> ul {
+			> li {
+				text-align: center;
+			}
+		}
+	}
+	&.info {
+		overflow: visible;
+		width: 250px;
+		> div {
+			span, input {
+				justify-content: flex-start;
+				font-size: 20px;
+				text-align: left;
+			}
+		}
+		> ul {
+			overflow: visible;
+			> li {
+				@include flex;
+				@include flex-center-vertical;
+				justify-content: space-between;
+				width: 100%;
+				position: relative;
+				text-align: left;
+				height: 48px;
+				padding: 0 11px 0 15px!important;
+				font-size: 20px;
+				font-weight: 600;
+				color: white;
+				.dropdown-popup {
+					display: block;
+					height: 100%;
+					width: 32px;
+					height: 32px;
+					svg {
+						display: block;
+						height: 100%;
+						* {
+							@include svg-stroke(white, 6);
+						}
+					}
+					&:hover, &:focus {
+						svg {
+							circle {
+								fill: white!important;
+								stroke: transparent!important;
+							}
+							path {
+								stroke: $slate!important;
+							}
+						}
+					}
+				}
+				.dropdown-info {
+					transition: all 150ms ease-in-out;
+					transition-delay: 0ms;
+					transform: translateZ(0) scale(0);
+					transform-origin: 0% 24px;
+					z-index: -10;
+					position: absolute;
+					left: 250px;
+					width: 200px;
+					white-space: normal;
+					top: 0;
+					background: white;
+					color: lighten($slate, 15%);
+					border-radius: 2px;
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						top: 16px;
+						left: -16px;
+						width: 0;
+						height: 0;
+						border: 8px solid transparent;
+						border-right-color: white;
+					}
+					> div {
+						padding: 10px 15px;
+						font-size: 16px;
+						line-height: 1.2;
+					}
+					button {
+						height: 40px;
+						font-size: 20px;
+						border-radius: 0 0 2px 2px;
+					}
+				}
+			}
+			li:hover .dropdown-info,
+			.dropdown-popup:hover + .dropdown-info,
+			.dropdown-popup:focus + .dropdown-info,
+			.dropdown-info:hover {
+				transition-delay: 600ms;
+				transform: translateZ(0) scale(1)!important;
+				z-index: auto!important;
+			}
+		}
+	}
+}
+
+// EDIT
+.dropdown {
+	> div {
+		position: relative;
+		div {
+			position: absolute;
+			background: lighten($slate, 10%);
+			border-radius: 1000px;
+			&:nth-child(1) {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				transform-origin: right center;
+				transform: scaleX(0);
+			}
+			&:nth-child(2) {
+				top: 0;
+				right: 0;
+				width: 2px;
+				height: 100%;
+				transform-origin: center bottom;
+				transform: scaleY(0);
+			}
+			&:nth-child(3) {
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				height: 2px;
+				transform-origin: left center;
+				transform: scaleX(0);
+			}
+			&:nth-child(4) {
+				bottom: 0;
+				left: 0;
+				width: 2px;
+				height: 100%;
+				transform-origin: center top;
+				transform: scaleY(0);
+			}
+		}
+		span {
+			border-radius: 2px 0 0 2px;
+		}
+		a {
+			svg {
+				border-radius: 0 2px 2px 0;
+			}
+		}
+	}
+	> ul {
+		li:last-child {
+			border-radius: 0 0 2px 2px;
+		}
+	}
+	&.activate {
+		> div {
+			span {
+				border-radius: 2px 0 0 0;
+			}
+			a {
+				svg {
+					border-radius: 0 2px 0 0;
+				}
+			}
+		}
+	}
+}
+
+.state-onload {
+	> div {
+		div {
+			&:nth-child(1) {
+				transition: all 250ms ease-out;
+			}
+			&:nth-child(2) {
+				transition: all 250ms ease-out 150ms;
+			}
+			&:nth-child(3) {
+				transition: all 250ms ease-out 300ms;
+			}
+			&:nth-child(4) {
+				transition: all 250ms ease-out 450ms;
+			}
+		}
+		span, a {
+			opacity: 0;
+		}
+	}
+}
+.state-onenter {
+	> div {
+		div {
+			transform: none!important;
+			transition: all 250ms ease-out;
+		}
+		span, a {
+			opacity: 0;
+			transition: all 250ms ease-out;
+		}
+		a svg {
+			stroke-dasharray: 103;
+			stroke-dashoffset: 103;
+			transition: all 250ms ease-out 250ms;
+		}
+	}
+}
+.state-onexit {
+	transition: all 450ms ease-in;
+}
+.state-hover {
+	> div {
+		* {
+			transition: all 150ms ease-in-out;
+		}
+		a svg {
+			path {
+				transform-origin: center center;
+			}
+		}
+	}
+}
+.state-active {
+	> div {
+		span {
+			transition: all 150ms ease-in-out;
+			background: lighten($slate, 20%);
+		}
+		a {
+			svg {
+				background: mix($shamrock, white);
+				path {
+					stroke: mix($shamrock, $slate);
+					animation: hover 1000ms linear infinite both;
+				}
+			}
+		}
+	}
+}
+.state-disabled {
+	transition: all 150ms ease-in-out;
+}
+.state-onopen {
+	> div {
+		a {
+			svg {
+				path {
+					transition: all 150ms ease-in-out;
+				}
+			}
+		}
+	}
+	> ul {
+		opacity: 1;
+		z-index: -1;
+		li {
+			transform-origin: center top;
+			opacity: 0;
+			&:nth-child(odd) {
+				transform: rotateX(90deg) translateZ(0);
+			}
+			&:nth-child(even) {
+				transform: rotateX(-90deg) translateZ(0);
+			}
+			&:nth-child(1) {
+				transition: all 250ms ease-in-out 750ms, background 150ms ease-in-out;
+			}
+			&:nth-child(2) {
+				transition: all 250ms ease-in-out 500ms, background 150ms ease-in-out;
+			}
+			&:nth-child(3) {
+				transition: all 250ms ease-in-out 250ms, background 150ms ease-in-out;
+			}
+		}
+	}
+}
+.state-onclose {
+	> div {
+		a {
+			svg {
+				path {
+					transform: rotate(180deg);
+					transition: all 150ms ease-in-out;
+				}
+			}
+		}
+	}
+	> ul {
+		opacity: 1;
+		z-index: 99;
+		li {
+			transform: translateZ(0)!important;
+			opacity: 1;
+			&:nth-child(1) {
+				transition: all 250ms ease-in-out 250ms, background 150ms ease-in-out;
+			}
+			&:nth-child(2) {
+				transition: all 250ms ease-in-out 500ms, background 150ms ease-in-out;
+			}
+			&:nth-child(3) {
+				transition: all 250ms ease-in-out 750ms, background 150ms ease-in-out;
+			}
+		}
+	}
+}
+.state-option-hover {
+	> div {
+		a {
+			svg {
+				path {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	> ul {
+		opacity: 1;
+		z-index: 99;
+		li {
+			&:nth-child(1) {
+				transition: all 150ms ease-in-out;
+			}
+		}
+	}
+}
+.state-option-active {
+	> div {
+		a {
+			svg {
+				path {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	> ul {
+		opacity: 1;
+		z-index: 99;
+		li {
+			&:nth-child(1) {
+				background: mix($slate, $shamrock);
+				transition: all 150ms ease-in-out;
+				svg {
+					* {
+						transition: all 150ms ease-in-out;
+					}
+				}
+			}
+		}
+	}
+}
+.state-option-disabled {
+	> div {
+		a {
+			svg {
+				path {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	> ul {
+		opacity: 1;
+		z-index: 99;
+		li {
+			&:nth-child(1) {
+				transition: all 150ms ease-in-out;
+				svg {
+					* {
+						transition: all 150ms ease-in-out;
+					}
+				}
+			}
+		}
+	}
+}
+.state-info-hover {
+	> div {
+		a {
+			svg {
+				path {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	> ul {
+		opacity: 1;
+		z-index: 99;
+		li {
+			&:nth-child(1) {
+				background: mix($slate, $shamrock);
+				transition: all 150ms ease-in-out;
+				svg {
+					transition: all 150ms ease-in-out;
+				}
+				.dropdown-info {
+					transition: all 150ms ease-in-out 300ms;
+				}
+			}
+		}
+	}
+}
+
+.activate {
+	&.state-onload {
+		> div {
+			div {
+				transform: none!important;
+				&:nth-child(1) {
+					transition: all 250ms ease-out 450ms;
+				}
+				&:nth-child(2) {
+					transition: all 250ms ease-out 300ms;
+				}
+				&:nth-child(3) {
+					transition: all 250ms ease-out 150ms;
+				}
+				&:nth-child(4) {
+					transition: all 250ms ease-out;
+				}
+			}
+		}
+	}
+	&.state-onenter {
+		> div {
+			div {
+				opacity: 0;
+			}
+			span, a {
+				opacity: 1;
+			}
+			a svg {
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+	&.state-onexit {
+		opacity: 0;
+	}
+	&.state-hover {
+		> div {
+			span {
+				background: lighten($slate, 20%);
+			}
+			a {
+				svg {
+					background: mix($shamrock, white);
+					path {
+						stroke: mix($shamrock, $slate);
+						animation: hover 1000ms linear infinite both;
+					}
+				}
+			}
+		}
+	}
+	&.state-active {
+		> div {
+			span {
+				background: darken($slate, 5%);
+			}
+			a {
+				svg {
+					background: mix($shamrock, $slate);
+					path {
+						stroke: white;
+						animation: none;
+					}
+				}
+			}
+		}
+	}
+	&.state-disabled {
+		opacity: 0.2;
+	}
+	&.state-onopen {
+		> div {
+			a {
+				svg {
+					path {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+		> ul {
+			z-index: 99;
+			li {
+				transform: translateZ(0)!important;
+				opacity: 1;
+				&:nth-child(1) {
+					transition: all 250ms ease-in-out 250ms, background 150ms ease-in-out;
+				}
+				&:nth-child(2) {
+					transition: all 250ms ease-in-out 500ms, background 150ms ease-in-out;
+				}
+				&:nth-child(3) {
+					transition: all 250ms ease-in-out 750ms, background 150ms ease-in-out;
+				}
+			}
+		}
+	}
+	&.state-onclose {
+		> div {
+			a {
+				svg {
+					path {
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+		> ul {
+			opacity: 1;
+			z-index: -1;
+			li {
+				transform-origin: center top;
+				opacity: 0;
+				&:nth-child(odd) {
+					transform: rotateX(90deg) translateZ(0);
+				}
+				&:nth-child(even) {
+					transform: rotateX(-90deg) translateZ(0);
+				}
+				&:nth-child(1) {
+					transition: all 250ms ease-in-out 750ms, background 150ms ease-in-out;
+				}
+				&:nth-child(2) {
+					transition: all 250ms ease-in-out 500ms, background 150ms ease-in-out;
+				}
+				&:nth-child(3) {
+					transition: all 250ms ease-in-out 250ms, background 150ms ease-in-out;
+				}
+			}
+		}
+	}
+	&.state-option-hover {
+		> ul {
+			opacity: 1;
+			z-index: 99;
+			li {
+				&:nth-child(1) {
+					background: mix($slate, $shamrock);
+				}
+			}
+		}
+	}
+	&.state-option-active {
+		> ul {
+			opacity: 1;
+			z-index: 99;
+			li {
+				&:nth-child(1) {
+					background: mix(white, $shamrock);
+					color: mix($slate, $shamrock)!important;
+					svg {
+						* {
+							stroke: mix($slate, $shamrock)!important;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.state-option-disabled {
+		> ul {
+			opacity: 1;
+			z-index: 99;
+			li {
+				&:nth-child(1) {
+					background: mix($shamrock,lighten($slate, 30%), 20%);
+					color: rgba(white, 0.5);
+					svg {
+						* {
+							stroke: rgba(white, 0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+	&.state-info-hover {
+		> ul {
+			opacity: 1;
+			z-index: 99;
+			li {
+				&:nth-child(1) {
+					background: mix($slate, $shamrock);
+					svg {
+						circle {
+							fill: white!important;
+							stroke: transparent!important;
+						}
+						path {
+							stroke: $slate!important;
+						}
+					}
+					.dropdown-info{
+						transform: translateZ(0) scale(1)!important;
+						z-index: auto!important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// KEYFRAMES
+@keyframes hover {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
+}
