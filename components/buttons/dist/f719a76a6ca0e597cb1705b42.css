@@ -1,0 +1,1568 @@
+@mixin prefix($property, $value, $prefixes: ()) {
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $property}: $value;
+	}
+	#{$property}: $value;
+}
+@mixin opacity($opacity) {
+	filter: alpha(opacity=$opacity * 100);
+	opacity: $opacity;
+}
+@mixin opacity-important($opacity) {
+	filter: alpha(opacity=$opacity * 100)!important;
+	opacity: $opacity!important;
+}
+@mixin transition($transition) {
+	-webkit-transition: all $transition;
+	-o-transition: all $transition;
+	-ms-transition: all $transition;
+	-moz-transition: all $transition;
+	transition: all $transition;
+}
+@mixin transition-type($type, $transition) {
+	-webkit-transition: $type $transition;
+	-o-transition: $type $transition;
+	-ms-transition: $type $transition;
+	-moz-transition: $type $transition;
+	transition: $type $transition;
+}
+@mixin transition-none {
+	-webkit-transition: none!important;
+	-o-transition: none!important;
+	-ms-transition: none!important;
+	-moz-transition: none!important;
+	transition: none!important;
+}
+@mixin round {
+	border-radius: 1000px;
+}
+@mixin border-radius($radius) {
+	border-radius: $radius+px;
+}
+@mixin center-x {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+@mixin center-y {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@mixin center-xy {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+@mixin reset-pos {
+	position: static;
+	top: auto;
+	left: auto;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+@mixin pos-xy($xpos, $ypos) {
+	position: absolute;
+	top: percentage($ypos);
+	left: percentage($xpos);
+	-webkit-transform: translate(-(percentage($xpos)),-(percentage($ypos)));
+	-moz-transform: translate(-(percentage($xpos)),-(percentage($ypos)));
+	-ms-transform: translate(-(percentage($xpos)),-(percentage($ypos)));
+	-o-transform: translate(-(percentage($xpos)),-(percentage($ypos)));
+	transform: translate(-(percentage($xpos)),-(percentage($ypos)));
+}
+@mixin tri-down($size, $color, $radius, $padding) {
+	@include border-radius($radius);
+	position: relative;
+	background: $color;
+	padding: $padding;
+	margin-top: ($size * 2)+px;
+	&:before {
+		@include center-x;
+		content: "";
+		display: block;
+		position: absolute;
+		top: -($size * 2)+px;
+		width: 0;
+		height: 0;
+		border: $size+px solid transparent;
+		border-bottom: $size+px solid $color;
+	}
+}
+@mixin tri-up($size, $color, $radius, $padding) {
+	@include border-radius($radius);
+	position: relative;
+	background: $color;
+	padding: $padding;
+	margin-bottom: ($size * 2)+px;
+	&:after {
+		@include center-x;
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -($size * 2)+px;
+		width: 0;
+		height: 0;
+		border: $size+px solid transparent;
+		border-top: $size+px solid $color;
+	}
+}
+@mixin flex {
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flex-important {
+	-ms-box-orient: horizontal!important;
+	display: -webkit-box!important;
+	display: -moz-box!important;
+	display: -ms-flexbox!important;
+	display: -moz-flex!important;
+	display: -webkit-flex!important;
+	display: flex!important;
+}
+@mixin flex-column {
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+@mixin flex-wrap {
+	-ms-flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+@mixin flex-center {
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+@mixin flex-center-column {
+	-webkit-flex-direction:column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+@mixin flex-center-vertical {
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+@mixin flex-left-center {
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+}
+@mixin flex-right-center {
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+@mixin flex-bottom {
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+@mixin flex-reset {
+	display: block;
+}
+@mixin flex-stretch {
+	-webkit-align-items: stretch!important;
+	align-items: stretch!important;
+	-webkit-align-content: stretch!important;
+	align-content: stretch!important;
+}
+@mixin flex-stretch-impt {
+	-webkit-align-items:stretch !important;
+	align-items: stretch !important;
+	-webkit-align-content: stretch !important;
+	align-content: stretch !important;
+}
+@mixin listless {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+@mixin translate($xpos, $ypos) {
+	-webkit-transform: translate($xpos,$ypos);
+	-moz-transform: translate($xpos,$ypos);
+	-ms-transform: translate($xpos,$ypos);
+	-o-transform: translate($xpos,$ypos);
+	transform: translate($xpos,$ypos);
+}
+@mixin translate-x($xpos) {
+	-webkit-transform: translateX($xpos);
+	-moz-transform: translateX($xpos);
+	-ms-transform: translateX($xpos);
+	-o-transform: translateX($xpos);
+	transform: translateX($xpos);
+}
+@mixin translate-y($ypos) {
+	-webkit-transform: translateY($ypos);
+	-moz-transform: translateY($ypos);
+	-ms-transform: translateY($ypos);
+	-o-transform: translateY($ypos);
+	transform: translateY($ypos);
+}
+@mixin transform-origin($origin) {
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	transform-origin: $origin;
+}
+@mixin blur($blur) {
+	filter: blur($blur+px);
+	-webkit-filter: blur($blur+px);
+	-moz-filter: blur($blur+px);
+	-o-filter: blur($blur+px);
+	-ms-filter: blur($blur+px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$blur}');
+}
+@mixin rotate($angle) {
+	-webkit-transform: rotate($angle+deg);
+	-moz-transform: rotate($angle+deg);
+	-ms-transform: rotate($angle+deg);
+	-o-transform: rotate($angle+deg);
+	transform: rotate($angle+deg);
+}
+@mixin scale($scale) {
+	-webkit-transform: scale($scale);
+	-moz-transform: scale($scale);
+	-ms-transform: scale($scale);
+	-o-transform: scale($scale);
+	transform: scale($scale);
+}
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+@mixin transform-reset {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin appearance {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin animation-direction($direction) {
+	-webkit-animation-direction: $direction;
+	-moz-animation-direction: $direction;
+	-o-animation-directionn: $direction;
+	animation-direction: $direction;
+}
+@mixin animation-timing-function($timing) {
+	-webkit-animation-timing-function: $timing;
+	-moz-animation-timing-function: $timing;
+	-o-animation-timing-function: $timing;
+	animation-timing-function: $timing;
+}
+@mixin animation-duration($duration) {
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+}
+@mixin animation-fill-mode($mode) {
+	-webkit-animation-fill-mode: $mode;
+	-moz-animation-fill-mode: $mode;
+	-o-animation-fill-mode: $mode;
+	animation-fill-mode: $mode;
+}
+@mixin animation-delay($delay) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+@mixin animation-iteration-count($count) {
+	-webkit-animation-iteration-count: $count;
+	-moz-animation-iteration-count: $count;
+	-o-animation-iteration-count: $count;
+	animation-iteration-count: $count;
+}
+@mixin animation-name($name) {
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name;
+}
+
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin box-sizing-important {
+	-webkit-box-sizing: border-box!important;
+	-moz-box-sizing: border-box!important;
+	box-sizing: border-box!important;
+}
+
+@mixin svg-stroke($stroke, $width) {
+	fill: none;
+	stroke: $stroke;
+	stroke-width: $width+px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+@mixin svg-stroke-width($width) {
+	fill: none;
+	stroke-width: $width+px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+$links: 'a:active, a:focus, a:hover';
+$buttons: 'button:active, button:hover, button:focus, a[class*=btn]:active, a[class*=btn]:focus, a[class*=btn]:hover';
+
+
+$charcoal: #2B3234;
+$slate: #40484B;
+$taupe: #757575;
+$campus: #8A9EA3;
+$smoke: #F1F1F1;
+
+$rocket: #696269;
+$shamrock: #69B3A5;
+$robin: #2BB3B8;
+$lake: #50A5DD;
+
+$moxie: #43cb9d;
+$crimson: #d3242c;
+
+$auburn: #F04F54;
+$orange: #E5753C;
+$gold: #F6C64E;
+$moola: #81B566;
+$azure: #55A4B7;
+$cobalt: #7872e3;
+$eggplant: #9A5BC5;
+$cerise: #e6389b;
+
+$first: #e8c480;
+$second: #c8bbc9;
+$third: #c5857c;
+
+$facebook: #3b5998;
+$facebook-light: #6279B1;
+$instagram: #517fa4;
+$linkedin: #007bb6;
+$twitter: #00aced;
+
+$beige: #FFFDFA;
+
+// $gabrielle: #958B8E;
+$gabrielle: $shamrock;
+
+$padding: 15px;
+
+$icon-bg: no-repeat center center;
+
+$font: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif!important;
+
+/* ---------- BUTTONS AND INPUT */
+button, input, textarea {
+	@include appearance;
+	font-family: $font;
+}
+
+// buttons
+.bg {
+	svg {
+		* {
+			stroke: white;
+		}
+	}
+	&.bg-charcoal {
+		background: $charcoal;
+		&:hover, &:focus {
+			background: mix($charcoal, white);
+			color: $charcoal;
+		}
+		&:active {
+			background: mix($charcoal, white, 75%);
+			color: white;
+		}
+	}
+	&.bg-slate {
+		background: $slate;
+		&:hover, &:focus {
+			background: mix($slate, white);
+			color: $slate;
+		}
+		&:active {
+			background: mix($slate, white, 75%);
+			color: white;
+		}
+	}
+	&.bg-taupe {
+		background: $taupe;
+		&:hover, &:focus {
+			background: mix($taupe, white);
+			color: $taupe;
+		}
+		&:active {
+			background: mix($taupe, white, 75%);
+			color: white;
+		}
+	}
+	&.bg-campus {
+		background: $campus;
+		&:hover, &:focus {
+			background: mix($campus, white);
+			color: mix($campus, $slate);
+		}
+		&:active {
+			background: mix($campus, $slate);
+			color: white;
+		}
+	}
+	&.bg-rocket {
+		background: $rocket;
+		&:hover, &:focus {
+			background: mix($rocket, white);
+			color: mix($rocket, $slate);
+		}
+		&:active {
+			background: mix($rocket, $slate);
+			color: white;
+		}
+	}
+	&.bg-shamrock {
+		background: $shamrock;
+		&:hover, &:focus {
+			background: mix($shamrock, white);
+			color: mix($shamrock, $slate);
+		}
+		&:active {
+			background: mix($shamrock, $slate);
+			color: white;
+		}
+	}
+	&.bg-robin {
+		background: $robin;
+		&:hover, &:focus {
+			background: mix($robin, white);
+			color: mix($robin, $slate);
+		}
+		&:active {
+			background: mix($robin, $slate);
+			color: white;
+		}
+	}
+	&.bg-lake {
+		background: $lake;
+		&:hover, &:focus {
+			background: mix($lake, white);
+			color: mix($lake, $slate);
+		}
+		&:active {
+			background: mix($lake, $slate);
+			color: white;
+		}
+	}
+	&.bg-moxie {
+		background: $moxie;
+		&:hover, &:focus {
+			background: mix($moxie, white);
+			color: mix($moxie, $slate);
+		}
+		&:active {
+			background: mix($moxie, $slate);
+			color: white;
+		}
+	}
+	&.bg-crimson {
+		background: $crimson;
+		&:hover, &:focus {
+			background: mix($crimson, white);
+			color: mix($crimson, $slate);
+		}
+		&:active {
+			background: mix($crimson, $slate);
+			color: white;
+		}
+	}
+	&.bg-auburn, &.bg-delivery {
+		background: $auburn;
+		&:hover, &:focus {
+			background: mix($auburn, white);
+			color: mix($auburn, $slate);
+		}
+		&:active {
+			background: mix($auburn, $slate);
+			color: white;
+		}
+	}
+	&.bg-orange, &.bg-freelancing {
+		background: $orange;
+		&:hover, &:focus {
+			background: mix($orange, white);
+			color: mix($orange, $slate);
+		}
+		&:active {
+			background: mix($orange, $slate);
+			color: white;
+		}
+	}
+	&.bg-gold, &.bg-baking {
+		background: $gold;
+		&:hover, &:focus {
+			background: mix($gold, white);
+			color: mix($gold, $slate);
+		}
+		&:active {
+			background: mix($gold, $slate);
+			color: white;
+		}
+	}
+	&.bg-moola, &.bg-photography {
+		background: $moola;
+		&:hover, &:focus {
+			background: mix($moola, white);
+			color: mix($moola, $slate);
+		}
+		&:active {
+			background: mix($moola, $slate);
+			color: white;
+		}
+	}
+	&.bg-azure, &.bg-tech {
+		background: $azure;
+		&:hover, &:focus {
+			background: mix($azure, white);
+			color: mix($azure, $slate);
+		}
+		&:active {
+			background: mix($azure, $slate);
+			color: white;
+		}
+	}
+	&.bg-cobalt, &.bg-household {
+		background: $cobalt;
+		&:hover, &:focus {
+			background: mix($cobalt, white);
+			color: mix($cobalt, $slate);
+		}
+		&:active {
+			background: mix($cobalt, $slate);
+			color: white;
+		}
+	}
+	&.bg-eggplant, &.bg-athletic {
+		background: $eggplant;
+		&:hover, &:focus {
+			background: mix($eggplant, white);
+			color: mix($eggplant, $slate);
+		}
+		&:active {
+			background: mix($eggplant, $slate);
+			color: white;
+		}
+	}
+	&.bg-cerise, &.bg-academic {
+		background: $cerise;
+		&:hover, &:focus {
+			background: mix($cerise, white);
+			color: mix($cerise, $slate);
+		}
+		&:active {
+			background: mix($cerise, $slate);
+			color: white;
+		}
+	}
+}
+button {
+	cursor: pointer;
+	width: 100%;
+	height: 64px;
+	border: 0;
+	color: white;
+	font-size: 24px;
+	font-weight: 600;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: $shamrock;
+	svg {
+		* {
+			stroke: white;
+		}
+	}
+	&.normal {
+		width: auto;
+	}
+	&.width-300 {
+		width: 300px;
+	}
+	&.width-400 {
+		width: 400px;
+	}
+	&.height-54 {
+		height: 54px
+	}
+	&.height-48 {
+		height: 48px
+	}
+	&.height-36 {
+		height: 36px
+	}
+	&:hover, &:focus {
+		background: mix($shamrock, white);
+		color: mix($shamrock, $slate);
+		svg {
+			* {
+				stroke: mix($shamrock, $slate);
+			}
+		}
+	}
+	&:active {
+		background: mix($shamrock, $slate);
+		color: white;
+		svg {
+			* {
+				stroke: white;
+			}
+		}
+	}
+	&.bg-charcoal {
+		background: $charcoal;
+		&:hover, &:focus {
+			background: mix($charcoal, white);
+			color: $charcoal;
+			svg {
+				* {
+					stroke: $charcoal;
+				}
+			}
+		}
+		&:active {
+			background: mix($charcoal, white, 75%);
+			color: white;
+			svg {
+				* {
+					stroke: white;
+				}
+			}
+		}
+		&.reverse {
+			background: white;
+			color: $charcoal;
+			svg {
+				* {
+					stroke: $charcoal;
+				}
+			}
+			&:hover, &:focus {
+				background: mix($charcoal, white);
+				color: $charcoal;
+				svg {
+					* {
+						stroke: $charcoal;
+					}
+				}
+			}
+			&:active {
+				background: mix($charcoal, white, 75%);
+				color: white;
+				svg {
+					* {
+						stroke: white;
+					}
+				}
+			}
+		}
+	}
+	&.bg-slate {
+		background: $slate;
+		&:hover, &:focus {
+			background: mix($slate, white);
+			color: $slate;
+			svg {
+				* {
+					stroke: $slate;
+				}
+			}
+		}
+		&:active {
+			background: mix($slate, white, 75%);
+			color: white;
+			svg {
+				* {
+					stroke: white;
+				}
+			}
+		}
+		&.reverse {
+			background: white;
+			color: $slate;
+			svg {
+				* {
+					stroke: $slate;
+				}
+			}
+			&:hover, &:focus {
+				background: mix($slate, white);
+				color: $slate;
+				svg {
+					* {
+						stroke: $slate;
+					}
+				}
+			}
+			&:active {
+				background: mix($slate, white, 75%);
+				color: white;
+				svg {
+					* {
+						stroke: white;
+					}
+				}
+			}
+		}
+	}
+	&.bg-taupe {
+		background: $taupe;
+		&:hover, &:focus {
+			background: mix($taupe, white);
+			color: $taupe;
+			svg {
+				* {
+					stroke: $taupe;
+				}
+			}
+		}
+		&:active {
+			background: mix($taupe, white, 75%);
+			color: white;
+			svg {
+				* {
+					stroke: white;
+				}
+			}
+		}
+		&.reverse {
+			background: white;
+			color: $taupe;
+			&:hover, &:focus {
+				background: mix($taupe, white);
+				color: $taupe;
+				svg {
+					* {
+						stroke: $taupe;
+					}
+				}
+			}
+			&:active {
+				background: mix($taupe, white, 75%);
+				color: white;
+				svg {
+					* {
+						stroke: white;
+					}
+				}
+			}
+		}
+	}
+	&.bg-campus {
+		background: $campus;
+		&:hover, &:focus {
+			background: mix($campus, white);
+			color: mix($campus, $slate);
+		}
+		&:active {
+			background: mix($campus, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $campus;
+			&:hover, &:focus {
+				background: mix($campus, white);
+				color: mix($campus, $slate);
+			}
+			&:active {
+				background: mix($campus, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-rocket {
+		background: $rocket;
+		&:hover, &:focus {
+			background: mix($rocket, white);
+			color: mix($rocket, $slate);
+		}
+		&:active {
+			background: mix($rocket, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $rocket;
+			&:hover, &:focus {
+				background: mix($rocket, white);
+				color: mix($rocket, $slate);
+			}
+			&:active {
+				background: mix($rocket, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-shamrock {
+		background: $shamrock;
+		&:hover, &:focus {
+			background: mix($shamrock, white);
+			color: mix($shamrock, $slate);
+		}
+		&:active {
+			background: mix($shamrock, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $shamrock;
+			&:hover, &:focus {
+				background: mix($shamrock, white);
+				color: mix($shamrock, $slate);
+			}
+			&:active {
+				background: mix($shamrock, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-robin {
+		background: $robin;
+		&:hover, &:focus {
+			background: mix($robin, white);
+			color: mix($robin, $slate);
+		}
+		&:active {
+			background: mix($robin, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $robin;
+			&:hover, &:focus {
+				background: mix($robin, white);
+				color: mix($robin, $slate);
+			}
+			&:active {
+				background: mix($robin, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-lake {
+		background: $lake;
+		&:hover, &:focus {
+			background: mix($lake, white);
+			color: mix($lake, $slate);
+		}
+		&:active {
+			background: mix($lake, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $lake;
+			&:hover, &:focus {
+				background: mix($lake, white);
+				color: mix($lake, $slate);
+			}
+			&:active {
+				background: mix($lake, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-moxie {
+		background: $moxie;
+		&:hover, &:focus {
+			background: mix($moxie, white);
+			color: mix($moxie, $slate);
+		}
+		&:active {
+			background: mix($moxie, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $moxie;
+			&:hover, &:focus {
+				background: mix($moxie, white);
+				color: mix($moxie, $slate);
+			}
+			&:active {
+				background: mix($moxie, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-crimson {
+		background: $crimson;
+		&:hover, &:focus {
+			background: mix($crimson, white);
+			color: mix($crimson, $slate);
+		}
+		&:active {
+			background: mix($crimson, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $crimson;
+			&:hover, &:focus {
+				background: mix($crimson, white);
+				color: mix($crimson, $slate);
+			}
+			&:active {
+				background: mix($crimson, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-auburn, &.bg-delivery {
+		background: $auburn;
+		&:hover, &:focus {
+			background: mix($auburn, white);
+			color: mix($auburn, $slate);
+		}
+		&:active {
+			background: mix($auburn, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $auburn;
+			&:hover, &:focus {
+				background: mix($auburn, white);
+				color: mix($auburn, $slate);
+			}
+			&:active {
+				background: mix($auburn, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-orange, &.bg-freelancing {
+		background: $orange;
+		&:hover, &:focus {
+			background: mix($orange, white);
+			color: mix($orange, $slate);
+		}
+		&:active {
+			background: mix($orange, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $orange;
+			&:hover, &:focus {
+				background: mix($orange, white);
+				color: mix($orange, $slate);
+			}
+			&:active {
+				background: mix($orange, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-gold, &.bg-baking {
+		background: $gold;
+		&:hover, &:focus {
+			background: mix($gold, white);
+			color: mix($gold, $slate);
+		}
+		&:active {
+			background: mix($gold, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $gold;
+			&:hover, &:focus {
+				background: mix($gold, white);
+				color: mix($gold, $slate);
+			}
+			&:active {
+				background: mix($gold, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-moola, &.bg-photography {
+		background: $moola;
+		&:hover, &:focus {
+			background: mix($moola, white);
+			color: mix($moola, $slate);
+		}
+		&:active {
+			background: mix($moola, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $moola;
+			&:hover, &:focus {
+				background: mix($moola, white);
+				color: mix($moola, $slate);
+			}
+			&:active {
+				background: mix($moola, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-azure, &.bg-tech {
+		background: $azure;
+		&:hover, &:focus {
+			background: mix($azure, white);
+			color: mix($azure, $slate);
+		}
+		&:active {
+			background: mix($azure, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $azure;
+			&:hover, &:focus {
+				background: mix($azure, white);
+				color: mix($azure, $slate);
+			}
+			&:active {
+				background: mix($azure, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-cobalt, &.bg-household {
+		background: $cobalt;
+		&:hover, &:focus {
+			background: mix($cobalt, white);
+			color: mix($cobalt, $slate);
+		}
+		&:active {
+			background: mix($cobalt, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $cobalt;
+			&:hover, &:focus {
+				background: mix($cobalt, white);
+				color: mix($cobalt, $slate);
+			}
+			&:active {
+				background: mix($cobalt, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-eggplant, &.bg-athletic {
+		background: $eggplant;
+		&:hover, &:focus {
+			background: mix($eggplant, white);
+			color: mix($eggplant, $slate);
+		}
+		&:active {
+			background: mix($eggplant, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $eggplant;
+			&:hover, &:focus {
+				background: mix($eggplant, white);
+				color: mix($eggplant, $slate);
+			}
+			&:active {
+				background: mix($eggplant, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-cerise, &.bg-academic {
+		background: $cerise;
+		&:hover, &:focus {
+			background: mix($cerise, white);
+			color: mix($cerise, $slate);
+		}
+		&:active {
+			background: mix($cerise, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $cerise;
+			&:hover, &:focus {
+				background: mix($cerise, white);
+				color: mix($cerise, $slate);
+			}
+			&:active {
+				background: mix($cerise, $slate);
+				color: white;
+			}
+		}
+	}
+	&.bg-fb {
+		background: $facebook;
+		&:hover, &:focus {
+			background: mix($facebook, white);
+			color: mix($facebook, $slate);
+		}
+		&:active {
+			background: mix($facebook, $slate);
+			color: white;
+		}
+		&.reverse {
+			background: white;
+			color: $facebook;
+			&:hover, &:focus {
+				background: mix($facebook, white);
+				color: mix($facebook, $slate);
+			}
+			&:active {
+				background: mix($facebook, $slate);
+				color: white;
+			}
+		}
+	}
+}
+button.disabled {
+	@include opacity(.7);
+}
+
+// ghost buttons
+[class*="btn-ghost"] {
+	@include round;
+	width: auto;
+	height: auto;
+	background: transparent;
+	padding: 10px 30px;
+	border: 2px solid;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	&:hover, &:focus {
+		background: white;
+		color: $charcoal;
+	}
+	&:active {
+		border-color: lighten($slate, 15%);
+		background: lighten($slate, 15%);
+		color: white;
+	}
+	&[class*="btn-ghost-charcoal"] {
+		color: $charcoal;
+		border-color: $charcoal;
+		&:hover, &:focus {
+			border-color: $charcoal;
+			background: $charcoal;
+			color: white;
+		}
+		&:active {
+			border-color: mix($charcoal, white);
+			background: mix($charcoal, white);
+			color: $charcoal;
+		}
+	}
+	&[class*="btn-ghost-slate"] {
+		color: $slate;
+		border-color: $slate;
+		&:hover, &:focus {
+			border-color: $slate;
+			background: $slate;
+			color: white;
+		}
+		&:active {
+			border-color: mix($slate, white);
+			background: mix($slate, white);
+			color: $slate;
+		}
+	}
+	&[class*="btn-ghost-taupe"] {
+		color: $taupe;
+		border-color: $taupe;
+		&:hover, &:focus {
+			border-color: $taupe;
+			background: $taupe;
+			color: white;
+		}
+		&:active {
+			border-color: mix($taupe, white);
+			background: mix($taupe, white);
+			color: $taupe;
+		}
+	}
+	&[class*="btn-ghost-campus"] {
+		color: $campus;
+		border-color: $campus;
+		&:hover, &:focus {
+			border-color: $campus;
+			background: $campus;
+			color: white;
+		}
+		&:active {
+			border-color: mix($campus, white);
+			background: mix($campus, white);
+			color: mix($campus, $slate);
+		}
+	}
+	&[class*="btn-ghost-smoke"] {
+		color: $smoke;
+		border-color: $smoke;
+		&:hover, &:focus {
+			border-color: $smoke;
+			background: $smoke;
+			color: white;
+		}
+		&:active {
+			border-color: lighten($slate, 15%);
+			background: lighten($slate, 15%);
+			color: white;
+		}
+	}
+	&[class*="btn-ghost-white"] {
+		color: white;
+		border-color: white;
+		&:hover, &:focus {
+			border-color: white;
+			background: white;
+			color: $charcoal;
+		}
+		&:active {
+			border-color: lighten($slate, 15%);
+			background: lighten($slate, 15%);
+			color: white;
+		}
+	}
+	&[class*="btn-ghost-rocket"] {
+		color: $rocket;
+		border-color: $rocket;
+		&:hover, &:focus {
+			border-color: $rocket;
+			background: $rocket;
+			color: white;
+		}
+		&:active {
+			border-color: mix($rocket, white);
+			background: mix($rocket, white);
+			color: mix($rocket, $slate);
+		}
+	}
+	&[class*="btn-ghost-shamrock"] {
+		color: $shamrock;
+		border-color: $shamrock;
+		&:hover, &:focus {
+			border-color: $shamrock;
+			background: $shamrock;
+			color: white;
+		}
+		&:active {
+			border-color: mix($shamrock, white);
+			background: mix($shamrock, white);
+			color: mix($shamrock, $slate);
+		}
+	}
+	&[class*="btn-ghost-robin"] {
+		color: $robin;
+		border-color: $robin;
+		&:hover, &:focus {
+			border-color: $robin;
+			background: $robin;
+			color: white;
+		}
+		&:active {
+			border-color: mix($robin, white);
+			background: mix($robin, white);
+			color: mix($robin, $slate);
+		}
+	}
+	&[class*="btn-ghost-lake"] {
+		color: $lake;
+		border-color: $lake;
+		&:hover, &:focus {
+			border-color: $lake;
+			background: $lake;
+			color: white;
+		}
+		&:active {
+			border-color: mix($lake, white);
+			background: mix($lake, white);
+			color: mix($lake, $slate);
+		}
+	}
+	&[class*="btn-ghost-moxie"] {
+		color: $moxie;
+		border-color: $moxie;
+		&:hover, &:focus {
+			border-color: $moxie;
+			background: $moxie;
+			color: white;
+		}
+		&:active {
+			border-color: mix($moxie, white);
+			background: mix($moxie, white);
+			color: mix($moxie, $slate);
+		}
+	}
+	&[class*="btn-ghost-crimson"] {
+		color: $crimson;
+		border-color: $crimson;
+		&:hover, &:focus {
+			border-color: $crimson;
+			background: $crimson;
+			color: white;
+		}
+		&:active {
+			border-color: mix($crimson, white);
+			background: mix($crimson, white);
+			color: mix($crimson, $slate);
+		}
+	}
+	&[class*="btn-ghost-auburn"], &[class*="btn-ghost-delivery"] {
+		color: $auburn;
+		border-color: $auburn;
+		&:hover, &:focus {
+			border-color: $auburn;
+			background: $auburn;
+			color: white;
+		}
+		&:active {
+			border-color: mix($auburn, white);
+			background: mix($auburn, white);
+			color: mix($auburn, $slate);
+		}
+	}
+	&[class*="btn-ghost-orange"], &[class*="btn-ghost-freelancing"] {
+		color: $orange;
+		border-color: $orange;
+		&:hover, &:focus {
+			border-color: $orange;
+			background: $orange;
+			color: white;
+		}
+		&:active {
+			border-color: mix($orange, white);
+			background: mix($orange, white);
+			color: mix($orange, $slate);
+		}
+	}
+	&[class*="btn-ghost-gold"], &[class*="btn-ghost-baking"] {
+		color: $gold;
+		border-color: $gold;
+		&:hover, &:focus {
+			border-color: $gold;
+			background: $gold;
+			color: white;
+		}
+		&:active {
+			border-color: mix($gold, white);
+			background: mix($gold, white);
+			color: mix($gold, $slate);
+		}
+	}
+	&[class*="btn-ghost-moola"], &[class*="btn-ghost-photography"] {
+		color: $moola;
+		border-color: $moola;
+		&:hover, &:focus {
+			border-color: $moola;
+			background: $moola;
+			color: white;
+		}
+		&:active {
+			border-color: mix($moola, white);
+			background: mix($moola, white);
+			color: mix($moola, $slate);
+		}
+	}
+	&[class*="btn-ghost-azure"], &[class*="btn-ghost-tech"] {
+		color: $azure;
+		border-color: $azure;
+		&:hover, &:focus {
+			border-color: $azure;
+			background: $azure;
+			color: white;
+		}
+		&:active {
+			border-color: mix($azure, white);
+			background: mix($azure, white);
+			color: mix($azure, $slate);
+		}
+	}
+	&[class*="btn-ghost-cobalt"], &[class*="btn-ghost-cobalt"] {
+		color: $cobalt;
+		border-color: $cobalt;
+		&:hover, &:focus {
+			border-color: $cobalt;
+			background: $cobalt;
+			color: white;
+		}
+		&:active {
+			border-color: mix($cobalt, white);
+			background: mix($cobalt, white);
+			color: mix($cobalt, $slate);
+		}
+	}
+	&[class*="btn-ghost-eggplant"], &[class*="btn-ghost-athletic"] {
+		color: $eggplant;
+		border-color: $eggplant;
+		&:hover, &:focus {
+			border-color: $eggplant;
+			background: $eggplant;
+			color: white;
+		}
+		&:active {
+			border-color: mix($eggplant, white);
+			background: mix($eggplant, white);
+			color: mix($eggplant, $slate);
+		}
+	}
+	&[class*="btn-ghost-cerise"], &[class*="btn-ghost-academic"] {
+		color: $cerise;
+		border-color: $cerise;
+		&:hover, &:focus {
+			border-color: $cerise;
+			background: $cerise;
+			color: white;
+		}
+		&:active {
+			border-color: mix($cerise, white);
+			background: mix($cerise, white);
+			color: mix($cerise, $slate);
+		}
+	}
+	&[class*="btn-ghost-fb"] {
+		color: $facebook;
+		border-color: $facebook;
+		&:hover, &:focus {
+			border-color: $facebook;
+			background: $facebook;
+			color: white;
+		}
+		&:active {
+			border-color: mix($facebook, white);
+			background: mix($facebook, white);
+			color: mix($facebook, $slate);
+		}
+	}
+}
+
+body {
+	margin: 0;
+}
+
+// pen
+main.pen-desc {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background: $slate;
+	h1 {
+		margin: 0;
+		color: white;
+		font-family: $font;
+		font-weight: 600;
+		font-size: 10vw;
+		line-height: 1;
+	}
+}
