@@ -1,10 +1,14 @@
 # Open Source Raw HTML CSS JS input/interactive components.
-*Click each gif below to direct codepen*
+*Click each header above any gif for link to public [codepen](codepen.io)*
 
-## Inputs
+## [Buttons](https://codepen.io/u-guru/full/bGGNgvM)
 
-![https://codepen.io/u-guru/pen/PoowWRO](gifs/inputs.gif)
+![](gifs/buttons.gif)
 
-## Tooltips
+## [Inputs](https://codepen.io/u-guru/pen/PoowWRO](gifs/inputs.gif)
 
-![https://codepen.io/u-guru/full/NWWPdYz](gifs/tooltips.gif)
+![](gifs/inputs.gif)
+
+## [Tooltips](https://codepen.io/u-guru/full/NWWPdYz)
+
+![](gifs/tooltips.gif)
