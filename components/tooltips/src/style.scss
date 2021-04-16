@@ -1,0 +1,1073 @@
+body, html {
+	height: 100%;
+	background: $charcoal;
+}
+*:focus {
+	outline: none;
+}
+body > div {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-flow: row-wrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: $font;
+	font-size: 24px;
+	> ul {
+		@include listless;
+		display: flex;
+		flex-flow: row wrap;
+		align-content: flex-start;
+		align-items: flex-start;
+		padding: 7.5px;
+		width: 100%;
+		height: 100%;
+		> li {
+			width: calc(100% / 3);
+			height: 50%;
+			min-height: 416px;
+			padding: 7.5px;
+			> div {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				padding: 15px;
+				background: rgba($slate, .25);
+				.checkbox-container {
+					margin-top: 15px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+* {
+	box-sizing: border-box;
+	backface-visibility: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-ms-overflow-style: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// checkbox inputs
+.checkbox-container {
+	@include flex;
+	@include flex-center;
+	div {
+		position: relative;
+		input:not([text]) {
+			opacity: 0;
+			position: absolute;
+			z-index: 12;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		span {
+			display: block;
+			background: $slate;
+		}
+	}
+	label {
+		padding-left: 15px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	div {
+		span {
+			border-radius: 3px;
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			svg {
+				fill: none;
+				width: 100%;
+				height: 100%;
+				circle {
+					fill: $moxie;
+					transform-origin: center center;
+					transform: scale(0);
+				}
+				path, polyline {
+					@include svg-stroke(lighten($slate, 20%), 2.5);
+				}
+			}
+		}
+		input:checked + span {
+			background: $moxie;
+			svg {
+				path, polyline {
+					stroke: white;
+				}
+			}
+		}
+	}
+}
+
+// tooltip
+.tooltip {
+	display: flex;
+	position: relative;
+	z-index: 99;
+	width: 300px;
+	height: 214px;
+	> span {
+		position: relative;
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		background: $moxie;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			background: $moxie;
+			border-radius: 1000px;
+		}
+	}
+	&.tooltip-top, &.tooltip-bot {
+		justify-content: center;
+		> span {
+			&:after {
+				left: 50%;
+				margin-left: -1px;
+				width: 2px;
+				height: 100px;
+			}
+		}
+		> div {
+			left: 50%;
+			margin-left: -100px;
+		}
+	}
+	&.tooltip-top {
+		> span {
+			align-self: flex-start;
+			&:after {
+				top: 0;
+			}
+		}
+		> div {
+			top: 100px;
+		}
+	}
+	&.tooltip-bot {
+		> span {
+			align-self: flex-end;
+			&:after {
+				bottom: 0;
+			}
+		}
+		> div {
+			bottom: 100px;
+		}
+	}
+	&.tooltip-left, &.tooltip-right {
+		align-items: center;
+		align-content: center;
+		> span {
+			&:after {
+				top: 50%;
+				margin-top: -1px;
+				width: 100px;
+				height: 2px;
+			}
+		}
+		> div {
+			top: 50%;
+			margin-top: -57px;
+		}
+	}
+	&.tooltip-left {
+		justify-content: flex-start;
+		> span {
+			&:after {
+				left: 0;
+			}
+		}
+		> div {
+			left: 100px;
+		}
+	}
+	&.tooltip-right {
+		justify-content: flex-end;
+		> span {
+			&:after {
+				right: 0;
+			}
+		}
+		> div {
+			right: 100px;
+		}
+	}
+
+	> div {
+		position: absolute;
+		width: 200px;
+		height: 104px;
+		background: rgba(white,.9);
+		border-radius: 2px;
+		color: $slate;
+		font-size: 18px;
+		font-weight: 600;
+		overflow: hidden;
+		> span {
+			display: block;
+			padding: 10px 15px;
+		}
+		> div {
+			position: absolute;
+			background: $moxie;
+			border-radius: 1000px;
+			&:nth-child(1) {
+				top: 0;
+				left: 0;
+				width: 50%;
+				height: 2px;
+				border-radius: 1000px 0 0 1000px;
+			}
+			&:nth-child(2) {
+				top: 0;
+				right: 0;
+				width: 50%;
+				height: 2px;
+				border-radius: 0 1000px 1000px 0;
+			}
+			&:nth-child(3) {
+				top: 0;
+				right: 0;
+				width: 2px;
+				height: 50%;
+				border-radius: 1000px 1000px 0 0;
+			}
+			&:nth-child(4) {
+				bottom: 0;
+				right: 0;
+				width: 2px;
+				height: 50%;
+				border-radius: 0 0 1000px 1000px;
+			}
+			&:nth-child(5) {
+				bottom: 0;
+				right: 0;
+				width: 50%;
+				height: 2px;
+				border-radius: 0 1000px 1000px 0;
+			}
+			&:nth-child(6) {
+				bottom: 0;
+				left: 0;
+				width: 50%;
+				height: 2px;
+				border-radius: 1000px 0 0 1000px;
+			}
+			&:nth-child(7) {
+				bottom: 0;
+				left: 0;
+				width: 2px;
+				height: 50%;
+				border-radius: 1000px 1000px 0 0;
+			}
+			&:nth-child(8) {
+				top: 0;
+				left: 0;
+				width: 2px;
+				height: 50%;
+				border-radius: 0 0 1000px 1000px;
+			}
+		}
+	}
+	button {
+		height: auto;
+		padding: 10px 15px;
+		font-size: 18px;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		line-height: 1;
+	}
+}
+
+//TRANSFORM ORIGINS
+.tooltip-top {
+	> div {
+		> div {
+			&:nth-child(1) {
+				transform-origin: right center;
+			}
+			&:nth-child(2) {
+				transform-origin: left center;
+			}
+			&:nth-child(3) {
+				transform-origin: center top;
+			}
+			&:nth-child(4) {
+				transform-origin: center top;
+			}
+			&:nth-child(5) {
+				transform-origin: right center;
+			}
+			&:nth-child(6) {
+				transform-origin: left center;
+			}
+			&:nth-child(7) {
+				transform-origin: center top;
+			}
+			&:nth-child(8) {
+				transform-origin: center top;
+			}
+		}
+	}
+}
+.tooltip-right {
+	> div {
+		> div {
+			&:nth-child(1) {
+				transform-origin: right center;
+			}
+			&:nth-child(2) {
+				transform-origin: right center;
+			}
+			&:nth-child(3) {
+				transform-origin: center bottom;
+			}
+			&:nth-child(4) {
+				transform-origin: center top;
+			}
+			&:nth-child(5) {
+				transform-origin: right center;
+			}
+			&:nth-child(6) {
+				transform-origin: right center;
+			}
+			&:nth-child(7) {
+				transform-origin: center bottom;
+			}
+			&:nth-child(8) {
+				transform-origin: center top;
+			}
+		}
+	}
+}
+.tooltip-left {
+	> div {
+		> div {
+			&:nth-child(1) {
+				transform-origin: left center;
+			}
+			&:nth-child(2) {
+				transform-origin: left center;
+			}
+			&:nth-child(3) {
+				transform-origin: center top;
+			}
+			&:nth-child(4) {
+				transform-origin: center bottom;
+			}
+			&:nth-child(5) {
+				transform-origin: left center;
+			}
+			&:nth-child(6) {
+				transform-origin: left center;
+			}
+			&:nth-child(7) {
+				transform-origin: center top;
+			}
+			&:nth-child(8) {
+				transform-origin: center bottom;
+			}
+		}
+	}
+}
+
+// EDITS
+.tooltip-top {
+	&.state-onenter {
+		> span {
+			transform: scale(0);
+			transition: all 150ms ease-out;
+		}
+		> div {
+			background: rgba(white,0);
+			transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in-out 250ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in-out 250ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(0);
+					transition: all 100ms ease-out 450ms;
+				}
+				&:nth-child(4) {
+					transform: scaleY(0);
+					transition: all 125ms ease-in 570ms;
+				}
+				&:nth-child(5) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in-out 750ms;
+				}
+				&:nth-child(6) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in 750ms;
+				}
+				&:nth-child(7) {
+					transform: scaleY(0);
+					transition: all 125ms ease-in 570ms;
+				}
+				&:nth-child(8) {
+					transform: scaleY(0);
+					transition: all 100ms ease-out 450ms;
+				}
+			}
+			span {
+				opacity: 0;
+				transform: translateY(-10%);
+				transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			}
+			button {
+				opacity: 0;
+				transform: translateY(-10%);
+				transition: 300ms cubic-bezier(.71,.06,.47,.63) 650ms;
+			}
+		}
+	}
+	&.state-onexit {
+		&.tooltip {
+			transform: translateY(0);
+			opacity: 1;
+			transition: all 450ms cubic-bezier(.71,.06,.47,.63);
+		}
+	}
+	&.state-oncomplete {
+		> span {
+			transform: scale(1);
+			transition: all 450ms cubic-bezier(.39,.22,.3,.89) 750ms;
+		}
+		> div {
+			background: rgba(white,0.9);
+			transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(1);
+					transition: all 250ms ease-in-out 750ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(1);
+					transition: all 250ms ease-in-out 750ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(1);
+					transition: all 100ms ease-in 570ms;
+				}
+				&:nth-child(4) {
+					transform: scaleY(1);
+					transition: all 125ms ease-in 450ms;
+				}
+				&:nth-child(5) {
+					transform: scaleX(1);
+					transition: all 250ms ease-in-out;
+				}
+				&:nth-child(6) {
+					transform: scaleX(1);
+					transition: all 250ms ease-out;
+				}
+				&:nth-child(7) {
+					transform: scaleY(1);
+					transition: all 125ms ease-out 450ms;
+				}
+				&:nth-child(8) {
+					transform: scaleY(1);
+					transition: all 100ms ease-in 570ms;
+				}
+			}
+			span {
+				opacity: 1;
+				transform: translateY(0);
+				transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			}
+			button {
+				opacity: 1;
+				transform: translateY(0);
+				transition: 300ms cubic-bezier(.71,.06,.47,.63) 250ms;
+			}
+		}
+	}
+	&.state-onswitch {
+		&.tooltip {
+			transform: translateY(0);
+			opacity: 1;
+			transition: all 300ms cubic-bezier(0,.4,.01,1.01);
+		}
+	}
+}
+.activate.tooltip-top {
+	&.state-onenter {
+		> span {
+			transform: scale(1);
+		}
+		> div {
+			background: rgba(white,0.9);
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(1);
+				}
+				&:nth-child(2) {
+					transform: scaleX(1);
+				}
+				&:nth-child(3) {
+					transform: scaleY(1);
+				}
+				&:nth-child(4) {
+					transform: scaleY(1);
+				}
+				&:nth-child(5) {
+					transform: scaleX(1);
+				}
+				&:nth-child(6) {
+					transform: scaleX(1);
+				}
+				&:nth-child(7) {
+					transform: scaleY(1);
+				}
+				&:nth-child(8) {
+					transform: scaleY(1);
+				}
+
+			}
+			span {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			button {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+	&.state-onexit {
+		&.tooltip {
+			transform: translateY(-10%);
+			opacity: 0;
+		}
+	}
+	&.state-oncomplete {
+		> span {
+			transform: scale(0);
+		}
+		> div {
+			background: rgba(white,0);
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in-out 250ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in-out 250ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(0);
+					transition: all 100ms ease-out 450ms;
+				}
+				&:nth-child(4) {
+					transform: scaleY(0);
+					transition: all 125ms ease-in 570ms;
+				}
+				&:nth-child(5) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in-out 750ms;
+				}
+				&:nth-child(6) {
+					transform: scaleX(0);
+					transition: all 250ms ease-in 750ms;
+				}
+				&:nth-child(7) {
+					transform: scaleY(0);
+					transition: all 125ms ease-in 570ms;
+				}
+				&:nth-child(8) {
+					transform: scaleY(0);
+					transition: all 100ms ease-out 450ms;
+				}
+			}
+			span {
+				opacity: 0;
+				transform: translateY(-10%);
+			}
+			button {
+				opacity: 0;
+				transform: translateY(-10%);
+			}
+		}
+	}
+	&.state-onswitch {
+		&.tooltip {
+			transform: translateY(-10%);
+			opacity: 0;
+		}
+	}
+}
+
+.tooltip-right {
+	&.state-onenter {
+		> span {
+			transform: scale(0);
+			transition: all 150ms ease-out;
+		}
+		> div {
+			background: rgba(white,0);
+			transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(0);
+					transition: all 125ms ease-out 570ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(0);
+					transition: all 125ms ease-in 450ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(0);
+					transition: all 250ms ease-in-out 250ms;
+				}
+				&:nth-child(4) {
+					transform: scaleY(0);
+					transition: all 250ms ease-in-out 250ms;
+				}
+				&:nth-child(5) {
+					transform: scaleX(0);
+					transition: all 125ms ease-in 450ms;
+				}
+				&:nth-child(6) {
+					transform: scaleX(0);
+					transition: all 125ms ease-out 570ms;
+				}
+				&:nth-child(7) {
+					transform: scaleY(0);
+					transition: all 250ms ease-in-out 750ms;
+				}
+				&:nth-child(8) {
+					transform: scaleY(0);
+					transition: all 250ms ease-in-out 750ms;
+				}
+			}
+			span {
+				opacity: 0;
+				transform: translateX(10%);
+				transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			}
+			button {
+				opacity: 0;
+				transform: translateX(10%);
+				transition: 300ms cubic-bezier(.71,.06,.47,.63) 650ms;
+			}
+		}
+	}
+	&.state-onexit {
+		&.tooltip {
+			transform: translateX(0);
+			opacity: 1;
+			transition: all 450ms cubic-bezier(.39,.22,.19,1.01);
+		}
+	}
+	&.state-oncomplete{
+		> span {
+			transform: scale(1);
+			transition: all 250ms ease-out 750ms;
+		}
+		> div {
+			background: rgba(white,0.9);
+			transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(1);
+					transition: all 125ms ease-in 250ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(1);
+					transition: all 125ms ease-out 375ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out 500ms;
+				}
+				&:nth-child(4) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out 500ms;
+				}
+				&:nth-child(5) {
+					transform: scaleX(1);
+					transition:  all 125ms ease-out 375ms;
+				}
+				&:nth-child(6) {
+					transform: scaleX(1);
+					transition: all 125ms ease-in 250ms;
+				}
+				&:nth-child(7) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out;
+				}
+				&:nth-child(8) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out;
+				}
+			}
+			span {
+				opacity: 1;
+				transform: translateX(0%);
+				transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			}
+			button {
+				opacity: 1;
+				transform: translateX(0%);
+				transition: 300ms cubic-bezier(.71,.06,.47,.63) 650ms;
+			}
+		}
+	}
+	&.state-onswitch {
+		&.tooltip {
+			transform: translateX(0);
+			opacity: 1;
+			transition: all 300ms cubic-bezier(0,.4,.01,1.01);
+		}
+	}
+}
+.activate.tooltip-right {
+	&.state-onenter {
+		> span {
+			transform: scale(1);
+		}
+		> div {
+			background: rgba(white,0.9);
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(1);
+				}
+				&:nth-child(2) {
+					transform: scaleX(1);
+				}
+				&:nth-child(3) {
+					transform: scaleY(1);
+				}
+				&:nth-child(4) {
+					transform: scaleY(1);
+				}
+				&:nth-child(5) {
+					transform: scaleX(1);
+				}
+				&:nth-child(6) {
+					transform: scaleX(1);
+				}
+				&:nth-child(7) {
+					transform: scaleY(1);
+				}
+				&:nth-child(8) {
+					transform: scaleY(1);
+				}
+
+			}
+			span {
+				opacity: 1;
+				transform: translateX(0);
+			}
+			button {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+	&.state-onexit {
+		&.tooltip {
+			transform: translateX(10%);
+			opacity: 0;
+		}
+	}
+	&.state-oncomplete {
+		> span {
+			transform: scale(0);
+		}
+		> div {
+			background: rgba(white,0);
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(0);
+				}
+				&:nth-child(2) {
+					transform: scaleX(0);
+				}
+				&:nth-child(3) {
+					transform: scaleY(0);
+				}
+				&:nth-child(4) {
+					transform: scaleY(0);
+				}
+				&:nth-child(5) {
+					transform: scaleX(0);
+				}
+				&:nth-child(6) {
+					transform: scaleX(0);
+				}
+				&:nth-child(7) {
+					transform: scaleY(0);
+				}
+				&:nth-child(8) {
+					transform: scaleY(0);
+				}
+			}
+			span {
+				opacity: 0;
+				transform: translateX(10%);
+			}
+			button {
+				opacity: 0;
+				transform: translateX(10%);
+			}
+		}
+	}
+	&.state-onswitch {
+		&.tooltip {
+			transform: translateX(10%);
+			opacity: 0;
+		}
+	}
+}
+
+.tooltip-left {
+	&.state-onenter {
+		> span {
+			transform: scale(0);
+			transition: all 150ms ease-out;
+		}
+		> div {
+			background: rgba(white,0);
+			transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(0);
+					transition: all 125ms ease-in 250ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(0);
+					transition: all 125ms ease-out 375ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(0);
+					transition:  all 250ms ease-in-out 570ms;
+				}
+				&:nth-child(4) {
+					transform: scaleY(0);
+					transition: all 250ms ease-in-out 570ms;
+				}
+				&:nth-child(5) {
+					transform: scaleX(0);
+					transition: all 125ms ease-out 375ms;
+				}
+				&:nth-child(6) {
+					transform: scaleX(0);
+					transition: all 125ms ease-in 250ms;
+				}
+				&:nth-child(7) {
+					transform: scaleY(0);
+					transition: all 250ms ease-in-out;
+				}
+				&:nth-child(8) {
+					transform: scaleY(0);
+					transition:all 250ms ease-in-out;
+				}
+			}
+			span {
+				opacity: 0;
+				transform: translateX(-10%);
+				transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			}
+			button {
+				opacity: 0;
+				transform: translateX(-10%);
+				transition: 300ms cubic-bezier(.71,.06,.47,.63) 650ms;
+			}
+		}
+	}
+	&.state-onexit {
+		&.tooltip {
+			transform: translateX(0);
+			opacity: 1;
+			transition: all 450ms cubic-bezier(.39,.22,.19,1.01);
+		}
+	}
+	&.state-oncomplete {
+		> span {
+			transform: scale(1);
+			transition: all 450ms cubic-bezier(.39,.22,.3,.89) 750ms;
+		}
+		> div {
+			background: rgba(white,0.9);
+			transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(1);
+					transition: all 125ms ease-out 375ms;
+				}
+				&:nth-child(2) {
+					transform: scaleX(1);
+					transition: all 125ms ease-in 250ms;
+				}
+				&:nth-child(3) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out;
+				}
+				&:nth-child(4) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out;
+				}
+				&:nth-child(5) {
+					transform: scaleX(1);
+					transition: all 125ms ease-in 250ms;
+				}
+				&:nth-child(6) {
+					transform: scaleX(1);
+					transition:  all 125ms ease-out 375ms;
+				}
+				&:nth-child(7) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out 500ms;
+				}
+				&:nth-child(8) {
+					transform: scaleY(1);
+					transition: all 250ms ease-in-out 500ms;
+				}
+			}
+			span {
+				opacity: 1;
+				transform: translateY(0);
+				transition: 500ms cubic-bezier(.71,.06,.47,.63) 450ms;
+			}
+			button {
+				opacity: 1;
+				transform: translateY(0);
+				transition: 300ms cubic-bezier(.71,.06,.47,.63) 250ms;
+			}
+		}
+	}
+	&.state-onswitch {
+		&.tooltip {
+			transform: translateX(0);
+			opacity: 1;
+			transition: all 300ms cubic-bezier(0,.4,.01,1.01);
+		}
+	}
+}
+.activate.tooltip-left {
+	&.state-onenter {
+		> span {
+			transform: scale(1);
+		}
+		> div {
+			background: rgba(white,0.9);
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(1);
+				}
+				&:nth-child(2) {
+					transform: scaleX(1);
+				}
+				&:nth-child(3) {
+					transform: scaleY(1);
+				}
+				&:nth-child(4) {
+					transform: scaleY(1);
+				}
+				&:nth-child(5) {
+					transform: scaleX(1);
+				}
+				&:nth-child(6) {
+					transform: scaleX(1);
+				}
+				&:nth-child(7) {
+					transform: scaleY(1);
+				}
+				&:nth-child(8) {
+					transform: scaleY(1);
+				}
+
+			}
+			span {
+				opacity: 1;
+				transform: translateY(0);
+			}
+			button {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+	&.state-onexit {
+		&.tooltip {
+			transform: translateX(-10%);
+			opacity: 0;
+		}
+	}
+	&.state-oncomplete {
+		> span {
+			transform: scale(0);
+		}
+		> div {
+			background: rgba(white,0);
+			> div {
+				&:nth-child(1) {
+					transform: scaleX(0);
+				}
+				&:nth-child(2) {
+					transform: scaleX(0);
+				}
+				&:nth-child(3) {
+					transform: scaleY(0);
+				}
+				&:nth-child(4) {
+					transform: scaleY(0);
+				}
+				&:nth-child(5) {
+					transform: scaleX(0);
+				}
+				&:nth-child(6) {
+					transform: scaleX(0);
+				}
+				&:nth-child(7) {
+					transform: scaleY(0);
+				}
+				&:nth-child(8) {
+					transform: scaleY(0);
+				}
+			}
+			span {
+				opacity: 0;
+				transform: translateX(-10%);
+			}
+			button {
+				opacity: 0;
+				transform: translateX(-10%);
+			}
+		}
+	}
+	&.state-onswitch {
+		&.tooltip {
+			transform: translateX(-10%);
+			opacity: 0;
+		}
+	}
+}

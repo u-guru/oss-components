@@ -1,0 +1,2048 @@
+/* ---------- BUTTONS AND INPUT */
+button, input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.bg svg * {
+  stroke: white;
+}
+.bg.bg-charcoal {
+  background: #2B3234;
+}
+.bg.bg-charcoal:hover, .bg.bg-charcoal:focus {
+  background: #95999a;
+  color: #2B3234;
+}
+.bg.bg-charcoal:active {
+  background: #606567;
+  color: white;
+}
+.bg.bg-slate {
+  background: #40484B;
+}
+.bg.bg-slate:hover, .bg.bg-slate:focus {
+  background: #a0a4a5;
+  color: #40484B;
+}
+.bg.bg-slate:active {
+  background: #707678;
+  color: white;
+}
+.bg.bg-taupe {
+  background: #757575;
+}
+.bg.bg-taupe:hover, .bg.bg-taupe:focus {
+  background: #bababa;
+  color: #757575;
+}
+.bg.bg-taupe:active {
+  background: #989898;
+  color: white;
+}
+.bg.bg-campus {
+  background: #8A9EA3;
+}
+.bg.bg-campus:hover, .bg.bg-campus:focus {
+  background: #c5cfd1;
+  color: #657377;
+}
+.bg.bg-campus:active {
+  background: #657377;
+  color: white;
+}
+.bg.bg-rocket {
+  background: #696269;
+}
+.bg.bg-rocket:hover, .bg.bg-rocket:focus {
+  background: #b4b1b4;
+  color: #55555a;
+}
+.bg.bg-rocket:active {
+  background: #55555a;
+  color: white;
+}
+.bg.bg-shamrock {
+  background: #69B3A5;
+}
+.bg.bg-shamrock:hover, .bg.bg-shamrock:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+.bg.bg-shamrock:active {
+  background: #557e78;
+  color: white;
+}
+.bg.bg-robin {
+  background: #2BB3B8;
+}
+.bg.bg-robin:hover, .bg.bg-robin:focus {
+  background: #95d9dc;
+  color: #367e82;
+}
+.bg.bg-robin:active {
+  background: #367e82;
+  color: white;
+}
+.bg.bg-lake {
+  background: #50A5DD;
+}
+.bg.bg-lake:hover, .bg.bg-lake:focus {
+  background: #a8d2ee;
+  color: #487794;
+}
+.bg.bg-lake:active {
+  background: #487794;
+  color: white;
+}
+.bg.bg-moxie {
+  background: #43cb9d;
+}
+.bg.bg-moxie:hover, .bg.bg-moxie:focus {
+  background: #a1e5ce;
+  color: #428a74;
+}
+.bg.bg-moxie:active {
+  background: #428a74;
+  color: white;
+}
+.bg.bg-crimson {
+  background: #d3242c;
+}
+.bg.bg-crimson:hover, .bg.bg-crimson:focus {
+  background: #e99296;
+  color: #8a363c;
+}
+.bg.bg-crimson:active {
+  background: #8a363c;
+  color: white;
+}
+.bg.bg-auburn, .bg.bg-delivery {
+  background: #F04F54;
+}
+.bg.bg-auburn:hover, .bg.bg-auburn:focus, .bg.bg-delivery:hover, .bg.bg-delivery:focus {
+  background: #f8a7aa;
+  color: #984c50;
+}
+.bg.bg-auburn:active, .bg.bg-delivery:active {
+  background: #984c50;
+  color: white;
+}
+.bg.bg-orange, .bg.bg-freelancing {
+  background: #E5753C;
+}
+.bg.bg-orange:hover, .bg.bg-orange:focus, .bg.bg-freelancing:hover, .bg.bg-freelancing:focus {
+  background: #f2ba9e;
+  color: #935f44;
+}
+.bg.bg-orange:active, .bg.bg-freelancing:active {
+  background: #935f44;
+  color: white;
+}
+.bg.bg-gold, .bg.bg-baking {
+  background: #F6C64E;
+}
+.bg.bg-gold:hover, .bg.bg-gold:focus, .bg.bg-baking:hover, .bg.bg-baking:focus {
+  background: #fbe3a7;
+  color: #9b874d;
+}
+.bg.bg-gold:active, .bg.bg-baking:active {
+  background: #9b874d;
+  color: white;
+}
+.bg.bg-moola, .bg.bg-photography {
+  background: #81B566;
+}
+.bg.bg-moola:hover, .bg.bg-moola:focus, .bg.bg-photography:hover, .bg.bg-photography:focus {
+  background: #c0dab3;
+  color: #617f59;
+}
+.bg.bg-moola:active, .bg.bg-photography:active {
+  background: #617f59;
+  color: white;
+}
+.bg.bg-azure, .bg.bg-tech {
+  background: #55A4B7;
+}
+.bg.bg-azure:hover, .bg.bg-azure:focus, .bg.bg-tech:hover, .bg.bg-tech:focus {
+  background: #aad2db;
+  color: #4b7681;
+}
+.bg.bg-azure:active, .bg.bg-tech:active {
+  background: #4b7681;
+  color: white;
+}
+.bg.bg-cobalt, .bg.bg-household {
+  background: #7872e3;
+}
+.bg.bg-cobalt:hover, .bg.bg-cobalt:focus, .bg.bg-household:hover, .bg.bg-household:focus {
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+.bg.bg-cobalt:active, .bg.bg-household:active {
+  background: #5c5d97;
+  color: white;
+}
+.bg.bg-eggplant, .bg.bg-athletic {
+  background: #9A5BC5;
+}
+.bg.bg-eggplant:hover, .bg.bg-eggplant:focus, .bg.bg-athletic:hover, .bg.bg-athletic:focus {
+  background: #cdade2;
+  color: #6d5288;
+}
+.bg.bg-eggplant:active, .bg.bg-athletic:active {
+  background: #6d5288;
+  color: white;
+}
+.bg.bg-cerise, .bg.bg-academic {
+  background: #e6389b;
+}
+.bg.bg-cerise:hover, .bg.bg-cerise:focus, .bg.bg-academic:hover, .bg.bg-academic:focus {
+  background: #f39ccd;
+  color: #934073;
+}
+.bg.bg-cerise:active, .bg.bg-academic:active {
+  background: #934073;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  height: 64px;
+  border: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #69B3A5;
+}
+button svg * {
+  stroke: white;
+}
+button.normal {
+  width: auto;
+}
+button.width-300 {
+  width: 300px;
+}
+button.width-400 {
+  width: 400px;
+}
+button.height-54 {
+  height: 54px;
+}
+button.height-48 {
+  height: 48px;
+}
+button.height-36 {
+  height: 36px;
+}
+button:hover, button:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+button:hover svg *, button:focus svg * {
+  stroke: #557e78;
+}
+button:active {
+  background: #557e78;
+  color: white;
+}
+button:active svg * {
+  stroke: white;
+}
+button.bg-charcoal {
+  background: #2B3234;
+}
+button.bg-charcoal:hover, button.bg-charcoal:focus {
+  background: #95999a;
+  color: #2B3234;
+}
+button.bg-charcoal:hover svg *, button.bg-charcoal:focus svg * {
+  stroke: #2B3234;
+}
+button.bg-charcoal:active {
+  background: #606567;
+  color: white;
+}
+button.bg-charcoal:active svg * {
+  stroke: white;
+}
+button.bg-charcoal.reverse {
+  background: white;
+  color: #2B3234;
+}
+button.bg-charcoal.reverse svg * {
+  stroke: #2B3234;
+}
+button.bg-charcoal.reverse:hover, button.bg-charcoal.reverse:focus {
+  background: #95999a;
+  color: #2B3234;
+}
+button.bg-charcoal.reverse:hover svg *, button.bg-charcoal.reverse:focus svg * {
+  stroke: #2B3234;
+}
+button.bg-charcoal.reverse:active {
+  background: #606567;
+  color: white;
+}
+button.bg-charcoal.reverse:active svg * {
+  stroke: white;
+}
+button.bg-slate {
+  background: #40484B;
+}
+button.bg-slate:hover, button.bg-slate:focus {
+  background: #a0a4a5;
+  color: #40484B;
+}
+button.bg-slate:hover svg *, button.bg-slate:focus svg * {
+  stroke: #40484B;
+}
+button.bg-slate:active {
+  background: #707678;
+  color: white;
+}
+button.bg-slate:active svg * {
+  stroke: white;
+}
+button.bg-slate.reverse {
+  background: white;
+  color: #40484B;
+}
+button.bg-slate.reverse svg * {
+  stroke: #40484B;
+}
+button.bg-slate.reverse:hover, button.bg-slate.reverse:focus {
+  background: #a0a4a5;
+  color: #40484B;
+}
+button.bg-slate.reverse:hover svg *, button.bg-slate.reverse:focus svg * {
+  stroke: #40484B;
+}
+button.bg-slate.reverse:active {
+  background: #707678;
+  color: white;
+}
+button.bg-slate.reverse:active svg * {
+  stroke: white;
+}
+button.bg-taupe {
+  background: #757575;
+}
+button.bg-taupe:hover, button.bg-taupe:focus {
+  background: #bababa;
+  color: #757575;
+}
+button.bg-taupe:hover svg *, button.bg-taupe:focus svg * {
+  stroke: #757575;
+}
+button.bg-taupe:active {
+  background: #989898;
+  color: white;
+}
+button.bg-taupe:active svg * {
+  stroke: white;
+}
+button.bg-taupe.reverse {
+  background: white;
+  color: #757575;
+}
+button.bg-taupe.reverse:hover, button.bg-taupe.reverse:focus {
+  background: #bababa;
+  color: #757575;
+}
+button.bg-taupe.reverse:hover svg *, button.bg-taupe.reverse:focus svg * {
+  stroke: #757575;
+}
+button.bg-taupe.reverse:active {
+  background: #989898;
+  color: white;
+}
+button.bg-taupe.reverse:active svg * {
+  stroke: white;
+}
+button.bg-campus {
+  background: #8A9EA3;
+}
+button.bg-campus:hover, button.bg-campus:focus {
+  background: #c5cfd1;
+  color: #657377;
+}
+button.bg-campus:active {
+  background: #657377;
+  color: white;
+}
+button.bg-campus.reverse {
+  background: white;
+  color: #8A9EA3;
+}
+button.bg-campus.reverse:hover, button.bg-campus.reverse:focus {
+  background: #c5cfd1;
+  color: #657377;
+}
+button.bg-campus.reverse:active {
+  background: #657377;
+  color: white;
+}
+button.bg-rocket {
+  background: #696269;
+}
+button.bg-rocket:hover, button.bg-rocket:focus {
+  background: #b4b1b4;
+  color: #55555a;
+}
+button.bg-rocket:active {
+  background: #55555a;
+  color: white;
+}
+button.bg-rocket.reverse {
+  background: white;
+  color: #696269;
+}
+button.bg-rocket.reverse:hover, button.bg-rocket.reverse:focus {
+  background: #b4b1b4;
+  color: #55555a;
+}
+button.bg-rocket.reverse:active {
+  background: #55555a;
+  color: white;
+}
+button.bg-shamrock {
+  background: #69B3A5;
+}
+button.bg-shamrock:hover, button.bg-shamrock:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+button.bg-shamrock:active {
+  background: #557e78;
+  color: white;
+}
+button.bg-shamrock.reverse {
+  background: white;
+  color: #69B3A5;
+}
+button.bg-shamrock.reverse:hover, button.bg-shamrock.reverse:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+button.bg-shamrock.reverse:active {
+  background: #557e78;
+  color: white;
+}
+button.bg-robin {
+  background: #2BB3B8;
+}
+button.bg-robin:hover, button.bg-robin:focus {
+  background: #95d9dc;
+  color: #367e82;
+}
+button.bg-robin:active {
+  background: #367e82;
+  color: white;
+}
+button.bg-robin.reverse {
+  background: white;
+  color: #2BB3B8;
+}
+button.bg-robin.reverse:hover, button.bg-robin.reverse:focus {
+  background: #95d9dc;
+  color: #367e82;
+}
+button.bg-robin.reverse:active {
+  background: #367e82;
+  color: white;
+}
+button.bg-lake {
+  background: #50A5DD;
+}
+button.bg-lake:hover, button.bg-lake:focus {
+  background: #a8d2ee;
+  color: #487794;
+}
+button.bg-lake:active {
+  background: #487794;
+  color: white;
+}
+button.bg-lake.reverse {
+  background: white;
+  color: #50A5DD;
+}
+button.bg-lake.reverse:hover, button.bg-lake.reverse:focus {
+  background: #a8d2ee;
+  color: #487794;
+}
+button.bg-lake.reverse:active {
+  background: #487794;
+  color: white;
+}
+button.bg-moxie {
+  background: #43cb9d;
+}
+button.bg-moxie:hover, button.bg-moxie:focus {
+  background: #a1e5ce;
+  color: #428a74;
+}
+button.bg-moxie:active {
+  background: #428a74;
+  color: white;
+}
+button.bg-moxie.reverse {
+  background: white;
+  color: #43cb9d;
+}
+button.bg-moxie.reverse:hover, button.bg-moxie.reverse:focus {
+  background: #a1e5ce;
+  color: #428a74;
+}
+button.bg-moxie.reverse:active {
+  background: #428a74;
+  color: white;
+}
+button.bg-crimson {
+  background: #d3242c;
+}
+button.bg-crimson:hover, button.bg-crimson:focus {
+  background: #e99296;
+  color: #8a363c;
+}
+button.bg-crimson:active {
+  background: #8a363c;
+  color: white;
+}
+button.bg-crimson.reverse {
+  background: white;
+  color: #d3242c;
+}
+button.bg-crimson.reverse:hover, button.bg-crimson.reverse:focus {
+  background: #e99296;
+  color: #8a363c;
+}
+button.bg-crimson.reverse:active {
+  background: #8a363c;
+  color: white;
+}
+button.bg-auburn, button.bg-delivery {
+  background: #F04F54;
+}
+button.bg-auburn:hover, button.bg-auburn:focus, button.bg-delivery:hover, button.bg-delivery:focus {
+  background: #f8a7aa;
+  color: #984c50;
+}
+button.bg-auburn:active, button.bg-delivery:active {
+  background: #984c50;
+  color: white;
+}
+button.bg-auburn.reverse, button.bg-delivery.reverse {
+  background: white;
+  color: #F04F54;
+}
+button.bg-auburn.reverse:hover, button.bg-auburn.reverse:focus, button.bg-delivery.reverse:hover, button.bg-delivery.reverse:focus {
+  background: #f8a7aa;
+  color: #984c50;
+}
+button.bg-auburn.reverse:active, button.bg-delivery.reverse:active {
+  background: #984c50;
+  color: white;
+}
+button.bg-orange, button.bg-freelancing {
+  background: #E5753C;
+}
+button.bg-orange:hover, button.bg-orange:focus, button.bg-freelancing:hover, button.bg-freelancing:focus {
+  background: #f2ba9e;
+  color: #935f44;
+}
+button.bg-orange:active, button.bg-freelancing:active {
+  background: #935f44;
+  color: white;
+}
+button.bg-orange.reverse, button.bg-freelancing.reverse {
+  background: white;
+  color: #E5753C;
+}
+button.bg-orange.reverse:hover, button.bg-orange.reverse:focus, button.bg-freelancing.reverse:hover, button.bg-freelancing.reverse:focus {
+  background: #f2ba9e;
+  color: #935f44;
+}
+button.bg-orange.reverse:active, button.bg-freelancing.reverse:active {
+  background: #935f44;
+  color: white;
+}
+button.bg-gold, button.bg-baking {
+  background: #F6C64E;
+}
+button.bg-gold:hover, button.bg-gold:focus, button.bg-baking:hover, button.bg-baking:focus {
+  background: #fbe3a7;
+  color: #9b874d;
+}
+button.bg-gold:active, button.bg-baking:active {
+  background: #9b874d;
+  color: white;
+}
+button.bg-gold.reverse, button.bg-baking.reverse {
+  background: white;
+  color: #F6C64E;
+}
+button.bg-gold.reverse:hover, button.bg-gold.reverse:focus, button.bg-baking.reverse:hover, button.bg-baking.reverse:focus {
+  background: #fbe3a7;
+  color: #9b874d;
+}
+button.bg-gold.reverse:active, button.bg-baking.reverse:active {
+  background: #9b874d;
+  color: white;
+}
+button.bg-moola, button.bg-photography {
+  background: #81B566;
+}
+button.bg-moola:hover, button.bg-moola:focus, button.bg-photography:hover, button.bg-photography:focus {
+  background: #c0dab3;
+  color: #617f59;
+}
+button.bg-moola:active, button.bg-photography:active {
+  background: #617f59;
+  color: white;
+}
+button.bg-moola.reverse, button.bg-photography.reverse {
+  background: white;
+  color: #81B566;
+}
+button.bg-moola.reverse:hover, button.bg-moola.reverse:focus, button.bg-photography.reverse:hover, button.bg-photography.reverse:focus {
+  background: #c0dab3;
+  color: #617f59;
+}
+button.bg-moola.reverse:active, button.bg-photography.reverse:active {
+  background: #617f59;
+  color: white;
+}
+button.bg-azure, button.bg-tech {
+  background: #55A4B7;
+}
+button.bg-azure:hover, button.bg-azure:focus, button.bg-tech:hover, button.bg-tech:focus {
+  background: #aad2db;
+  color: #4b7681;
+}
+button.bg-azure:active, button.bg-tech:active {
+  background: #4b7681;
+  color: white;
+}
+button.bg-azure.reverse, button.bg-tech.reverse {
+  background: white;
+  color: #55A4B7;
+}
+button.bg-azure.reverse:hover, button.bg-azure.reverse:focus, button.bg-tech.reverse:hover, button.bg-tech.reverse:focus {
+  background: #aad2db;
+  color: #4b7681;
+}
+button.bg-azure.reverse:active, button.bg-tech.reverse:active {
+  background: #4b7681;
+  color: white;
+}
+button.bg-cobalt, button.bg-household {
+  background: #7872e3;
+}
+button.bg-cobalt:hover, button.bg-cobalt:focus, button.bg-household:hover, button.bg-household:focus {
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+button.bg-cobalt:active, button.bg-household:active {
+  background: #5c5d97;
+  color: white;
+}
+button.bg-cobalt.reverse, button.bg-household.reverse {
+  background: white;
+  color: #7872e3;
+}
+button.bg-cobalt.reverse:hover, button.bg-cobalt.reverse:focus, button.bg-household.reverse:hover, button.bg-household.reverse:focus {
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+button.bg-cobalt.reverse:active, button.bg-household.reverse:active {
+  background: #5c5d97;
+  color: white;
+}
+button.bg-eggplant, button.bg-athletic {
+  background: #9A5BC5;
+}
+button.bg-eggplant:hover, button.bg-eggplant:focus, button.bg-athletic:hover, button.bg-athletic:focus {
+  background: #cdade2;
+  color: #6d5288;
+}
+button.bg-eggplant:active, button.bg-athletic:active {
+  background: #6d5288;
+  color: white;
+}
+button.bg-eggplant.reverse, button.bg-athletic.reverse {
+  background: white;
+  color: #9A5BC5;
+}
+button.bg-eggplant.reverse:hover, button.bg-eggplant.reverse:focus, button.bg-athletic.reverse:hover, button.bg-athletic.reverse:focus {
+  background: #cdade2;
+  color: #6d5288;
+}
+button.bg-eggplant.reverse:active, button.bg-athletic.reverse:active {
+  background: #6d5288;
+  color: white;
+}
+button.bg-cerise, button.bg-academic {
+  background: #e6389b;
+}
+button.bg-cerise:hover, button.bg-cerise:focus, button.bg-academic:hover, button.bg-academic:focus {
+  background: #f39ccd;
+  color: #934073;
+}
+button.bg-cerise:active, button.bg-academic:active {
+  background: #934073;
+  color: white;
+}
+button.bg-cerise.reverse, button.bg-academic.reverse {
+  background: white;
+  color: #e6389b;
+}
+button.bg-cerise.reverse:hover, button.bg-cerise.reverse:focus, button.bg-academic.reverse:hover, button.bg-academic.reverse:focus {
+  background: #f39ccd;
+  color: #934073;
+}
+button.bg-cerise.reverse:active, button.bg-academic.reverse:active {
+  background: #934073;
+  color: white;
+}
+button.bg-fb {
+  background: #3b5998;
+}
+button.bg-fb:hover, button.bg-fb:focus {
+  background: #9daccc;
+  color: #3e5172;
+}
+button.bg-fb:active {
+  background: #3e5172;
+  color: white;
+}
+button.bg-fb.reverse {
+  background: white;
+  color: #3b5998;
+}
+button.bg-fb.reverse:hover, button.bg-fb.reverse:focus {
+  background: #9daccc;
+  color: #3e5172;
+}
+button.bg-fb.reverse:active {
+  background: #3e5172;
+  color: white;
+}
+
+button.disabled {
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+[class*=btn-ghost] {
+  border-radius: 1000px;
+  width: auto;
+  height: auto;
+  background: transparent;
+  padding: 10px 30px;
+  border: 2px solid;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+[class*=btn-ghost]:hover, [class*=btn-ghost]:focus {
+  background: white;
+  color: #2B3234;
+}
+[class*=btn-ghost]:active {
+  border-color: #637074;
+  background: #637074;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-charcoal] {
+  color: #2B3234;
+  border-color: #2B3234;
+}
+[class*=btn-ghost][class*=btn-ghost-charcoal]:hover, [class*=btn-ghost][class*=btn-ghost-charcoal]:focus {
+  border-color: #2B3234;
+  background: #2B3234;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-charcoal]:active {
+  border-color: #95999a;
+  background: #95999a;
+  color: #2B3234;
+}
+[class*=btn-ghost][class*=btn-ghost-slate] {
+  color: #40484B;
+  border-color: #40484B;
+}
+[class*=btn-ghost][class*=btn-ghost-slate]:hover, [class*=btn-ghost][class*=btn-ghost-slate]:focus {
+  border-color: #40484B;
+  background: #40484B;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-slate]:active {
+  border-color: #a0a4a5;
+  background: #a0a4a5;
+  color: #40484B;
+}
+[class*=btn-ghost][class*=btn-ghost-taupe] {
+  color: #757575;
+  border-color: #757575;
+}
+[class*=btn-ghost][class*=btn-ghost-taupe]:hover, [class*=btn-ghost][class*=btn-ghost-taupe]:focus {
+  border-color: #757575;
+  background: #757575;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-taupe]:active {
+  border-color: #bababa;
+  background: #bababa;
+  color: #757575;
+}
+[class*=btn-ghost][class*=btn-ghost-campus] {
+  color: #8A9EA3;
+  border-color: #8A9EA3;
+}
+[class*=btn-ghost][class*=btn-ghost-campus]:hover, [class*=btn-ghost][class*=btn-ghost-campus]:focus {
+  border-color: #8A9EA3;
+  background: #8A9EA3;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-campus]:active {
+  border-color: #c5cfd1;
+  background: #c5cfd1;
+  color: #657377;
+}
+[class*=btn-ghost][class*=btn-ghost-smoke] {
+  color: #F1F1F1;
+  border-color: #F1F1F1;
+}
+[class*=btn-ghost][class*=btn-ghost-smoke]:hover, [class*=btn-ghost][class*=btn-ghost-smoke]:focus {
+  border-color: #F1F1F1;
+  background: #F1F1F1;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-smoke]:active {
+  border-color: #637074;
+  background: #637074;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-white] {
+  color: white;
+  border-color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-white]:hover, [class*=btn-ghost][class*=btn-ghost-white]:focus {
+  border-color: white;
+  background: white;
+  color: #2B3234;
+}
+[class*=btn-ghost][class*=btn-ghost-white]:active {
+  border-color: #637074;
+  background: #637074;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-rocket] {
+  color: #696269;
+  border-color: #696269;
+}
+[class*=btn-ghost][class*=btn-ghost-rocket]:hover, [class*=btn-ghost][class*=btn-ghost-rocket]:focus {
+  border-color: #696269;
+  background: #696269;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-rocket]:active {
+  border-color: #b4b1b4;
+  background: #b4b1b4;
+  color: #55555a;
+}
+[class*=btn-ghost][class*=btn-ghost-shamrock] {
+  color: #69B3A5;
+  border-color: #69B3A5;
+}
+[class*=btn-ghost][class*=btn-ghost-shamrock]:hover, [class*=btn-ghost][class*=btn-ghost-shamrock]:focus {
+  border-color: #69B3A5;
+  background: #69B3A5;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-shamrock]:active {
+  border-color: #b4d9d2;
+  background: #b4d9d2;
+  color: #557e78;
+}
+[class*=btn-ghost][class*=btn-ghost-robin] {
+  color: #2BB3B8;
+  border-color: #2BB3B8;
+}
+[class*=btn-ghost][class*=btn-ghost-robin]:hover, [class*=btn-ghost][class*=btn-ghost-robin]:focus {
+  border-color: #2BB3B8;
+  background: #2BB3B8;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-robin]:active {
+  border-color: #95d9dc;
+  background: #95d9dc;
+  color: #367e82;
+}
+[class*=btn-ghost][class*=btn-ghost-lake] {
+  color: #50A5DD;
+  border-color: #50A5DD;
+}
+[class*=btn-ghost][class*=btn-ghost-lake]:hover, [class*=btn-ghost][class*=btn-ghost-lake]:focus {
+  border-color: #50A5DD;
+  background: #50A5DD;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-lake]:active {
+  border-color: #a8d2ee;
+  background: #a8d2ee;
+  color: #487794;
+}
+[class*=btn-ghost][class*=btn-ghost-moxie] {
+  color: #43cb9d;
+  border-color: #43cb9d;
+}
+[class*=btn-ghost][class*=btn-ghost-moxie]:hover, [class*=btn-ghost][class*=btn-ghost-moxie]:focus {
+  border-color: #43cb9d;
+  background: #43cb9d;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-moxie]:active {
+  border-color: #a1e5ce;
+  background: #a1e5ce;
+  color: #428a74;
+}
+[class*=btn-ghost][class*=btn-ghost-crimson] {
+  color: #d3242c;
+  border-color: #d3242c;
+}
+[class*=btn-ghost][class*=btn-ghost-crimson]:hover, [class*=btn-ghost][class*=btn-ghost-crimson]:focus {
+  border-color: #d3242c;
+  background: #d3242c;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-crimson]:active {
+  border-color: #e99296;
+  background: #e99296;
+  color: #8a363c;
+}
+[class*=btn-ghost][class*=btn-ghost-auburn], [class*=btn-ghost][class*=btn-ghost-delivery] {
+  color: #F04F54;
+  border-color: #F04F54;
+}
+[class*=btn-ghost][class*=btn-ghost-auburn]:hover, [class*=btn-ghost][class*=btn-ghost-auburn]:focus, [class*=btn-ghost][class*=btn-ghost-delivery]:hover, [class*=btn-ghost][class*=btn-ghost-delivery]:focus {
+  border-color: #F04F54;
+  background: #F04F54;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-auburn]:active, [class*=btn-ghost][class*=btn-ghost-delivery]:active {
+  border-color: #f8a7aa;
+  background: #f8a7aa;
+  color: #984c50;
+}
+[class*=btn-ghost][class*=btn-ghost-orange], [class*=btn-ghost][class*=btn-ghost-freelancing] {
+  color: #E5753C;
+  border-color: #E5753C;
+}
+[class*=btn-ghost][class*=btn-ghost-orange]:hover, [class*=btn-ghost][class*=btn-ghost-orange]:focus, [class*=btn-ghost][class*=btn-ghost-freelancing]:hover, [class*=btn-ghost][class*=btn-ghost-freelancing]:focus {
+  border-color: #E5753C;
+  background: #E5753C;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-orange]:active, [class*=btn-ghost][class*=btn-ghost-freelancing]:active {
+  border-color: #f2ba9e;
+  background: #f2ba9e;
+  color: #935f44;
+}
+[class*=btn-ghost][class*=btn-ghost-gold], [class*=btn-ghost][class*=btn-ghost-baking] {
+  color: #F6C64E;
+  border-color: #F6C64E;
+}
+[class*=btn-ghost][class*=btn-ghost-gold]:hover, [class*=btn-ghost][class*=btn-ghost-gold]:focus, [class*=btn-ghost][class*=btn-ghost-baking]:hover, [class*=btn-ghost][class*=btn-ghost-baking]:focus {
+  border-color: #F6C64E;
+  background: #F6C64E;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-gold]:active, [class*=btn-ghost][class*=btn-ghost-baking]:active {
+  border-color: #fbe3a7;
+  background: #fbe3a7;
+  color: #9b874d;
+}
+[class*=btn-ghost][class*=btn-ghost-moola], [class*=btn-ghost][class*=btn-ghost-photography] {
+  color: #81B566;
+  border-color: #81B566;
+}
+[class*=btn-ghost][class*=btn-ghost-moola]:hover, [class*=btn-ghost][class*=btn-ghost-moola]:focus, [class*=btn-ghost][class*=btn-ghost-photography]:hover, [class*=btn-ghost][class*=btn-ghost-photography]:focus {
+  border-color: #81B566;
+  background: #81B566;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-moola]:active, [class*=btn-ghost][class*=btn-ghost-photography]:active {
+  border-color: #c0dab3;
+  background: #c0dab3;
+  color: #617f59;
+}
+[class*=btn-ghost][class*=btn-ghost-azure], [class*=btn-ghost][class*=btn-ghost-tech] {
+  color: #55A4B7;
+  border-color: #55A4B7;
+}
+[class*=btn-ghost][class*=btn-ghost-azure]:hover, [class*=btn-ghost][class*=btn-ghost-azure]:focus, [class*=btn-ghost][class*=btn-ghost-tech]:hover, [class*=btn-ghost][class*=btn-ghost-tech]:focus {
+  border-color: #55A4B7;
+  background: #55A4B7;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-azure]:active, [class*=btn-ghost][class*=btn-ghost-tech]:active {
+  border-color: #aad2db;
+  background: #aad2db;
+  color: #4b7681;
+}
+[class*=btn-ghost][class*=btn-ghost-cobalt], [class*=btn-ghost][class*=btn-ghost-cobalt] {
+  color: #7872e3;
+  border-color: #7872e3;
+}
+[class*=btn-ghost][class*=btn-ghost-cobalt]:hover, [class*=btn-ghost][class*=btn-ghost-cobalt]:focus, [class*=btn-ghost][class*=btn-ghost-cobalt]:hover, [class*=btn-ghost][class*=btn-ghost-cobalt]:focus {
+  border-color: #7872e3;
+  background: #7872e3;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-cobalt]:active, [class*=btn-ghost][class*=btn-ghost-cobalt]:active {
+  border-color: #bcb9f1;
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+[class*=btn-ghost][class*=btn-ghost-eggplant], [class*=btn-ghost][class*=btn-ghost-athletic] {
+  color: #9A5BC5;
+  border-color: #9A5BC5;
+}
+[class*=btn-ghost][class*=btn-ghost-eggplant]:hover, [class*=btn-ghost][class*=btn-ghost-eggplant]:focus, [class*=btn-ghost][class*=btn-ghost-athletic]:hover, [class*=btn-ghost][class*=btn-ghost-athletic]:focus {
+  border-color: #9A5BC5;
+  background: #9A5BC5;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-eggplant]:active, [class*=btn-ghost][class*=btn-ghost-athletic]:active {
+  border-color: #cdade2;
+  background: #cdade2;
+  color: #6d5288;
+}
+[class*=btn-ghost][class*=btn-ghost-cerise], [class*=btn-ghost][class*=btn-ghost-academic] {
+  color: #e6389b;
+  border-color: #e6389b;
+}
+[class*=btn-ghost][class*=btn-ghost-cerise]:hover, [class*=btn-ghost][class*=btn-ghost-cerise]:focus, [class*=btn-ghost][class*=btn-ghost-academic]:hover, [class*=btn-ghost][class*=btn-ghost-academic]:focus {
+  border-color: #e6389b;
+  background: #e6389b;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-cerise]:active, [class*=btn-ghost][class*=btn-ghost-academic]:active {
+  border-color: #f39ccd;
+  background: #f39ccd;
+  color: #934073;
+}
+[class*=btn-ghost][class*=btn-ghost-fb] {
+  color: #3b5998;
+  border-color: #3b5998;
+}
+[class*=btn-ghost][class*=btn-ghost-fb]:hover, [class*=btn-ghost][class*=btn-ghost-fb]:focus {
+  border-color: #3b5998;
+  background: #3b5998;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-fb]:active {
+  border-color: #9daccc;
+  background: #9daccc;
+  color: #3e5172;
+}
+
+body {
+  margin: 0;
+}
+
+main.pen-desc {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #40484B;
+}
+main.pen-desc h1 {
+  margin: 0;
+  color: white;
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 600;
+  font-size: 10vw;
+  line-height: 1;
+}
+
+body, html {
+  height: 100%;
+  background: #2B3234;
+}
+
+*:focus {
+  outline: none;
+}
+
+body > div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-flow: row-wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 24px;
+}
+body > div > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  padding: 7.5px;
+  width: 100%;
+  height: 100%;
+}
+body > div > ul > li {
+  width: calc(100% / 3);
+  height: 50%;
+  min-height: 416px;
+  padding: 7.5px;
+}
+body > div > ul > li > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 15px;
+  background: rgba(64, 72, 75, 0.25);
+}
+body > div > ul > li > div .checkbox-container {
+  margin-top: 15px;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.checkbox-container {
+  -ms-box-orient: horizontal;
+  display: -moz-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.checkbox-container div {
+  position: relative;
+}
+.checkbox-container div input:not([text]) {
+  opacity: 0;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.checkbox-container div span {
+  display: block;
+  background: #40484B;
+}
+.checkbox-container label {
+  padding-left: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.checkbox-container div span {
+  border-radius: 3px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+.checkbox-container div span svg {
+  fill: none;
+  width: 100%;
+  height: 100%;
+}
+.checkbox-container div span svg circle {
+  fill: #43cb9d;
+  transform-origin: center center;
+  transform: scale(0);
+}
+.checkbox-container div span svg path, .checkbox-container div span svg polyline {
+  fill: none;
+  stroke: #6f7d82;
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.checkbox-container div input:checked + span {
+  background: #43cb9d;
+}
+.checkbox-container div input:checked + span svg path, .checkbox-container div input:checked + span svg polyline {
+  stroke: white;
+}
+
+.tooltip {
+  display: flex;
+  position: relative;
+  z-index: 99;
+  width: 300px;
+  height: 214px;
+}
+.tooltip > span {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #43cb9d;
+}
+.tooltip > span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #43cb9d;
+  border-radius: 1000px;
+}
+.tooltip.tooltip-top, .tooltip.tooltip-bot {
+  justify-content: center;
+}
+.tooltip.tooltip-top > span:after, .tooltip.tooltip-bot > span:after {
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100px;
+}
+.tooltip.tooltip-top > div, .tooltip.tooltip-bot > div {
+  left: 50%;
+  margin-left: -100px;
+}
+.tooltip.tooltip-top > span {
+  align-self: flex-start;
+}
+.tooltip.tooltip-top > span:after {
+  top: 0;
+}
+.tooltip.tooltip-top > div {
+  top: 100px;
+}
+.tooltip.tooltip-bot > span {
+  align-self: flex-end;
+}
+.tooltip.tooltip-bot > span:after {
+  bottom: 0;
+}
+.tooltip.tooltip-bot > div {
+  bottom: 100px;
+}
+.tooltip.tooltip-left, .tooltip.tooltip-right {
+  align-items: center;
+  align-content: center;
+}
+.tooltip.tooltip-left > span:after, .tooltip.tooltip-right > span:after {
+  top: 50%;
+  margin-top: -1px;
+  width: 100px;
+  height: 2px;
+}
+.tooltip.tooltip-left > div, .tooltip.tooltip-right > div {
+  top: 50%;
+  margin-top: -57px;
+}
+.tooltip.tooltip-left {
+  justify-content: flex-start;
+}
+.tooltip.tooltip-left > span:after {
+  left: 0;
+}
+.tooltip.tooltip-left > div {
+  left: 100px;
+}
+.tooltip.tooltip-right {
+  justify-content: flex-end;
+}
+.tooltip.tooltip-right > span:after {
+  right: 0;
+}
+.tooltip.tooltip-right > div {
+  right: 100px;
+}
+.tooltip > div {
+  position: absolute;
+  width: 200px;
+  height: 104px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  color: #40484B;
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.tooltip > div > span {
+  display: block;
+  padding: 10px 15px;
+}
+.tooltip > div > div {
+  position: absolute;
+  background: #43cb9d;
+  border-radius: 1000px;
+}
+.tooltip > div > div:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  border-radius: 1000px 0 0 1000px;
+}
+.tooltip > div > div:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  border-radius: 0 1000px 1000px 0;
+}
+.tooltip > div > div:nth-child(3) {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 50%;
+  border-radius: 1000px 1000px 0 0;
+}
+.tooltip > div > div:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 50%;
+  border-radius: 0 0 1000px 1000px;
+}
+.tooltip > div > div:nth-child(5) {
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  border-radius: 0 1000px 1000px 0;
+}
+.tooltip > div > div:nth-child(6) {
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  border-radius: 1000px 0 0 1000px;
+}
+.tooltip > div > div:nth-child(7) {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 50%;
+  border-radius: 1000px 1000px 0 0;
+}
+.tooltip > div > div:nth-child(8) {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 50%;
+  border-radius: 0 0 1000px 1000px;
+}
+.tooltip button {
+  height: auto;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  line-height: 1;
+}
+
+.tooltip-top > div > div:nth-child(1) {
+  transform-origin: right center;
+}
+.tooltip-top > div > div:nth-child(2) {
+  transform-origin: left center;
+}
+.tooltip-top > div > div:nth-child(3) {
+  transform-origin: center top;
+}
+.tooltip-top > div > div:nth-child(4) {
+  transform-origin: center top;
+}
+.tooltip-top > div > div:nth-child(5) {
+  transform-origin: right center;
+}
+.tooltip-top > div > div:nth-child(6) {
+  transform-origin: left center;
+}
+.tooltip-top > div > div:nth-child(7) {
+  transform-origin: center top;
+}
+.tooltip-top > div > div:nth-child(8) {
+  transform-origin: center top;
+}
+
+.tooltip-right > div > div:nth-child(1) {
+  transform-origin: right center;
+}
+.tooltip-right > div > div:nth-child(2) {
+  transform-origin: right center;
+}
+.tooltip-right > div > div:nth-child(3) {
+  transform-origin: center bottom;
+}
+.tooltip-right > div > div:nth-child(4) {
+  transform-origin: center top;
+}
+.tooltip-right > div > div:nth-child(5) {
+  transform-origin: right center;
+}
+.tooltip-right > div > div:nth-child(6) {
+  transform-origin: right center;
+}
+.tooltip-right > div > div:nth-child(7) {
+  transform-origin: center bottom;
+}
+.tooltip-right > div > div:nth-child(8) {
+  transform-origin: center top;
+}
+
+.tooltip-left > div > div:nth-child(1) {
+  transform-origin: left center;
+}
+.tooltip-left > div > div:nth-child(2) {
+  transform-origin: left center;
+}
+.tooltip-left > div > div:nth-child(3) {
+  transform-origin: center top;
+}
+.tooltip-left > div > div:nth-child(4) {
+  transform-origin: center bottom;
+}
+.tooltip-left > div > div:nth-child(5) {
+  transform-origin: left center;
+}
+.tooltip-left > div > div:nth-child(6) {
+  transform-origin: left center;
+}
+.tooltip-left > div > div:nth-child(7) {
+  transform-origin: center top;
+}
+.tooltip-left > div > div:nth-child(8) {
+  transform-origin: center bottom;
+}
+
+.tooltip-top.state-onenter > span {
+  transform: scale(0);
+  transition: all 150ms ease-out;
+}
+.tooltip-top.state-onenter > div {
+  background: rgba(255, 255, 255, 0);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(1) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out 250ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(2) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out 250ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(3) {
+  transform: scaleY(0);
+  transition: all 100ms ease-out 450ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(4) {
+  transform: scaleY(0);
+  transition: all 125ms ease-in 570ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(5) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out 750ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(6) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in 750ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(7) {
+  transform: scaleY(0);
+  transition: all 125ms ease-in 570ms;
+}
+.tooltip-top.state-onenter > div > div:nth-child(8) {
+  transform: scaleY(0);
+  transition: all 100ms ease-out 450ms;
+}
+.tooltip-top.state-onenter > div span {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-top.state-onenter > div button {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: 300ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 650ms;
+}
+.tooltip-top.state-onexit.tooltip {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 450ms cubic-bezier(0.71, 0.06, 0.47, 0.63);
+}
+.tooltip-top.state-oncomplete > span {
+  transform: scale(1);
+  transition: all 450ms cubic-bezier(0.39, 0.22, 0.3, 0.89) 750ms;
+}
+.tooltip-top.state-oncomplete > div {
+  background: rgba(255, 255, 255, 0.9);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(1) {
+  transform: scaleX(1);
+  transition: all 250ms ease-in-out 750ms;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(2) {
+  transform: scaleX(1);
+  transition: all 250ms ease-in-out 750ms;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(3) {
+  transform: scaleY(1);
+  transition: all 100ms ease-in 570ms;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(4) {
+  transform: scaleY(1);
+  transition: all 125ms ease-in 450ms;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(5) {
+  transform: scaleX(1);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(6) {
+  transform: scaleX(1);
+  transition: all 250ms ease-out;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(7) {
+  transform: scaleY(1);
+  transition: all 125ms ease-out 450ms;
+}
+.tooltip-top.state-oncomplete > div > div:nth-child(8) {
+  transform: scaleY(1);
+  transition: all 100ms ease-in 570ms;
+}
+.tooltip-top.state-oncomplete > div span {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-top.state-oncomplete > div button {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 300ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 250ms;
+}
+.tooltip-top.state-onswitch.tooltip {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 300ms cubic-bezier(0, 0.4, 0.01, 1.01);
+}
+
+.activate.tooltip-top.state-onenter > span {
+  transform: scale(1);
+}
+.activate.tooltip-top.state-onenter > div {
+  background: rgba(255, 255, 255, 0.9);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(1) {
+  transform: scaleX(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(2) {
+  transform: scaleX(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(3) {
+  transform: scaleY(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(4) {
+  transform: scaleY(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(5) {
+  transform: scaleX(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(6) {
+  transform: scaleX(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(7) {
+  transform: scaleY(1);
+}
+.activate.tooltip-top.state-onenter > div > div:nth-child(8) {
+  transform: scaleY(1);
+}
+.activate.tooltip-top.state-onenter > div span {
+  opacity: 1;
+  transform: translateY(0);
+}
+.activate.tooltip-top.state-onenter > div button {
+  opacity: 1;
+  transform: translateY(0);
+}
+.activate.tooltip-top.state-onexit.tooltip {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.activate.tooltip-top.state-oncomplete > span {
+  transform: scale(0);
+}
+.activate.tooltip-top.state-oncomplete > div {
+  background: rgba(255, 255, 255, 0);
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(1) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out 250ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(2) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out 250ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(3) {
+  transform: scaleY(0);
+  transition: all 100ms ease-out 450ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(4) {
+  transform: scaleY(0);
+  transition: all 125ms ease-in 570ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(5) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in-out 750ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(6) {
+  transform: scaleX(0);
+  transition: all 250ms ease-in 750ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(7) {
+  transform: scaleY(0);
+  transition: all 125ms ease-in 570ms;
+}
+.activate.tooltip-top.state-oncomplete > div > div:nth-child(8) {
+  transform: scaleY(0);
+  transition: all 100ms ease-out 450ms;
+}
+.activate.tooltip-top.state-oncomplete > div span {
+  opacity: 0;
+  transform: translateY(-10%);
+}
+.activate.tooltip-top.state-oncomplete > div button {
+  opacity: 0;
+  transform: translateY(-10%);
+}
+.activate.tooltip-top.state-onswitch.tooltip {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+
+.tooltip-right.state-onenter > span {
+  transform: scale(0);
+  transition: all 150ms ease-out;
+}
+.tooltip-right.state-onenter > div {
+  background: rgba(255, 255, 255, 0);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(1) {
+  transform: scaleX(0);
+  transition: all 125ms ease-out 570ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(2) {
+  transform: scaleX(0);
+  transition: all 125ms ease-in 450ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(3) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out 250ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(4) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out 250ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(5) {
+  transform: scaleX(0);
+  transition: all 125ms ease-in 450ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(6) {
+  transform: scaleX(0);
+  transition: all 125ms ease-out 570ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(7) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out 750ms;
+}
+.tooltip-right.state-onenter > div > div:nth-child(8) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out 750ms;
+}
+.tooltip-right.state-onenter > div span {
+  opacity: 0;
+  transform: translateX(10%);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-right.state-onenter > div button {
+  opacity: 0;
+  transform: translateX(10%);
+  transition: 300ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 650ms;
+}
+.tooltip-right.state-onexit.tooltip {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 450ms cubic-bezier(0.39, 0.22, 0.19, 1.01);
+}
+.tooltip-right.state-oncomplete > span {
+  transform: scale(1);
+  transition: all 250ms ease-out 750ms;
+}
+.tooltip-right.state-oncomplete > div {
+  background: rgba(255, 255, 255, 0.9);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(1) {
+  transform: scaleX(1);
+  transition: all 125ms ease-in 250ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(2) {
+  transform: scaleX(1);
+  transition: all 125ms ease-out 375ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(3) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out 500ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(4) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out 500ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(5) {
+  transform: scaleX(1);
+  transition: all 125ms ease-out 375ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(6) {
+  transform: scaleX(1);
+  transition: all 125ms ease-in 250ms;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(7) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-right.state-oncomplete > div > div:nth-child(8) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-right.state-oncomplete > div span {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-right.state-oncomplete > div button {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 300ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 650ms;
+}
+.tooltip-right.state-onswitch.tooltip {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms cubic-bezier(0, 0.4, 0.01, 1.01);
+}
+
+.activate.tooltip-right.state-onenter > span {
+  transform: scale(1);
+}
+.activate.tooltip-right.state-onenter > div {
+  background: rgba(255, 255, 255, 0.9);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(1) {
+  transform: scaleX(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(2) {
+  transform: scaleX(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(3) {
+  transform: scaleY(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(4) {
+  transform: scaleY(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(5) {
+  transform: scaleX(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(6) {
+  transform: scaleX(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(7) {
+  transform: scaleY(1);
+}
+.activate.tooltip-right.state-onenter > div > div:nth-child(8) {
+  transform: scaleY(1);
+}
+.activate.tooltip-right.state-onenter > div span {
+  opacity: 1;
+  transform: translateX(0);
+}
+.activate.tooltip-right.state-onenter > div button {
+  opacity: 1;
+  transform: translateX(0);
+}
+.activate.tooltip-right.state-onexit.tooltip {
+  transform: translateX(10%);
+  opacity: 0;
+}
+.activate.tooltip-right.state-oncomplete > span {
+  transform: scale(0);
+}
+.activate.tooltip-right.state-oncomplete > div {
+  background: rgba(255, 255, 255, 0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(1) {
+  transform: scaleX(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(2) {
+  transform: scaleX(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(3) {
+  transform: scaleY(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(4) {
+  transform: scaleY(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(5) {
+  transform: scaleX(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(6) {
+  transform: scaleX(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(7) {
+  transform: scaleY(0);
+}
+.activate.tooltip-right.state-oncomplete > div > div:nth-child(8) {
+  transform: scaleY(0);
+}
+.activate.tooltip-right.state-oncomplete > div span {
+  opacity: 0;
+  transform: translateX(10%);
+}
+.activate.tooltip-right.state-oncomplete > div button {
+  opacity: 0;
+  transform: translateX(10%);
+}
+.activate.tooltip-right.state-onswitch.tooltip {
+  transform: translateX(10%);
+  opacity: 0;
+}
+
+.tooltip-left.state-onenter > span {
+  transform: scale(0);
+  transition: all 150ms ease-out;
+}
+.tooltip-left.state-onenter > div {
+  background: rgba(255, 255, 255, 0);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(1) {
+  transform: scaleX(0);
+  transition: all 125ms ease-in 250ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(2) {
+  transform: scaleX(0);
+  transition: all 125ms ease-out 375ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(3) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out 570ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(4) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out 570ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(5) {
+  transform: scaleX(0);
+  transition: all 125ms ease-out 375ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(6) {
+  transform: scaleX(0);
+  transition: all 125ms ease-in 250ms;
+}
+.tooltip-left.state-onenter > div > div:nth-child(7) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-left.state-onenter > div > div:nth-child(8) {
+  transform: scaleY(0);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-left.state-onenter > div span {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-left.state-onenter > div button {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: 300ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 650ms;
+}
+.tooltip-left.state-onexit.tooltip {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 450ms cubic-bezier(0.39, 0.22, 0.19, 1.01);
+}
+.tooltip-left.state-oncomplete > span {
+  transform: scale(1);
+  transition: all 450ms cubic-bezier(0.39, 0.22, 0.3, 0.89) 750ms;
+}
+.tooltip-left.state-oncomplete > div {
+  background: rgba(255, 255, 255, 0.9);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(1) {
+  transform: scaleX(1);
+  transition: all 125ms ease-out 375ms;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(2) {
+  transform: scaleX(1);
+  transition: all 125ms ease-in 250ms;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(3) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(4) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(5) {
+  transform: scaleX(1);
+  transition: all 125ms ease-in 250ms;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(6) {
+  transform: scaleX(1);
+  transition: all 125ms ease-out 375ms;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(7) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out 500ms;
+}
+.tooltip-left.state-oncomplete > div > div:nth-child(8) {
+  transform: scaleY(1);
+  transition: all 250ms ease-in-out 500ms;
+}
+.tooltip-left.state-oncomplete > div span {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 500ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 450ms;
+}
+.tooltip-left.state-oncomplete > div button {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 300ms cubic-bezier(0.71, 0.06, 0.47, 0.63) 250ms;
+}
+.tooltip-left.state-onswitch.tooltip {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 300ms cubic-bezier(0, 0.4, 0.01, 1.01);
+}
+
+.activate.tooltip-left.state-onenter > span {
+  transform: scale(1);
+}
+.activate.tooltip-left.state-onenter > div {
+  background: rgba(255, 255, 255, 0.9);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(1) {
+  transform: scaleX(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(2) {
+  transform: scaleX(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(3) {
+  transform: scaleY(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(4) {
+  transform: scaleY(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(5) {
+  transform: scaleX(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(6) {
+  transform: scaleX(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(7) {
+  transform: scaleY(1);
+}
+.activate.tooltip-left.state-onenter > div > div:nth-child(8) {
+  transform: scaleY(1);
+}
+.activate.tooltip-left.state-onenter > div span {
+  opacity: 1;
+  transform: translateY(0);
+}
+.activate.tooltip-left.state-onenter > div button {
+  opacity: 1;
+  transform: translateY(0);
+}
+.activate.tooltip-left.state-onexit.tooltip {
+  transform: translateX(-10%);
+  opacity: 0;
+}
+.activate.tooltip-left.state-oncomplete > span {
+  transform: scale(0);
+}
+.activate.tooltip-left.state-oncomplete > div {
+  background: rgba(255, 255, 255, 0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(1) {
+  transform: scaleX(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(2) {
+  transform: scaleX(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(3) {
+  transform: scaleY(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(4) {
+  transform: scaleY(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(5) {
+  transform: scaleX(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(6) {
+  transform: scaleX(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(7) {
+  transform: scaleY(0);
+}
+.activate.tooltip-left.state-oncomplete > div > div:nth-child(8) {
+  transform: scaleY(0);
+}
+.activate.tooltip-left.state-oncomplete > div span {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+.activate.tooltip-left.state-oncomplete > div button {
+  opacity: 0;
+  transform: translateX(-10%);
+}
+.activate.tooltip-left.state-onswitch.tooltip {
+  transform: translateX(-10%);
+  opacity: 0;
+}
