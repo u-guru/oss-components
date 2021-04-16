@@ -1,0 +1,2187 @@
+/* ---------- BUTTONS AND INPUT */
+button, input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.bg svg * {
+  stroke: white;
+}
+.bg.bg-charcoal {
+  background: #2B3234;
+}
+.bg.bg-charcoal:hover, .bg.bg-charcoal:focus {
+  background: #95999a;
+  color: #2B3234;
+}
+.bg.bg-charcoal:active {
+  background: #606567;
+  color: white;
+}
+.bg.bg-slate {
+  background: #40484B;
+}
+.bg.bg-slate:hover, .bg.bg-slate:focus {
+  background: #a0a4a5;
+  color: #40484B;
+}
+.bg.bg-slate:active {
+  background: #707678;
+  color: white;
+}
+.bg.bg-taupe {
+  background: #757575;
+}
+.bg.bg-taupe:hover, .bg.bg-taupe:focus {
+  background: #bababa;
+  color: #757575;
+}
+.bg.bg-taupe:active {
+  background: #989898;
+  color: white;
+}
+.bg.bg-campus {
+  background: #8A9EA3;
+}
+.bg.bg-campus:hover, .bg.bg-campus:focus {
+  background: #c5cfd1;
+  color: #657377;
+}
+.bg.bg-campus:active {
+  background: #657377;
+  color: white;
+}
+.bg.bg-rocket {
+  background: #696269;
+}
+.bg.bg-rocket:hover, .bg.bg-rocket:focus {
+  background: #b4b1b4;
+  color: #55555a;
+}
+.bg.bg-rocket:active {
+  background: #55555a;
+  color: white;
+}
+.bg.bg-shamrock {
+  background: #69B3A5;
+}
+.bg.bg-shamrock:hover, .bg.bg-shamrock:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+.bg.bg-shamrock:active {
+  background: #557e78;
+  color: white;
+}
+.bg.bg-robin {
+  background: #2BB3B8;
+}
+.bg.bg-robin:hover, .bg.bg-robin:focus {
+  background: #95d9dc;
+  color: #367e82;
+}
+.bg.bg-robin:active {
+  background: #367e82;
+  color: white;
+}
+.bg.bg-lake {
+  background: #50A5DD;
+}
+.bg.bg-lake:hover, .bg.bg-lake:focus {
+  background: #a8d2ee;
+  color: #487794;
+}
+.bg.bg-lake:active {
+  background: #487794;
+  color: white;
+}
+.bg.bg-moxie {
+  background: #43cb9d;
+}
+.bg.bg-moxie:hover, .bg.bg-moxie:focus {
+  background: #a1e5ce;
+  color: #428a74;
+}
+.bg.bg-moxie:active {
+  background: #428a74;
+  color: white;
+}
+.bg.bg-crimson {
+  background: #d3242c;
+}
+.bg.bg-crimson:hover, .bg.bg-crimson:focus {
+  background: #e99296;
+  color: #8a363c;
+}
+.bg.bg-crimson:active {
+  background: #8a363c;
+  color: white;
+}
+.bg.bg-auburn, .bg.bg-delivery {
+  background: #F04F54;
+}
+.bg.bg-auburn:hover, .bg.bg-auburn:focus, .bg.bg-delivery:hover, .bg.bg-delivery:focus {
+  background: #f8a7aa;
+  color: #984c50;
+}
+.bg.bg-auburn:active, .bg.bg-delivery:active {
+  background: #984c50;
+  color: white;
+}
+.bg.bg-orange, .bg.bg-freelancing {
+  background: #E5753C;
+}
+.bg.bg-orange:hover, .bg.bg-orange:focus, .bg.bg-freelancing:hover, .bg.bg-freelancing:focus {
+  background: #f2ba9e;
+  color: #935f44;
+}
+.bg.bg-orange:active, .bg.bg-freelancing:active {
+  background: #935f44;
+  color: white;
+}
+.bg.bg-gold, .bg.bg-baking {
+  background: #F6C64E;
+}
+.bg.bg-gold:hover, .bg.bg-gold:focus, .bg.bg-baking:hover, .bg.bg-baking:focus {
+  background: #fbe3a7;
+  color: #9b874d;
+}
+.bg.bg-gold:active, .bg.bg-baking:active {
+  background: #9b874d;
+  color: white;
+}
+.bg.bg-moola, .bg.bg-photography {
+  background: #81B566;
+}
+.bg.bg-moola:hover, .bg.bg-moola:focus, .bg.bg-photography:hover, .bg.bg-photography:focus {
+  background: #c0dab3;
+  color: #617f59;
+}
+.bg.bg-moola:active, .bg.bg-photography:active {
+  background: #617f59;
+  color: white;
+}
+.bg.bg-azure, .bg.bg-tech {
+  background: #55A4B7;
+}
+.bg.bg-azure:hover, .bg.bg-azure:focus, .bg.bg-tech:hover, .bg.bg-tech:focus {
+  background: #aad2db;
+  color: #4b7681;
+}
+.bg.bg-azure:active, .bg.bg-tech:active {
+  background: #4b7681;
+  color: white;
+}
+.bg.bg-cobalt, .bg.bg-household {
+  background: #7872e3;
+}
+.bg.bg-cobalt:hover, .bg.bg-cobalt:focus, .bg.bg-household:hover, .bg.bg-household:focus {
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+.bg.bg-cobalt:active, .bg.bg-household:active {
+  background: #5c5d97;
+  color: white;
+}
+.bg.bg-eggplant, .bg.bg-athletic {
+  background: #9A5BC5;
+}
+.bg.bg-eggplant:hover, .bg.bg-eggplant:focus, .bg.bg-athletic:hover, .bg.bg-athletic:focus {
+  background: #cdade2;
+  color: #6d5288;
+}
+.bg.bg-eggplant:active, .bg.bg-athletic:active {
+  background: #6d5288;
+  color: white;
+}
+.bg.bg-cerise, .bg.bg-academic {
+  background: #e6389b;
+}
+.bg.bg-cerise:hover, .bg.bg-cerise:focus, .bg.bg-academic:hover, .bg.bg-academic:focus {
+  background: #f39ccd;
+  color: #934073;
+}
+.bg.bg-cerise:active, .bg.bg-academic:active {
+  background: #934073;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  height: 64px;
+  border: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #69B3A5;
+}
+button svg * {
+  stroke: white;
+}
+button.normal {
+  width: auto;
+}
+button.width-300 {
+  width: 300px;
+}
+button.width-400 {
+  width: 400px;
+}
+button.height-54 {
+  height: 54px;
+}
+button.height-48 {
+  height: 48px;
+}
+button.height-36 {
+  height: 36px;
+}
+button:hover, button:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+button:hover svg *, button:focus svg * {
+  stroke: #557e78;
+}
+button:active {
+  background: #557e78;
+  color: white;
+}
+button:active svg * {
+  stroke: white;
+}
+button.bg-charcoal {
+  background: #2B3234;
+}
+button.bg-charcoal:hover, button.bg-charcoal:focus {
+  background: #95999a;
+  color: #2B3234;
+}
+button.bg-charcoal:hover svg *, button.bg-charcoal:focus svg * {
+  stroke: #2B3234;
+}
+button.bg-charcoal:active {
+  background: #606567;
+  color: white;
+}
+button.bg-charcoal:active svg * {
+  stroke: white;
+}
+button.bg-charcoal.reverse {
+  background: white;
+  color: #2B3234;
+}
+button.bg-charcoal.reverse svg * {
+  stroke: #2B3234;
+}
+button.bg-charcoal.reverse:hover, button.bg-charcoal.reverse:focus {
+  background: #95999a;
+  color: #2B3234;
+}
+button.bg-charcoal.reverse:hover svg *, button.bg-charcoal.reverse:focus svg * {
+  stroke: #2B3234;
+}
+button.bg-charcoal.reverse:active {
+  background: #606567;
+  color: white;
+}
+button.bg-charcoal.reverse:active svg * {
+  stroke: white;
+}
+button.bg-slate {
+  background: #40484B;
+}
+button.bg-slate:hover, button.bg-slate:focus {
+  background: #a0a4a5;
+  color: #40484B;
+}
+button.bg-slate:hover svg *, button.bg-slate:focus svg * {
+  stroke: #40484B;
+}
+button.bg-slate:active {
+  background: #707678;
+  color: white;
+}
+button.bg-slate:active svg * {
+  stroke: white;
+}
+button.bg-slate.reverse {
+  background: white;
+  color: #40484B;
+}
+button.bg-slate.reverse svg * {
+  stroke: #40484B;
+}
+button.bg-slate.reverse:hover, button.bg-slate.reverse:focus {
+  background: #a0a4a5;
+  color: #40484B;
+}
+button.bg-slate.reverse:hover svg *, button.bg-slate.reverse:focus svg * {
+  stroke: #40484B;
+}
+button.bg-slate.reverse:active {
+  background: #707678;
+  color: white;
+}
+button.bg-slate.reverse:active svg * {
+  stroke: white;
+}
+button.bg-taupe {
+  background: #757575;
+}
+button.bg-taupe:hover, button.bg-taupe:focus {
+  background: #bababa;
+  color: #757575;
+}
+button.bg-taupe:hover svg *, button.bg-taupe:focus svg * {
+  stroke: #757575;
+}
+button.bg-taupe:active {
+  background: #989898;
+  color: white;
+}
+button.bg-taupe:active svg * {
+  stroke: white;
+}
+button.bg-taupe.reverse {
+  background: white;
+  color: #757575;
+}
+button.bg-taupe.reverse:hover, button.bg-taupe.reverse:focus {
+  background: #bababa;
+  color: #757575;
+}
+button.bg-taupe.reverse:hover svg *, button.bg-taupe.reverse:focus svg * {
+  stroke: #757575;
+}
+button.bg-taupe.reverse:active {
+  background: #989898;
+  color: white;
+}
+button.bg-taupe.reverse:active svg * {
+  stroke: white;
+}
+button.bg-campus {
+  background: #8A9EA3;
+}
+button.bg-campus:hover, button.bg-campus:focus {
+  background: #c5cfd1;
+  color: #657377;
+}
+button.bg-campus:active {
+  background: #657377;
+  color: white;
+}
+button.bg-campus.reverse {
+  background: white;
+  color: #8A9EA3;
+}
+button.bg-campus.reverse:hover, button.bg-campus.reverse:focus {
+  background: #c5cfd1;
+  color: #657377;
+}
+button.bg-campus.reverse:active {
+  background: #657377;
+  color: white;
+}
+button.bg-rocket {
+  background: #696269;
+}
+button.bg-rocket:hover, button.bg-rocket:focus {
+  background: #b4b1b4;
+  color: #55555a;
+}
+button.bg-rocket:active {
+  background: #55555a;
+  color: white;
+}
+button.bg-rocket.reverse {
+  background: white;
+  color: #696269;
+}
+button.bg-rocket.reverse:hover, button.bg-rocket.reverse:focus {
+  background: #b4b1b4;
+  color: #55555a;
+}
+button.bg-rocket.reverse:active {
+  background: #55555a;
+  color: white;
+}
+button.bg-shamrock {
+  background: #69B3A5;
+}
+button.bg-shamrock:hover, button.bg-shamrock:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+button.bg-shamrock:active {
+  background: #557e78;
+  color: white;
+}
+button.bg-shamrock.reverse {
+  background: white;
+  color: #69B3A5;
+}
+button.bg-shamrock.reverse:hover, button.bg-shamrock.reverse:focus {
+  background: #b4d9d2;
+  color: #557e78;
+}
+button.bg-shamrock.reverse:active {
+  background: #557e78;
+  color: white;
+}
+button.bg-robin {
+  background: #2BB3B8;
+}
+button.bg-robin:hover, button.bg-robin:focus {
+  background: #95d9dc;
+  color: #367e82;
+}
+button.bg-robin:active {
+  background: #367e82;
+  color: white;
+}
+button.bg-robin.reverse {
+  background: white;
+  color: #2BB3B8;
+}
+button.bg-robin.reverse:hover, button.bg-robin.reverse:focus {
+  background: #95d9dc;
+  color: #367e82;
+}
+button.bg-robin.reverse:active {
+  background: #367e82;
+  color: white;
+}
+button.bg-lake {
+  background: #50A5DD;
+}
+button.bg-lake:hover, button.bg-lake:focus {
+  background: #a8d2ee;
+  color: #487794;
+}
+button.bg-lake:active {
+  background: #487794;
+  color: white;
+}
+button.bg-lake.reverse {
+  background: white;
+  color: #50A5DD;
+}
+button.bg-lake.reverse:hover, button.bg-lake.reverse:focus {
+  background: #a8d2ee;
+  color: #487794;
+}
+button.bg-lake.reverse:active {
+  background: #487794;
+  color: white;
+}
+button.bg-moxie {
+  background: #43cb9d;
+}
+button.bg-moxie:hover, button.bg-moxie:focus {
+  background: #a1e5ce;
+  color: #428a74;
+}
+button.bg-moxie:active {
+  background: #428a74;
+  color: white;
+}
+button.bg-moxie.reverse {
+  background: white;
+  color: #43cb9d;
+}
+button.bg-moxie.reverse:hover, button.bg-moxie.reverse:focus {
+  background: #a1e5ce;
+  color: #428a74;
+}
+button.bg-moxie.reverse:active {
+  background: #428a74;
+  color: white;
+}
+button.bg-crimson {
+  background: #d3242c;
+}
+button.bg-crimson:hover, button.bg-crimson:focus {
+  background: #e99296;
+  color: #8a363c;
+}
+button.bg-crimson:active {
+  background: #8a363c;
+  color: white;
+}
+button.bg-crimson.reverse {
+  background: white;
+  color: #d3242c;
+}
+button.bg-crimson.reverse:hover, button.bg-crimson.reverse:focus {
+  background: #e99296;
+  color: #8a363c;
+}
+button.bg-crimson.reverse:active {
+  background: #8a363c;
+  color: white;
+}
+button.bg-auburn, button.bg-delivery {
+  background: #F04F54;
+}
+button.bg-auburn:hover, button.bg-auburn:focus, button.bg-delivery:hover, button.bg-delivery:focus {
+  background: #f8a7aa;
+  color: #984c50;
+}
+button.bg-auburn:active, button.bg-delivery:active {
+  background: #984c50;
+  color: white;
+}
+button.bg-auburn.reverse, button.bg-delivery.reverse {
+  background: white;
+  color: #F04F54;
+}
+button.bg-auburn.reverse:hover, button.bg-auburn.reverse:focus, button.bg-delivery.reverse:hover, button.bg-delivery.reverse:focus {
+  background: #f8a7aa;
+  color: #984c50;
+}
+button.bg-auburn.reverse:active, button.bg-delivery.reverse:active {
+  background: #984c50;
+  color: white;
+}
+button.bg-orange, button.bg-freelancing {
+  background: #E5753C;
+}
+button.bg-orange:hover, button.bg-orange:focus, button.bg-freelancing:hover, button.bg-freelancing:focus {
+  background: #f2ba9e;
+  color: #935f44;
+}
+button.bg-orange:active, button.bg-freelancing:active {
+  background: #935f44;
+  color: white;
+}
+button.bg-orange.reverse, button.bg-freelancing.reverse {
+  background: white;
+  color: #E5753C;
+}
+button.bg-orange.reverse:hover, button.bg-orange.reverse:focus, button.bg-freelancing.reverse:hover, button.bg-freelancing.reverse:focus {
+  background: #f2ba9e;
+  color: #935f44;
+}
+button.bg-orange.reverse:active, button.bg-freelancing.reverse:active {
+  background: #935f44;
+  color: white;
+}
+button.bg-gold, button.bg-baking {
+  background: #F6C64E;
+}
+button.bg-gold:hover, button.bg-gold:focus, button.bg-baking:hover, button.bg-baking:focus {
+  background: #fbe3a7;
+  color: #9b874d;
+}
+button.bg-gold:active, button.bg-baking:active {
+  background: #9b874d;
+  color: white;
+}
+button.bg-gold.reverse, button.bg-baking.reverse {
+  background: white;
+  color: #F6C64E;
+}
+button.bg-gold.reverse:hover, button.bg-gold.reverse:focus, button.bg-baking.reverse:hover, button.bg-baking.reverse:focus {
+  background: #fbe3a7;
+  color: #9b874d;
+}
+button.bg-gold.reverse:active, button.bg-baking.reverse:active {
+  background: #9b874d;
+  color: white;
+}
+button.bg-moola, button.bg-photography {
+  background: #81B566;
+}
+button.bg-moola:hover, button.bg-moola:focus, button.bg-photography:hover, button.bg-photography:focus {
+  background: #c0dab3;
+  color: #617f59;
+}
+button.bg-moola:active, button.bg-photography:active {
+  background: #617f59;
+  color: white;
+}
+button.bg-moola.reverse, button.bg-photography.reverse {
+  background: white;
+  color: #81B566;
+}
+button.bg-moola.reverse:hover, button.bg-moola.reverse:focus, button.bg-photography.reverse:hover, button.bg-photography.reverse:focus {
+  background: #c0dab3;
+  color: #617f59;
+}
+button.bg-moola.reverse:active, button.bg-photography.reverse:active {
+  background: #617f59;
+  color: white;
+}
+button.bg-azure, button.bg-tech {
+  background: #55A4B7;
+}
+button.bg-azure:hover, button.bg-azure:focus, button.bg-tech:hover, button.bg-tech:focus {
+  background: #aad2db;
+  color: #4b7681;
+}
+button.bg-azure:active, button.bg-tech:active {
+  background: #4b7681;
+  color: white;
+}
+button.bg-azure.reverse, button.bg-tech.reverse {
+  background: white;
+  color: #55A4B7;
+}
+button.bg-azure.reverse:hover, button.bg-azure.reverse:focus, button.bg-tech.reverse:hover, button.bg-tech.reverse:focus {
+  background: #aad2db;
+  color: #4b7681;
+}
+button.bg-azure.reverse:active, button.bg-tech.reverse:active {
+  background: #4b7681;
+  color: white;
+}
+button.bg-cobalt, button.bg-household {
+  background: #7872e3;
+}
+button.bg-cobalt:hover, button.bg-cobalt:focus, button.bg-household:hover, button.bg-household:focus {
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+button.bg-cobalt:active, button.bg-household:active {
+  background: #5c5d97;
+  color: white;
+}
+button.bg-cobalt.reverse, button.bg-household.reverse {
+  background: white;
+  color: #7872e3;
+}
+button.bg-cobalt.reverse:hover, button.bg-cobalt.reverse:focus, button.bg-household.reverse:hover, button.bg-household.reverse:focus {
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+button.bg-cobalt.reverse:active, button.bg-household.reverse:active {
+  background: #5c5d97;
+  color: white;
+}
+button.bg-eggplant, button.bg-athletic {
+  background: #9A5BC5;
+}
+button.bg-eggplant:hover, button.bg-eggplant:focus, button.bg-athletic:hover, button.bg-athletic:focus {
+  background: #cdade2;
+  color: #6d5288;
+}
+button.bg-eggplant:active, button.bg-athletic:active {
+  background: #6d5288;
+  color: white;
+}
+button.bg-eggplant.reverse, button.bg-athletic.reverse {
+  background: white;
+  color: #9A5BC5;
+}
+button.bg-eggplant.reverse:hover, button.bg-eggplant.reverse:focus, button.bg-athletic.reverse:hover, button.bg-athletic.reverse:focus {
+  background: #cdade2;
+  color: #6d5288;
+}
+button.bg-eggplant.reverse:active, button.bg-athletic.reverse:active {
+  background: #6d5288;
+  color: white;
+}
+button.bg-cerise, button.bg-academic {
+  background: #e6389b;
+}
+button.bg-cerise:hover, button.bg-cerise:focus, button.bg-academic:hover, button.bg-academic:focus {
+  background: #f39ccd;
+  color: #934073;
+}
+button.bg-cerise:active, button.bg-academic:active {
+  background: #934073;
+  color: white;
+}
+button.bg-cerise.reverse, button.bg-academic.reverse {
+  background: white;
+  color: #e6389b;
+}
+button.bg-cerise.reverse:hover, button.bg-cerise.reverse:focus, button.bg-academic.reverse:hover, button.bg-academic.reverse:focus {
+  background: #f39ccd;
+  color: #934073;
+}
+button.bg-cerise.reverse:active, button.bg-academic.reverse:active {
+  background: #934073;
+  color: white;
+}
+button.bg-fb {
+  background: #3b5998;
+}
+button.bg-fb:hover, button.bg-fb:focus {
+  background: #9daccc;
+  color: #3e5172;
+}
+button.bg-fb:active {
+  background: #3e5172;
+  color: white;
+}
+button.bg-fb.reverse {
+  background: white;
+  color: #3b5998;
+}
+button.bg-fb.reverse:hover, button.bg-fb.reverse:focus {
+  background: #9daccc;
+  color: #3e5172;
+}
+button.bg-fb.reverse:active {
+  background: #3e5172;
+  color: white;
+}
+
+button.disabled {
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+[class*=btn-ghost] {
+  border-radius: 1000px;
+  width: auto;
+  height: auto;
+  background: transparent;
+  padding: 10px 30px;
+  border: 2px solid;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+[class*=btn-ghost]:hover, [class*=btn-ghost]:focus {
+  background: white;
+  color: #2B3234;
+}
+[class*=btn-ghost]:active {
+  border-color: #637074;
+  background: #637074;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-charcoal] {
+  color: #2B3234;
+  border-color: #2B3234;
+}
+[class*=btn-ghost][class*=btn-ghost-charcoal]:hover, [class*=btn-ghost][class*=btn-ghost-charcoal]:focus {
+  border-color: #2B3234;
+  background: #2B3234;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-charcoal]:active {
+  border-color: #95999a;
+  background: #95999a;
+  color: #2B3234;
+}
+[class*=btn-ghost][class*=btn-ghost-slate] {
+  color: #40484B;
+  border-color: #40484B;
+}
+[class*=btn-ghost][class*=btn-ghost-slate]:hover, [class*=btn-ghost][class*=btn-ghost-slate]:focus {
+  border-color: #40484B;
+  background: #40484B;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-slate]:active {
+  border-color: #a0a4a5;
+  background: #a0a4a5;
+  color: #40484B;
+}
+[class*=btn-ghost][class*=btn-ghost-taupe] {
+  color: #757575;
+  border-color: #757575;
+}
+[class*=btn-ghost][class*=btn-ghost-taupe]:hover, [class*=btn-ghost][class*=btn-ghost-taupe]:focus {
+  border-color: #757575;
+  background: #757575;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-taupe]:active {
+  border-color: #bababa;
+  background: #bababa;
+  color: #757575;
+}
+[class*=btn-ghost][class*=btn-ghost-campus] {
+  color: #8A9EA3;
+  border-color: #8A9EA3;
+}
+[class*=btn-ghost][class*=btn-ghost-campus]:hover, [class*=btn-ghost][class*=btn-ghost-campus]:focus {
+  border-color: #8A9EA3;
+  background: #8A9EA3;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-campus]:active {
+  border-color: #c5cfd1;
+  background: #c5cfd1;
+  color: #657377;
+}
+[class*=btn-ghost][class*=btn-ghost-smoke] {
+  color: #F1F1F1;
+  border-color: #F1F1F1;
+}
+[class*=btn-ghost][class*=btn-ghost-smoke]:hover, [class*=btn-ghost][class*=btn-ghost-smoke]:focus {
+  border-color: #F1F1F1;
+  background: #F1F1F1;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-smoke]:active {
+  border-color: #637074;
+  background: #637074;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-white] {
+  color: white;
+  border-color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-white]:hover, [class*=btn-ghost][class*=btn-ghost-white]:focus {
+  border-color: white;
+  background: white;
+  color: #2B3234;
+}
+[class*=btn-ghost][class*=btn-ghost-white]:active {
+  border-color: #637074;
+  background: #637074;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-rocket] {
+  color: #696269;
+  border-color: #696269;
+}
+[class*=btn-ghost][class*=btn-ghost-rocket]:hover, [class*=btn-ghost][class*=btn-ghost-rocket]:focus {
+  border-color: #696269;
+  background: #696269;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-rocket]:active {
+  border-color: #b4b1b4;
+  background: #b4b1b4;
+  color: #55555a;
+}
+[class*=btn-ghost][class*=btn-ghost-shamrock] {
+  color: #69B3A5;
+  border-color: #69B3A5;
+}
+[class*=btn-ghost][class*=btn-ghost-shamrock]:hover, [class*=btn-ghost][class*=btn-ghost-shamrock]:focus {
+  border-color: #69B3A5;
+  background: #69B3A5;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-shamrock]:active {
+  border-color: #b4d9d2;
+  background: #b4d9d2;
+  color: #557e78;
+}
+[class*=btn-ghost][class*=btn-ghost-robin] {
+  color: #2BB3B8;
+  border-color: #2BB3B8;
+}
+[class*=btn-ghost][class*=btn-ghost-robin]:hover, [class*=btn-ghost][class*=btn-ghost-robin]:focus {
+  border-color: #2BB3B8;
+  background: #2BB3B8;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-robin]:active {
+  border-color: #95d9dc;
+  background: #95d9dc;
+  color: #367e82;
+}
+[class*=btn-ghost][class*=btn-ghost-lake] {
+  color: #50A5DD;
+  border-color: #50A5DD;
+}
+[class*=btn-ghost][class*=btn-ghost-lake]:hover, [class*=btn-ghost][class*=btn-ghost-lake]:focus {
+  border-color: #50A5DD;
+  background: #50A5DD;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-lake]:active {
+  border-color: #a8d2ee;
+  background: #a8d2ee;
+  color: #487794;
+}
+[class*=btn-ghost][class*=btn-ghost-moxie] {
+  color: #43cb9d;
+  border-color: #43cb9d;
+}
+[class*=btn-ghost][class*=btn-ghost-moxie]:hover, [class*=btn-ghost][class*=btn-ghost-moxie]:focus {
+  border-color: #43cb9d;
+  background: #43cb9d;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-moxie]:active {
+  border-color: #a1e5ce;
+  background: #a1e5ce;
+  color: #428a74;
+}
+[class*=btn-ghost][class*=btn-ghost-crimson] {
+  color: #d3242c;
+  border-color: #d3242c;
+}
+[class*=btn-ghost][class*=btn-ghost-crimson]:hover, [class*=btn-ghost][class*=btn-ghost-crimson]:focus {
+  border-color: #d3242c;
+  background: #d3242c;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-crimson]:active {
+  border-color: #e99296;
+  background: #e99296;
+  color: #8a363c;
+}
+[class*=btn-ghost][class*=btn-ghost-auburn], [class*=btn-ghost][class*=btn-ghost-delivery] {
+  color: #F04F54;
+  border-color: #F04F54;
+}
+[class*=btn-ghost][class*=btn-ghost-auburn]:hover, [class*=btn-ghost][class*=btn-ghost-auburn]:focus, [class*=btn-ghost][class*=btn-ghost-delivery]:hover, [class*=btn-ghost][class*=btn-ghost-delivery]:focus {
+  border-color: #F04F54;
+  background: #F04F54;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-auburn]:active, [class*=btn-ghost][class*=btn-ghost-delivery]:active {
+  border-color: #f8a7aa;
+  background: #f8a7aa;
+  color: #984c50;
+}
+[class*=btn-ghost][class*=btn-ghost-orange], [class*=btn-ghost][class*=btn-ghost-freelancing] {
+  color: #E5753C;
+  border-color: #E5753C;
+}
+[class*=btn-ghost][class*=btn-ghost-orange]:hover, [class*=btn-ghost][class*=btn-ghost-orange]:focus, [class*=btn-ghost][class*=btn-ghost-freelancing]:hover, [class*=btn-ghost][class*=btn-ghost-freelancing]:focus {
+  border-color: #E5753C;
+  background: #E5753C;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-orange]:active, [class*=btn-ghost][class*=btn-ghost-freelancing]:active {
+  border-color: #f2ba9e;
+  background: #f2ba9e;
+  color: #935f44;
+}
+[class*=btn-ghost][class*=btn-ghost-gold], [class*=btn-ghost][class*=btn-ghost-baking] {
+  color: #F6C64E;
+  border-color: #F6C64E;
+}
+[class*=btn-ghost][class*=btn-ghost-gold]:hover, [class*=btn-ghost][class*=btn-ghost-gold]:focus, [class*=btn-ghost][class*=btn-ghost-baking]:hover, [class*=btn-ghost][class*=btn-ghost-baking]:focus {
+  border-color: #F6C64E;
+  background: #F6C64E;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-gold]:active, [class*=btn-ghost][class*=btn-ghost-baking]:active {
+  border-color: #fbe3a7;
+  background: #fbe3a7;
+  color: #9b874d;
+}
+[class*=btn-ghost][class*=btn-ghost-moola], [class*=btn-ghost][class*=btn-ghost-photography] {
+  color: #81B566;
+  border-color: #81B566;
+}
+[class*=btn-ghost][class*=btn-ghost-moola]:hover, [class*=btn-ghost][class*=btn-ghost-moola]:focus, [class*=btn-ghost][class*=btn-ghost-photography]:hover, [class*=btn-ghost][class*=btn-ghost-photography]:focus {
+  border-color: #81B566;
+  background: #81B566;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-moola]:active, [class*=btn-ghost][class*=btn-ghost-photography]:active {
+  border-color: #c0dab3;
+  background: #c0dab3;
+  color: #617f59;
+}
+[class*=btn-ghost][class*=btn-ghost-azure], [class*=btn-ghost][class*=btn-ghost-tech] {
+  color: #55A4B7;
+  border-color: #55A4B7;
+}
+[class*=btn-ghost][class*=btn-ghost-azure]:hover, [class*=btn-ghost][class*=btn-ghost-azure]:focus, [class*=btn-ghost][class*=btn-ghost-tech]:hover, [class*=btn-ghost][class*=btn-ghost-tech]:focus {
+  border-color: #55A4B7;
+  background: #55A4B7;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-azure]:active, [class*=btn-ghost][class*=btn-ghost-tech]:active {
+  border-color: #aad2db;
+  background: #aad2db;
+  color: #4b7681;
+}
+[class*=btn-ghost][class*=btn-ghost-cobalt], [class*=btn-ghost][class*=btn-ghost-cobalt] {
+  color: #7872e3;
+  border-color: #7872e3;
+}
+[class*=btn-ghost][class*=btn-ghost-cobalt]:hover, [class*=btn-ghost][class*=btn-ghost-cobalt]:focus, [class*=btn-ghost][class*=btn-ghost-cobalt]:hover, [class*=btn-ghost][class*=btn-ghost-cobalt]:focus {
+  border-color: #7872e3;
+  background: #7872e3;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-cobalt]:active, [class*=btn-ghost][class*=btn-ghost-cobalt]:active {
+  border-color: #bcb9f1;
+  background: #bcb9f1;
+  color: #5c5d97;
+}
+[class*=btn-ghost][class*=btn-ghost-eggplant], [class*=btn-ghost][class*=btn-ghost-athletic] {
+  color: #9A5BC5;
+  border-color: #9A5BC5;
+}
+[class*=btn-ghost][class*=btn-ghost-eggplant]:hover, [class*=btn-ghost][class*=btn-ghost-eggplant]:focus, [class*=btn-ghost][class*=btn-ghost-athletic]:hover, [class*=btn-ghost][class*=btn-ghost-athletic]:focus {
+  border-color: #9A5BC5;
+  background: #9A5BC5;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-eggplant]:active, [class*=btn-ghost][class*=btn-ghost-athletic]:active {
+  border-color: #cdade2;
+  background: #cdade2;
+  color: #6d5288;
+}
+[class*=btn-ghost][class*=btn-ghost-cerise], [class*=btn-ghost][class*=btn-ghost-academic] {
+  color: #e6389b;
+  border-color: #e6389b;
+}
+[class*=btn-ghost][class*=btn-ghost-cerise]:hover, [class*=btn-ghost][class*=btn-ghost-cerise]:focus, [class*=btn-ghost][class*=btn-ghost-academic]:hover, [class*=btn-ghost][class*=btn-ghost-academic]:focus {
+  border-color: #e6389b;
+  background: #e6389b;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-cerise]:active, [class*=btn-ghost][class*=btn-ghost-academic]:active {
+  border-color: #f39ccd;
+  background: #f39ccd;
+  color: #934073;
+}
+[class*=btn-ghost][class*=btn-ghost-fb] {
+  color: #3b5998;
+  border-color: #3b5998;
+}
+[class*=btn-ghost][class*=btn-ghost-fb]:hover, [class*=btn-ghost][class*=btn-ghost-fb]:focus {
+  border-color: #3b5998;
+  background: #3b5998;
+  color: white;
+}
+[class*=btn-ghost][class*=btn-ghost-fb]:active {
+  border-color: #9daccc;
+  background: #9daccc;
+  color: #3e5172;
+}
+
+body {
+  margin: 0;
+}
+
+main.pen-desc {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #40484B;
+}
+main.pen-desc h1 {
+  margin: 0;
+  color: white;
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 600;
+  font-size: 10vw;
+  line-height: 1;
+}
+
+.checkbox-container, .radio-container {
+  -ms-box-orient: horizontal;
+  display: -moz-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.checkbox-container div, .radio-container div {
+  position: relative;
+}
+.checkbox-container div input:not([text]), .radio-container div input:not([text]) {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.checkbox-container div span, .radio-container div span {
+  display: block;
+  background: #40484B;
+}
+.checkbox-container label, .radio-container label {
+  padding-left: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.checkbox-container div span {
+  border-radius: 3px;
+  width: 32px;
+  height: 32px;
+}
+.checkbox-container div span svg {
+  fill: none;
+  stroke: #6f7d82;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  padding: 4px;
+  width: 100%;
+  height: 100%;
+}
+.checkbox-container div input:checked + span {
+  background: #69B3A5;
+}
+.checkbox-container div input:checked + span svg {
+  stroke: white;
+}
+.checkbox-container.small div span {
+  width: 20px;
+  height: 20px;
+}
+.checkbox-container.small label {
+  font-size: 16px;
+}
+
+.small .checkbox-container div span {
+  width: 20px;
+  height: 20px;
+}
+.small .checkbox-container label {
+  font-size: 16px;
+}
+
+.checkbox-shamrock input:checked + span {
+  background: #69B3A5 !important;
+}
+
+.checkbox-robin input:checked + span {
+  background: #2BB3B8 !important;
+}
+
+.checkbox-lake input:checked + span {
+  background: #50A5DD !important;
+}
+
+.checkbox-moxie input:checked + span {
+  background: #43cb9d !important;
+}
+
+.checkbox-crimson input:checked + span {
+  background: #d3242c !important;
+}
+
+.checkbox-auburn input:checked + span, .checkbox-delivery input:checked + span {
+  background: #F04F54 !important;
+}
+
+.checkbox-orange input:checked + span, .checkbox-freelancing input:checked + span {
+  background: #E5753C !important;
+}
+
+.checkbox-gold input:checked + span, .checkbox-baking input:checked + span {
+  background: #F6C64E !important;
+}
+
+.checkbox-moola input:checked + span, .checkbox-photography input:checked + span {
+  background: #81B566 !important;
+}
+
+.checkbox-azure input:checked + span, .checkbox-tech input:checked + span {
+  background: #55A4B7 !important;
+}
+
+.checkbox-cobalt input:checked + span, .checkbox-household input:checked + span {
+  background: #7872e3 !important;
+}
+
+.checkbox-eggplant input:checked + span, .checkbox-athletic input:checked + span {
+  background: #9A5BC5 !important;
+}
+
+.checkbox-cerise input:checked + span, .checkbox-academic input:checked + span {
+  background: #e6389b !important;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  perspective: 1000;
+  background: #2B3234;
+  color: white;
+  font-family: "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+body > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+*:focus {
+  outline: none;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  padding: 0;
+}
+
+body > div > ul {
+  -ms-box-orient: horizontal;
+  display: -moz-flex;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 15px;
+}
+body > div > ul > li {
+  -ms-box-orient: horizontal;
+  display: -moz-flex;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 15px;
+}
+body > div > ul > li .checkbox-container {
+  margin-right: 15px;
+}
+
+fieldset {
+  -ms-box-orient: horizontal;
+  display: -moz-flex;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 400px;
+  min-height: 30px;
+}
+fieldset * {
+  transition: all 150ms ease-in-out;
+}
+fieldset input {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+}
+fieldset input::-webkit-input-placeholder {
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  font-weight: 400;
+  font-size: 16px;
+}
+fieldset input:-moz-placeholder {
+  -moz-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  font-weight: 400;
+  font-size: 16px;
+}
+fieldset input::-moz-placeholder {
+  -moz-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  font-weight: 400;
+  font-size: 16px;
+}
+fieldset input:-ms-input-placeholder {
+  -ms-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.input-border {
+  position: relative;
+  z-index: 9;
+  background: none;
+  width: calc(100% - 52px);
+  padding: 15px 0 15px 52px;
+  transition: all 300ms linear;
+}
+.input-border:focus::-moz-selection {
+  background: white;
+  color: #40484B;
+}
+.input-border:focus::selection {
+  background: white;
+  color: #40484B;
+}
+.input-border:focus::-moz-selection {
+  background: white;
+  color: #40484B;
+}
+.input-border.light {
+  color: white;
+}
+.input-border.light::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+.input-border.light:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+.input-border.light::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+.input-border.light:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+.input-border.light:focus::-webkit-input-placeholder {
+  color: white;
+}
+.input-border.light:focus:-moz-placeholder {
+  color: white;
+}
+.input-border.light:focus::-moz-placeholder {
+  color: white;
+}
+.input-border.light:focus:-ms-input-placeholder {
+  color: white;
+}
+.input-border + label:not(:empty) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.input-border + label:not(:empty):before, .input-border + label:not(:empty):after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1000px;
+  transform-origin: left center;
+  transition: all 300ms ease-in-out;
+}
+.input-border + label:not(:empty):before {
+  background: white;
+  transform: scaleX(0);
+}
+.input-border + label:not(:empty) .input-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  z-index: 3;
+  top: 13px;
+  left: 13px;
+}
+.input-border + label:not(:empty) .input-icon * {
+  stroke-width: 8px;
+  stroke: #637074;
+}
+.input-border + label:not(:empty) .input-icon .template {
+  stroke-dasharray: 220.3;
+}
+.input-border + label:not(:empty) .input-icon .success-1 {
+  stroke-dasharray: 19.8;
+  opacity: 0;
+}
+.input-border + label:not(:empty) .input-icon .success-2 {
+  stroke-dasharray: 50.2;
+  opacity: 0;
+}
+.input-border + label:not(:empty) .input-icon .error-1, .input-border + label:not(:empty) .input-icon .error-2 {
+  stroke: #d3242c;
+  stroke-dasharray: 39.6;
+  opacity: 0;
+}
+.input-border + label:not(:empty) .input-icon .email {
+  transform-origin: center center;
+  stroke-dasharray: 365.6;
+}
+.input-border + label:not(:empty) .input-icon .name {
+  transform-origin: center center;
+  stroke-dasharray: 365.6;
+}
+.input-border + label:not(:empty) .input-icon.email-icon .name {
+  opacity: 0;
+}
+.input-border + label:not(:empty) .input-icon.name-icon .email {
+  opacity: 0;
+}
+.input-border + label:not(:empty) > span {
+  position: absolute;
+  top: 15px;
+  display: block;
+  font-size: 16px;
+  transition: all 250ms ease-out 300ms;
+  padding-left: 52px;
+  padding-right: 52px;
+}
+.input-border + label:not(:empty) .input {
+  z-index: 5;
+  display: flex;
+}
+.input-border + label:not(:empty) .input span {
+  display: block;
+  position: relative;
+}
+.input-border + label:not(:empty) .input span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: 2px;
+  border-radius: 1000px;
+  background: white;
+}
+.input-border + label:not(:empty) .input span:last-child {
+  margin-left: 2px;
+}
+.input-border + label:not(:empty) .input span:last-child:after {
+  display: none !important;
+}
+.input-border + label:not(:empty) a {
+  transition: all 150ms ease-in-out;
+  transform-origin: center center;
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  z-index: 4;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
+  opacity: 0.75;
+}
+.input-border + label:not(:empty) a svg {
+  transform-origin: center center;
+  transform: rotate(45deg);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.input-border + label:not(:empty) a svg * {
+  stroke-width: 8px;
+}
+.input-border + label:not(:empty) a svg circle {
+  stroke: white;
+  fill: white;
+}
+.input-border + label:not(:empty) a svg path {
+  stroke: #40484B;
+}
+.input-border + label:not(:empty) a:hover, .input-border + label:not(:empty) a:focus {
+  opacity: 1 !important;
+}
+.input-border + label:not(:empty) a:active svg circle {
+  fill: rgba(255, 255, 255, 0.2);
+}
+.input-border + label:not(:empty) a:active svg path {
+  stroke: white;
+}
+.input-border + label:not(:empty) > div {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  transform: rotateX(90deg);
+  transition: all 300ms linear;
+  transform-origin: center bottom;
+  opacity: 0;
+}
+.input-border + label:not(:empty) > div div, .input-border + label:not(:empty) > div div:before, .input-border + label:not(:empty) > div div:after {
+  position: absolute;
+}
+.input-border + label:not(:empty) > div div:after, .input-border + label:not(:empty) > div div:before {
+  border-radius: 1000px;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scaleX(0);
+  background: white;
+}
+.input-border + label:not(:empty) > div div:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+.input-border + label:not(:empty) > div div:nth-child(1):before, .input-border + label:not(:empty) > div div:nth-child(1):after {
+  transform-origin: right center;
+  transition: all 300ms ease-in-out 750ms;
+}
+.input-border + label:not(:empty) > div div:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+}
+.input-border + label:not(:empty) > div div:nth-child(2):before, .input-border + label:not(:empty) > div div:nth-child(2):after {
+  transform-origin: center bottom;
+  transition: all 100ms ease-in-out 650ms;
+}
+.input-border + label:not(:empty) > div div:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+}
+.input-border + label:not(:empty) > div div:nth-child(3):before, .input-border + label:not(:empty) > div div:nth-child(3):after {
+  transform-origin: left center;
+  transition: all 300ms ease-in-out 500ms;
+}
+.input-border + label:not(:empty) > div div:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+}
+.input-border + label:not(:empty) > div div:nth-child(4):before, .input-border + label:not(:empty) > div div:nth-child(4):after {
+  transform-origin: center top;
+  transition: all 100ms ease-in-out 400ms;
+}
+
+.state-hover + label:not(:empty) .label, .state-focus + label:not(:empty) .label {
+  transform: translateY(-24px);
+  font-size: 12px;
+}
+
+.state-hover + label:not(:empty) a {
+  transform: rotate(-180deg);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.state-focus + label:not(:empty) a {
+  opacity: 0.5;
+}
+.state-focus + label:not(:empty) .input span:after {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.state-focus + label:not(:empty) .input span:last-child {
+  opacity: 0;
+}
+
+.state-disabled + label:not(:empty) a {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.state-typing + label:not(:empty):before, .state-typing + label:not(:empty):after, .state-valid + label:not(:empty):before, .state-valid + label:not(:empty):after, .state-invalid + label:not(:empty):before, .state-invalid + label:not(:empty):after, .state-typing-valid + label:not(:empty):before, .state-typing-valid + label:not(:empty):after, .state-typing-invalid + label:not(:empty):before, .state-typing-invalid + label:not(:empty):after, .state-blur + label:not(:empty):before, .state-blur + label:not(:empty):after, .state-selected + label:not(:empty):before, .state-selected + label:not(:empty):after, .state-invalid-clear + label:not(:empty):before, .state-invalid-clear + label:not(:empty):after {
+  opacity: 0;
+}
+.state-typing + label:not(:empty) .input-icon *, .state-valid + label:not(:empty) .input-icon *, .state-invalid + label:not(:empty) .input-icon *, .state-typing-valid + label:not(:empty) .input-icon *, .state-typing-invalid + label:not(:empty) .input-icon *, .state-blur + label:not(:empty) .input-icon *, .state-selected + label:not(:empty) .input-icon *, .state-invalid-clear + label:not(:empty) .input-icon * {
+  stroke: white;
+}
+.state-typing + label:not(:empty) .input-icon .success-1, .state-valid + label:not(:empty) .input-icon .success-1, .state-invalid + label:not(:empty) .input-icon .success-1, .state-typing-valid + label:not(:empty) .input-icon .success-1, .state-typing-invalid + label:not(:empty) .input-icon .success-1, .state-blur + label:not(:empty) .input-icon .success-1, .state-selected + label:not(:empty) .input-icon .success-1, .state-invalid-clear + label:not(:empty) .input-icon .success-1 {
+  transition: stroke-dashoffset 250ms ease-out 250ms, opacity 25ms ease 250ms, stroke 250ms ease-out 500ms;
+}
+.state-typing + label:not(:empty) .input-icon .success-2, .state-valid + label:not(:empty) .input-icon .success-2, .state-invalid + label:not(:empty) .input-icon .success-2, .state-typing-valid + label:not(:empty) .input-icon .success-2, .state-typing-invalid + label:not(:empty) .input-icon .success-2, .state-blur + label:not(:empty) .input-icon .success-2, .state-selected + label:not(:empty) .input-icon .success-2, .state-invalid-clear + label:not(:empty) .input-icon .success-2 {
+  transition: stroke-dashoffset 500ms ease-out, opacity 25ms ease, stroke 250ms ease-out 500ms;
+}
+.state-typing + label:not(:empty) .input-icon .email, .state-typing + label:not(:empty) .input-icon .name, .state-valid + label:not(:empty) .input-icon .email, .state-valid + label:not(:empty) .input-icon .name, .state-invalid + label:not(:empty) .input-icon .email, .state-invalid + label:not(:empty) .input-icon .name, .state-typing-valid + label:not(:empty) .input-icon .email, .state-typing-valid + label:not(:empty) .input-icon .name, .state-typing-invalid + label:not(:empty) .input-icon .email, .state-typing-invalid + label:not(:empty) .input-icon .name, .state-blur + label:not(:empty) .input-icon .email, .state-blur + label:not(:empty) .input-icon .name, .state-selected + label:not(:empty) .input-icon .email, .state-selected + label:not(:empty) .input-icon .name, .state-invalid-clear + label:not(:empty) .input-icon .email, .state-invalid-clear + label:not(:empty) .input-icon .name {
+  transition: stroke-dashoffset 1000ms ease-out 750ms, transform 500ms ease-out 250ms, stroke 250ms ease-out 500ms;
+}
+.state-typing + label:not(:empty) .label, .state-valid + label:not(:empty) .label, .state-invalid + label:not(:empty) .label, .state-typing-valid + label:not(:empty) .label, .state-typing-invalid + label:not(:empty) .label, .state-blur + label:not(:empty) .label, .state-selected + label:not(:empty) .label, .state-invalid-clear + label:not(:empty) .label {
+  transform: translateY(-36px);
+  font-size: 12px;
+}
+.state-typing + label:not(:empty) > div, .state-valid + label:not(:empty) > div, .state-invalid + label:not(:empty) > div, .state-typing-valid + label:not(:empty) > div, .state-typing-invalid + label:not(:empty) > div, .state-blur + label:not(:empty) > div, .state-selected + label:not(:empty) > div, .state-invalid-clear + label:not(:empty) > div {
+  transform-origin: center bottom;
+  transform: rotateX(0);
+  opacity: 1;
+}
+.state-typing + label:not(:empty) > div div:before, .state-valid + label:not(:empty) > div div:before, .state-invalid + label:not(:empty) > div div:before, .state-typing-valid + label:not(:empty) > div div:before, .state-typing-invalid + label:not(:empty) > div div:before, .state-blur + label:not(:empty) > div div:before, .state-selected + label:not(:empty) > div div:before, .state-invalid-clear + label:not(:empty) > div div:before {
+  opacity: 0.1;
+  transform: none;
+}
+
+.state-typing + label:not(:empty) > div div:after {
+  opacity: 1;
+  transform: none;
+}
+
+.state-typing-valid + label:not(:empty) .input span:last-child, .state-typing-invalid + label:not(:empty) .input span:last-child, .state-blur + label:not(:empty) .input span:last-child, .state-selected + label:not(:empty) .input span:last-child, .state-invalid-clear + label:not(:empty) .input span:last-child {
+  opacity: 1;
+  -webkit-animation: opacity 1000ms infinite alternate;
+          animation: opacity 1000ms infinite alternate;
+}
+
+.state-typing + label:not(:empty) .input span {
+  opacity: 0;
+}
+.state-typing + label:not(:empty) .input span:after {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.state-typing + label:not(:empty) .input .char1 {
+  transition: all 150ms ease-in-out 100ms;
+  -webkit-animation-delay: 100ms !important;
+          animation-delay: 100ms !important;
+}
+.state-typing + label:not(:empty) .input .char1:after {
+  transition: all 150ms ease-in-out 100ms;
+}
+.state-typing + label:not(:empty) .input .char2 {
+  transition: all 150ms ease-in-out 200ms;
+  -webkit-animation-delay: 200ms !important;
+          animation-delay: 200ms !important;
+}
+.state-typing + label:not(:empty) .input .char2:after {
+  transition: all 150ms ease-in-out 200ms;
+}
+.state-typing + label:not(:empty) .input .char3 {
+  transition: all 150ms ease-in-out 300ms;
+  -webkit-animation-delay: 300ms !important;
+          animation-delay: 300ms !important;
+}
+.state-typing + label:not(:empty) .input .char3:after {
+  transition: all 150ms ease-in-out 300ms;
+}
+.state-typing + label:not(:empty) .input .char4 {
+  transition: all 150ms ease-in-out 400ms;
+  -webkit-animation-delay: 400ms !important;
+          animation-delay: 400ms !important;
+}
+.state-typing + label:not(:empty) .input .char4:after {
+  transition: all 150ms ease-in-out 400ms;
+}
+.state-typing + label:not(:empty) .input .char5 {
+  transition: all 150ms ease-in-out 500ms;
+  -webkit-animation-delay: 500ms !important;
+          animation-delay: 500ms !important;
+}
+.state-typing + label:not(:empty) .input .char5:after {
+  transition: all 150ms ease-in-out 500ms;
+}
+.state-typing + label:not(:empty) .input .char6 {
+  transition: all 150ms ease-in-out 600ms;
+  -webkit-animation-delay: 600ms !important;
+          animation-delay: 600ms !important;
+}
+.state-typing + label:not(:empty) .input .char6:after {
+  transition: all 150ms ease-in-out 600ms;
+}
+.state-typing + label:not(:empty) .input .char7 {
+  transition: all 150ms ease-in-out 700ms;
+  -webkit-animation-delay: 700ms !important;
+          animation-delay: 700ms !important;
+}
+.state-typing + label:not(:empty) .input .char7:after {
+  transition: all 150ms ease-in-out 700ms;
+}
+.state-typing + label:not(:empty) .input .char8 {
+  transition: all 150ms ease-in-out 800ms;
+  -webkit-animation-delay: 800ms !important;
+          animation-delay: 800ms !important;
+}
+.state-typing + label:not(:empty) .input .char8:after {
+  transition: all 150ms ease-in-out 800ms;
+}
+.state-typing + label:not(:empty) .input .char9 {
+  transition: all 150ms ease-in-out 900ms;
+  -webkit-animation-delay: 900ms !important;
+          animation-delay: 900ms !important;
+}
+.state-typing + label:not(:empty) .input .char9:after {
+  transition: all 150ms ease-in-out 900ms;
+}
+.state-typing + label:not(:empty) .input .char10 {
+  transition: all 150ms ease-in-out 1000ms;
+  -webkit-animation-delay: 1000ms !important;
+          animation-delay: 1000ms !important;
+}
+.state-typing + label:not(:empty) .input .char10:after {
+  transition: all 150ms ease-in-out 1000ms;
+}
+.state-typing + label:not(:empty) .input .char11 {
+  transition: all 150ms ease-in-out 1100ms;
+  -webkit-animation-delay: 1100ms !important;
+          animation-delay: 1100ms !important;
+}
+.state-typing + label:not(:empty) .input .char11:after {
+  transition: all 150ms ease-in-out 1100ms;
+}
+.state-typing + label:not(:empty) .input .char12 {
+  transition: all 150ms ease-in-out 1200ms;
+  -webkit-animation-delay: 1200ms !important;
+          animation-delay: 1200ms !important;
+}
+.state-typing + label:not(:empty) .input .char12:after {
+  transition: all 150ms ease-in-out 1200ms;
+}
+.state-typing + label:not(:empty) .input .char13 {
+  transition: all 150ms ease-in-out 1300ms;
+  -webkit-animation-delay: 1300ms !important;
+          animation-delay: 1300ms !important;
+}
+.state-typing + label:not(:empty) .input .char13:after {
+  transition: all 150ms ease-in-out 1300ms;
+}
+.state-typing + label:not(:empty) .input .char14 {
+  transition: all 150ms ease-in-out 1400ms;
+  -webkit-animation-delay: 1400ms !important;
+          animation-delay: 1400ms !important;
+}
+.state-typing + label:not(:empty) .input .char14:after {
+  transition: all 150ms ease-in-out 1400ms;
+}
+.state-typing + label:not(:empty) .input .char15 {
+  transition: all 150ms ease-in-out 1500ms;
+  -webkit-animation-delay: 1500ms !important;
+          animation-delay: 1500ms !important;
+}
+.state-typing + label:not(:empty) .input .char15:after {
+  transition: all 150ms ease-in-out 1500ms;
+}
+.state-typing + label:not(:empty) .input .char16 {
+  transition: all 150ms ease-in-out 1600ms;
+  -webkit-animation-delay: 1600ms !important;
+          animation-delay: 1600ms !important;
+}
+.state-typing + label:not(:empty) .input .char16:after {
+  transition: all 150ms ease-in-out 1600ms;
+}
+.state-typing + label:not(:empty) .input .char17 {
+  transition: all 150ms ease-in-out 1700ms;
+  -webkit-animation-delay: 1700ms !important;
+          animation-delay: 1700ms !important;
+}
+.state-typing + label:not(:empty) .input .char17:after {
+  transition: all 150ms ease-in-out 1700ms;
+}
+.state-typing + label:not(:empty) .input .char18 {
+  transition: all 150ms ease-in-out 1800ms;
+  -webkit-animation-delay: 1800ms !important;
+          animation-delay: 1800ms !important;
+}
+.state-typing + label:not(:empty) .input .char18:after {
+  transition: all 150ms ease-in-out 1800ms;
+}
+.state-typing + label:not(:empty) .input .char19 {
+  transition: all 150ms ease-in-out 1900ms;
+  -webkit-animation-delay: 1900ms !important;
+          animation-delay: 1900ms !important;
+}
+.state-typing + label:not(:empty) .input .char19:after {
+  transition: all 150ms ease-in-out 1900ms;
+}
+.state-typing + label:not(:empty) .input .char20 {
+  transition: all 150ms ease-in-out 2000ms;
+  -webkit-animation-delay: 2000ms !important;
+          animation-delay: 2000ms !important;
+}
+.state-typing + label:not(:empty) .input .char20:after {
+  transition: all 150ms ease-in-out 2000ms;
+}
+.state-typing + label:not(:empty) .input .char21 {
+  transition: all 150ms ease-in-out 2100ms;
+  -webkit-animation-delay: 2100ms !important;
+          animation-delay: 2100ms !important;
+}
+.state-typing + label:not(:empty) .input .char21:after {
+  transition: all 150ms ease-in-out 2100ms;
+}
+.state-typing + label:not(:empty) .input .char22 {
+  transition: all 150ms ease-in-out 2200ms;
+  -webkit-animation-delay: 2200ms !important;
+          animation-delay: 2200ms !important;
+}
+.state-typing + label:not(:empty) .input .char22:after {
+  transition: all 150ms ease-in-out 2200ms;
+}
+.state-typing + label:not(:empty) .input .char23 {
+  transition: all 150ms ease-in-out 2300ms;
+  -webkit-animation-delay: 2300ms !important;
+          animation-delay: 2300ms !important;
+}
+.state-typing + label:not(:empty) .input .char23:after {
+  transition: all 150ms ease-in-out 2300ms;
+}
+.state-typing + label:not(:empty) .input .char24 {
+  transition: all 150ms ease-in-out 2400ms;
+  -webkit-animation-delay: 2400ms !important;
+          animation-delay: 2400ms !important;
+}
+.state-typing + label:not(:empty) .input .char24:after {
+  transition: all 150ms ease-in-out 2400ms;
+}
+.state-typing + label:not(:empty) .input .char25 {
+  transition: all 150ms ease-in-out 2500ms;
+  -webkit-animation-delay: 2500ms !important;
+          animation-delay: 2500ms !important;
+}
+.state-typing + label:not(:empty) .input .char25:after {
+  transition: all 150ms ease-in-out 2500ms;
+}
+.state-typing + label:not(:empty) .input .char26 {
+  transition: all 150ms ease-in-out 2600ms;
+  -webkit-animation-delay: 2600ms !important;
+          animation-delay: 2600ms !important;
+}
+.state-typing + label:not(:empty) .input .char26:after {
+  transition: all 150ms ease-in-out 2600ms;
+}
+.state-typing + label:not(:empty) .input .char27 {
+  transition: all 150ms ease-in-out 2700ms;
+  -webkit-animation-delay: 2700ms !important;
+          animation-delay: 2700ms !important;
+}
+.state-typing + label:not(:empty) .input .char27:after {
+  transition: all 150ms ease-in-out 2700ms;
+}
+
+.state-invalid-clear + label:not(:empty) a svg circle {
+  fill: #d3242c;
+  stroke: #d3242c;
+}
+.state-invalid-clear + label:not(:empty) a svg path {
+  stroke: white;
+}
+.state-invalid-clear + label:not(:empty) .input-icon .error-1, .state-invalid-clear + label:not(:empty) .input-icon .error-2, .state-invalid-clear + label:not(:empty) .input-icon .email, .state-invalid-clear + label:not(:empty) .input-icon .name {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #d3242c;
+}
+.state-invalid-clear + label:not(:empty) .input-icon .email, .state-invalid-clear + label:not(:empty) .input-icon .name {
+  stroke-dashoffset: -145.3;
+  transform: rotate(-67.5deg);
+}
+.state-invalid-clear + label:not(:empty) .label {
+  color: #d3242c;
+}
+.state-invalid-clear + label:not(:empty) .input span {
+  transition: all 150ms cubic-bezier(0.25, -0.5, 0.75, 1.5);
+}
+.state-invalid-clear + label:not(:empty) .input span:after {
+  transition: all 150ms ease-in-out 150ms;
+}
+.state-invalid-clear + label:not(:empty) > div {
+  background: rgba(211, 36, 44, 0.1) !important;
+}
+.state-invalid-clear + label:not(:empty) > div div:after {
+  background: #d3242c !important;
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+}
+
+.activate.state-hover + label:not(:empty):before {
+  transform: scaleX(1);
+}
+.activate.state-hover + label:not(:empty) .input-icon * {
+  stroke: white;
+}
+.activate.state-hover + label:not(:empty) a {
+  transform: none;
+  opacity: 0.5;
+  visibility: visible;
+}
+.activate.state-typing + label:not(:empty) .input span {
+  opacity: 1;
+}
+.activate.state-typing + label:not(:empty) .input span:last-child {
+  opacity: 1;
+  -webkit-animation: opacity 1000ms infinite alternate;
+          animation: opacity 1000ms infinite alternate;
+}
+.activate.state-typing + label:not(:empty) .input span:after {
+  transform: scaleX(1);
+}
+.activate.state-typing + label:not(:empty) > div div:after {
+  transition: all 150ms ease-in-out !important;
+  opacity: 0;
+}
+.activate.state-valid + label:not(:empty) a svg circle, .activate.state-typing-valid + label:not(:empty) a svg circle {
+  transition: all 150ms ease-in-out 500ms;
+  fill: #43cb9d;
+  stroke: #43cb9d;
+}
+.activate.state-valid + label:not(:empty) a svg path, .activate.state-typing-valid + label:not(:empty) a svg path {
+  transition: all 150ms ease-in-out 500ms;
+  stroke: white;
+}
+.activate.state-valid + label:not(:empty) .input-icon *, .activate.state-typing-valid + label:not(:empty) .input-icon * {
+  stroke: #43cb9d;
+}
+.activate.state-valid + label:not(:empty) .input-icon .success-1, .activate.state-valid + label:not(:empty) .input-icon .success-2, .activate.state-typing-valid + label:not(:empty) .input-icon .success-1, .activate.state-typing-valid + label:not(:empty) .input-icon .success-2 {
+  opacity: 1;
+}
+.activate.state-valid + label:not(:empty) .input-icon .success-1, .activate.state-typing-valid + label:not(:empty) .input-icon .success-1 {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 250ms ease-out 500ms, opacity 25ms ease 500ms, stroke 250ms ease-out 250ms;
+}
+.activate.state-valid + label:not(:empty) .input-icon .success-2, .activate.state-typing-valid + label:not(:empty) .input-icon .success-2 {
+  stroke-dashoffset: 4;
+  transition: stroke-dashoffset 500ms cubic-bezier(0.17, 0.67, 0.78, 1.37) 750ms, opacity 25ms ease 750ms, stroke 250ms ease-out 250ms;
+}
+.activate.state-valid + label:not(:empty) .input-icon .email, .activate.state-valid + label:not(:empty) .input-icon .name, .activate.state-typing-valid + label:not(:empty) .input-icon .email, .activate.state-typing-valid + label:not(:empty) .input-icon .name {
+  stroke-dashoffset: -145.3;
+  transform: rotate(-67.5deg);
+  transition: stroke-dashoffset 1000ms ease-out, transform 500ms ease-out 500ms, stroke 250ms ease-out 250ms;
+}
+.activate.state-valid + label:not(:empty) .label, .activate.state-typing-valid + label:not(:empty) .label {
+  color: #43cb9d;
+}
+.activate.state-valid + label:not(:empty) > div, .activate.state-typing-valid + label:not(:empty) > div {
+  background: rgba(67, 203, 157, 0.1);
+}
+.activate.state-valid + label:not(:empty) > div div:after, .activate.state-typing-valid + label:not(:empty) > div div:after {
+  background: #43cb9d;
+  opacity: 1;
+  transform: scaleX(1);
+}
+.activate.state-invalid, .activate.state-typing-invalid {
+  -webkit-animation: shake-vertical 500ms ease-in-out 500ms both;
+          animation: shake-vertical 500ms ease-in-out 500ms both;
+}
+.activate.state-invalid + label:not(:empty), .activate.state-typing-invalid + label:not(:empty) {
+  -webkit-animation: shake-vertical 500ms ease-in-out 500ms both;
+          animation: shake-vertical 500ms ease-in-out 500ms both;
+}
+.activate.state-invalid + label:not(:empty) a svg circle, .activate.state-typing-invalid + label:not(:empty) a svg circle {
+  transition: all 150ms ease-in-out 500ms;
+  fill: #d3242c;
+  stroke: #d3242c;
+}
+.activate.state-invalid + label:not(:empty) a svg path, .activate.state-typing-invalid + label:not(:empty) a svg path {
+  transition: all 150ms ease-in-out 500ms;
+  stroke: white;
+}
+.activate.state-invalid + label:not(:empty) .input-icon *, .activate.state-typing-invalid + label:not(:empty) .input-icon * {
+  stroke: #d3242c;
+}
+.activate.state-invalid + label:not(:empty) .input-icon .error-1, .activate.state-invalid + label:not(:empty) .input-icon .error-2, .activate.state-typing-invalid + label:not(:empty) .input-icon .error-1, .activate.state-typing-invalid + label:not(:empty) .input-icon .error-2 {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+.activate.state-invalid + label:not(:empty) .input-icon .error-1, .activate.state-typing-invalid + label:not(:empty) .input-icon .error-1 {
+  transition: stroke-dashoffset 350ms ease-out 500ms, opacity 35ms ease 500ms, stroke 250ms ease-out 250ms;
+}
+.activate.state-invalid + label:not(:empty) .input-icon .error-2, .activate.state-typing-invalid + label:not(:empty) .input-icon .error-2 {
+  transition: stroke-dashoffset 350ms ease-out 750ms, opacity 35ms ease 750ms, stroke 250ms ease-out 250ms;
+}
+.activate.state-invalid + label:not(:empty) .input-icon .email, .activate.state-invalid + label:not(:empty) .input-icon .name, .activate.state-typing-invalid + label:not(:empty) .input-icon .email, .activate.state-typing-invalid + label:not(:empty) .input-icon .name {
+  stroke-dashoffset: -145.3;
+  transform: rotate(-67.5deg);
+  transition: stroke-dashoffset 1000ms ease-out, transform 500ms ease-out 500ms, stroke 250ms ease-out 250ms;
+}
+.activate.state-invalid + label:not(:empty) .label, .activate.state-typing-invalid + label:not(:empty) .label {
+  color: #d3242c;
+}
+.activate.state-invalid + label:not(:empty) > div, .activate.state-typing-invalid + label:not(:empty) > div {
+  background: rgba(211, 36, 44, 0.1);
+}
+.activate.state-invalid + label:not(:empty) > div div:after, .activate.state-typing-invalid + label:not(:empty) > div div:after {
+  background: #d3242c;
+  opacity: 1;
+  transform: none;
+}
+.activate.state-disabled + label:not(:empty) {
+  opacity: 0.5;
+}
+.activate.state-disabled + label:not(:empty) .label {
+  opacity: 0.75;
+}
+.activate.state-blur + label:not(:empty):after {
+  transition: all 150ms ease-in-out 1000ms;
+  opacity: 1;
+}
+.activate.state-blur + label:not(:empty):before {
+  transition: all 150ms ease-in-out 1000ms;
+  opacity: 0;
+}
+.activate.state-blur + label:not(:empty) a {
+  opacity: 0;
+}
+.activate.state-blur + label:not(:empty) .input-icon * {
+  stroke: #637074;
+  transition: all 500ms ease 700ms;
+}
+.activate.state-blur + label:not(:empty) .label {
+  transition: all 150ms ease-in-out 1000ms;
+  transform: translateY(-24px);
+}
+.activate.state-blur + label:not(:empty) .input span:after {
+  transition: all 150ms ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.activate.state-blur + label:not(:empty) .input span:last-child {
+  opacity: 0;
+  -webkit-animation: none;
+          animation: none;
+}
+.activate.state-blur + label:not(:empty) > div {
+  transform-origin: center bottom;
+  transform: rotateX(90deg);
+  opacity: 0;
+  transition: all 1000ms ease-out 1000ms;
+}
+.activate.state-blur + label:not(:empty) > div div:before {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.activate.state-blur + label:not(:empty) > div div:nth-child(1):before, .activate.state-blur + label:not(:empty) > div div:nth-child(1):after {
+  transition: all 100ms ease-in-out 400ms;
+  transform: scaleX(0);
+}
+.activate.state-blur + label:not(:empty) > div div:nth-child(2):before, .activate.state-blur + label:not(:empty) > div div:nth-child(2):after {
+  transition: all 100ms ease-in-out 500ms;
+  transform: scaleY(0);
+}
+.activate.state-blur + label:not(:empty) > div div:nth-child(3):before, .activate.state-blur + label:not(:empty) > div div:nth-child(3):after {
+  transition: all 100ms ease-in-out 600ms;
+  transform: scaleX(0);
+}
+.activate.state-blur + label:not(:empty) > div div:nth-child(4):before, .activate.state-blur + label:not(:empty) > div div:nth-child(4):after {
+  transition: all 100ms ease-in-out 700ms;
+  transform: scaleY(0);
+}
+.activate.state-focus + label:not(:empty) a {
+  opacity: 0.75;
+}
+.activate.state-focus + label:not(:empty):before, .activate.state-focus + label:not(:empty):after {
+  opacity: 0;
+}
+.activate.state-focus + label:not(:empty) .input-icon * {
+  stroke: white;
+}
+.activate.state-focus + label:not(:empty) .label {
+  transform: translateY(-36px);
+}
+.activate.state-focus + label:not(:empty) .input span:last-child {
+  opacity: 1;
+  -webkit-animation: opacity 1000ms infinite alternate;
+          animation: opacity 1000ms infinite alternate;
+}
+.activate.state-focus + label:not(:empty) > div {
+  transform-origin: center bottom;
+  transform: rotateX(0);
+  opacity: 1;
+  transition: all 1000ms ease;
+}
+.activate.state-focus + label:not(:empty) > div div:before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.activate.state-selected + label:not(:empty) .input {
+  position: relative;
+}
+.activate.state-selected + label:not(:empty) .input span {
+  background: white;
+  color: #637074;
+}
+.activate.state-selected + label:not(:empty) .input span:last-child {
+  opacity: 0;
+  -webkit-animation: none;
+          animation: none;
+}
+.activate.state-invalid-clear + label:not(:empty) .input span {
+  transition: all 150ms cubic-bezier(0.25, -0.5, 0.75, 1.5) 150ms;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.activate.state-invalid-clear + label:not(:empty) .input span:after {
+  transition: all 150ms ease-in-out;
+  opacity: 0;
+}
+.activate.state-invalid-clear + label:not(:empty) .input span:last-child {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes shake-vertical {
+  15%, 45%, 75% {
+    transform: translateY(-5px);
+  }
+  30%, 60% {
+    transform: translateY(5px);
+  }
+}
+@keyframes shake-vertical {
+  15%, 45%, 75% {
+    transform: translateY(-5px);
+  }
+  30%, 60% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes input-icon-success-2 {
+  0% {
+    stroke-dashoffset: 50.2;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 4;
+    opacity: 1;
+  }
+}
+@keyframes input-icon-success-2 {
+  0% {
+    stroke-dashoffset: 50.2;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 4;
+    opacity: 1;
+  }
+}

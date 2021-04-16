@@ -1,0 +1,934 @@
+.checkbox-container, .radio-container {
+	@include flex;
+	@include flex-center;
+	div {
+		position: relative;
+		input:not([text]) {
+			@include opacity(0);
+			position: absolute;
+			z-index: 12;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		span {
+			display: block;
+			background: $slate;
+		}
+	}
+	label {
+		padding-left: 15px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+}
+// checkbox inputs
+.checkbox-container {
+	div {
+		span {
+			border-radius: 3px;
+			width: 32px;
+			height: 32px;
+			svg {
+				@include svg-stroke(lighten($slate, 20%), 10);
+				padding: 4px;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		input:checked + span {
+			background: $shamrock;
+			svg {
+				stroke: white;
+			}
+		}
+	}
+	&.small {
+		div {
+			span {
+				width: 20px;
+				height: 20px;
+			}
+		}
+		label {
+			font-size: 16px;
+		}
+	}
+}
+.small .checkbox-container {
+	div {
+		span {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	label {
+		font-size: 16px;
+	}
+}
+.checkbox-shamrock {
+	input:checked + span {
+		background: $shamrock!important;
+	}
+}
+.checkbox-robin {
+	input:checked + span {
+		background: $robin!important;
+	}
+}
+.checkbox-lake {
+	input:checked + span {
+		background: $lake!important;
+	}
+}
+.checkbox-moxie {
+	input:checked + span {
+		background: $moxie!important;
+	}
+}
+.checkbox-crimson {
+	input:checked + span {
+		background: $crimson!important;
+	}
+}
+.checkbox-auburn, .checkbox-delivery {
+	input:checked + span {
+		background: $auburn!important;
+	}
+}
+.checkbox-orange, .checkbox-freelancing {
+	input:checked + span {
+		background: $orange!important;
+	}
+}
+.checkbox-gold, .checkbox-baking {
+	input:checked + span {
+		background: $gold!important;
+	}
+}
+.checkbox-moola, .checkbox-photography {
+	input:checked + span {
+		background: $moola!important;
+	}
+}
+.checkbox-azure, .checkbox-tech {
+	input:checked + span {
+		background: $azure!important;
+	}
+}
+.checkbox-cobalt, .checkbox-household {
+	input:checked + span {
+		background: $cobalt!important;
+	}
+}
+.checkbox-eggplant, .checkbox-athletic {
+	input:checked + span {
+		background: $eggplant!important;
+	}
+}
+.checkbox-cerise, .checkbox-academic {
+	input:checked + span {
+		background: $cerise!important;
+	}
+}
+
+body, html {
+	height: 100%;
+}
+body {
+	perspective: 1000;
+	background: $charcoal;
+	color: white;
+	font-family: $font;
+}
+
+body > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box!important;
+}
+*:focus {
+	outline: none;
+}
+
+input {
+	appearance: none;
+	border: 0;
+	padding: 0;
+}
+
+body > div > ul {
+	@include flex;
+	@include flex-wrap;
+	@include listless;
+	margin: 0 auto;
+	max-width: 900px;
+	padding: 15px;
+	> li {
+		@include flex;
+		@include flex-center-vertical;
+		width: 50%;
+		padding: 15px;
+		.checkbox-container {
+			margin-right: 15px;
+		}
+	}
+}
+
+fieldset {
+	@include flex;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 18px;
+	font-weight: 400;
+	width: 100%;
+	max-width: 400px;
+	min-height: 30px;
+	* {
+		transition: all 150ms ease-in-out;
+	}
+	input {
+		display: block;
+		width: 100%;
+		font-size: 16px;
+		@include placeholder {
+			transition: all 150ms ease-in-out;
+			font-weight: 400;
+			font-size: 16px;
+		}
+	}
+}
+
+.input-border {
+	position: relative;
+	z-index: 9;
+	background: none;
+	width: calc(100% - 52px);
+	padding: 15px 0 15px 52px;
+	transition: all 300ms linear;
+	&:focus {
+		&::selection {
+			background: white;
+			color: $slate;
+		}
+		&::-moz-selection {
+			background: white;
+			color: $slate;
+		}
+	}
+	&.light {
+		color: white;
+		@include placeholder {
+			color: rgba(white, .2);
+		}
+		&:focus {
+			@include placeholder {
+				color: white;
+			}
+		}
+	}
+	+ label:not(:empty) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&:before, &:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: rgba(white, .2);
+			border-radius: 1000px;
+			transform-origin: left center;
+			transition: all 300ms ease-in-out;
+		}
+		&:before {
+			background: white;
+			transform: scaleX(0);
+		}
+		.input-icon {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			z-index: 3;
+			top: 13px;
+			left: 13px;
+			* {
+				stroke-width: 8px;
+				stroke: lighten($slate, 15%);
+			}
+			.template {
+				stroke-dasharray: 220.3;
+			}
+			.success-1 {
+				stroke-dasharray: 19.8;
+				opacity: 0;
+			}
+			.success-2 {
+				stroke-dasharray: 50.2;
+				opacity: 0;
+			}
+			.error-1, .error-2 {
+				stroke: $crimson;
+				stroke-dasharray: 39.6;
+				opacity: 0;
+			}
+			.email {
+				transform-origin: center center;
+				stroke-dasharray: 365.6;
+			}
+			.name {
+				transform-origin: center center;
+				stroke-dasharray: 365.6;
+			}
+			&.email-icon {
+				.name {
+					opacity: 0;
+				}
+			}
+			&.name-icon {
+				.email {
+					opacity: 0;
+				}
+			}
+		}
+		> span {
+			position: absolute;
+			top: 15px;
+			display: block;
+			font-size: 16px;
+			transition: all 250ms ease-out 300ms;
+			padding-left: 52px;
+			padding-right: 52px;
+		}
+		.input {
+			z-index: 5;
+			display: flex;
+			span {
+				display: block;
+				position: relative;
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					bottom: -15px;
+					left: -1px;
+					width: calc(100% + 2px);
+					height: 2px;
+					border-radius: 1000px;
+					background: white;
+				}
+			}
+			span:last-child {
+				margin-left: 2px;
+				// animation: opacity 1000ms infinite alternate;
+				&:after {
+					display: none!important;
+				}
+			}
+		}
+		a {
+			transition: all 150ms ease-in-out;
+			transform-origin: center center;
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			z-index: 4;
+			top: 13px;
+			right: 13px;
+			cursor: pointer;
+			opacity: 0.75;
+			svg {
+				transform-origin: center center;
+				transform: rotate(45deg);
+				display: block;
+				width: 100%;
+				height: 100%;
+				* {
+					stroke-width: 8px;
+				}
+				circle {
+					stroke: white;
+					fill: white;
+				}
+				path {
+					stroke: $slate;
+				}
+			}
+			&:hover, &:focus {
+				opacity: 1!important;
+			}
+			&:active {
+				svg {
+					circle {
+						fill: rgba(white, .2);
+					}
+					path {
+						stroke: white;
+					}
+				}
+			}
+		}
+		> div {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(white, .2);
+			border-radius: 2px;
+			transform: rotateX(90deg);
+			transition: all 300ms linear;
+			transform-origin: center bottom;
+			opacity: 0;
+			div, div:before, div:after {
+				position: absolute;
+			}
+			div {
+				&:after, &:before {
+					@include round;
+					content: "";
+					display: block;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					transform: scaleX(0);
+					background: white;
+				}
+				&:nth-child(1) {
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 2px;
+				}
+				&:nth-child(1):before, &:nth-child(1):after {
+					transform-origin: right center;
+					transition: all 300ms ease-in-out 750ms;
+				}
+				&:nth-child(2) {
+					top: 0;
+					right: 0;
+					width: 2px;
+					height: 100%;
+				}
+				&:nth-child(2):before, &:nth-child(2):after {
+					transform-origin: center bottom;
+					transition: all 100ms ease-in-out 650ms;
+				}
+				&:nth-child(3) {
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					height: 2px;
+				}
+				&:nth-child(3):before, &:nth-child(3):after {
+					transform-origin: left center;
+					transition: all 300ms ease-in-out 500ms;
+				}
+				&:nth-child(4) {
+					bottom: 0;
+					left: 0;
+					width: 2px;
+					height: 100%;
+				}
+				&:nth-child(4):before, &:nth-child(4):after {
+					transform-origin: center top;
+					transition: all 100ms ease-in-out 400ms;
+				}
+			}
+		}
+	}
+}
+
+// EDIT HERE
+.state-hover, .state-focus {
+	+ label:not(:empty) {
+		.label {
+			transform: translateY(-24px);
+			font-size: 12px;
+		}
+	}
+}
+.state-hover {
+	+ label:not(:empty) {
+		a {
+			transform: rotate(-180deg);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+.state-focus {
+	+ label:not(:empty) {
+		a {
+			opacity: 0.5;
+		}
+		.input {
+			span {
+				&:after {
+					opacity: 0;
+					transform: translateY(100%);
+				}
+				&:last-child {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+.state-disabled {
+	+ label:not(:empty) {
+		a {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+.state-typing, .state-valid, .state-invalid, .state-typing-valid, .state-typing-invalid, .state-blur, .state-selected, .state-invalid-clear {
+	+ label:not(:empty) {
+		&:before, &:after {
+			opacity: 0;
+		}
+		.input-icon {
+			* {
+				stroke: white;
+			}
+			.success-1 {
+				transition: stroke-dashoffset 250ms ease-out 250ms, opacity 25ms ease 250ms, stroke 250ms ease-out 500ms;
+			}
+			.success-2 {
+				transition: stroke-dashoffset 500ms ease-out, opacity 25ms ease, stroke 250ms ease-out 500ms;
+			}
+			.email, .name {
+				transition: stroke-dashoffset 1000ms ease-out 750ms, transform 500ms ease-out 250ms, stroke 250ms ease-out 500ms;
+			}
+		}
+		.label {
+			transform: translateY(-36px);
+			font-size: 12px;
+		}
+		> div {
+			transform-origin: center bottom;
+			transform: rotateX(0);
+			opacity: 1;
+			div:before {
+				opacity: 0.1;
+				transform: none;
+			}
+		}
+	}
+}
+.state-typing {
+	+ label:not(:empty) {
+		> div {
+			div:after {
+				opacity: 1;
+				transform: none;
+			}
+		}
+	}
+}
+.state-typing-valid, .state-typing-invalid, .state-blur, .state-selected, .state-invalid-clear {
+	+ label:not(:empty) {
+		.input {
+			span {
+				&:last-child {
+					opacity: 1;
+					animation: opacity 1000ms infinite alternate;
+				}
+			}
+		}
+	}
+}
+.state-typing {
+	+ label:not(:empty) {
+		.input {
+			span {
+				opacity: 0;
+				&:after {
+					transform: scaleX(0);
+					transform-origin: left center;
+				}
+			}
+			@for $i from 1 through 27 {
+				.char#{$i} {
+					transition: all 150ms ease-in-out #{($i*100)}ms;
+					animation-delay: #{($i*100)}ms!important;
+					&:after {
+						transition: all 150ms ease-in-out #{($i*100)}ms;
+					}
+				}
+			}
+		}
+	}
+}
+.state-invalid-clear {
+	+ label:not(:empty) {
+		a {
+			svg {
+				circle {
+					fill: $crimson;
+					stroke: $crimson;
+				}
+				path {
+					stroke: white;
+				}
+			}
+		}
+		.input-icon {
+			.error-1, .error-2, .email, .name {
+				stroke-dashoffset: 0;
+				opacity: 1;
+				stroke: $crimson;
+			}
+			.email, .name {
+				stroke-dashoffset: -145.3;
+				transform: rotate(-67.5deg);
+			}
+		}
+		.label {
+			color: $crimson;
+		}
+		.input {
+			span {
+				transition: all 150ms cubic-bezier(.25,-0.5,.75,1.5);
+				&:after {
+					transition: all 150ms ease-in-out 150ms;
+				}
+			}
+		}
+		> div {
+			background: rgba($crimson,.1)!important;
+			div {
+				&:after {
+					background: $crimson!important;
+					opacity: 1!important;
+					transform: scaleX(1)!important;
+				}
+			}
+		}
+	}
+}
+.activate {
+	&.state-hover {
+		+ label:not(:empty) {
+			&:before {
+				transform: scaleX(1);
+			}
+			.input-icon {
+				* {
+					stroke: white;
+				}
+			}
+			a {
+				transform: none;
+				opacity: 0.5;
+				visibility: visible;
+			}
+		}
+	}
+	&.state-typing {
+		+ label:not(:empty) {
+			.input {
+				span {
+					opacity: 1;
+					&:last-child {
+						opacity: 1;
+						animation: opacity 1000ms infinite alternate;
+					}
+					&:after {
+						transform: scaleX(1);
+					}
+				}
+			}
+			> div {
+				div:after {
+					transition: all 150ms ease-in-out!important;
+					opacity: 0;
+				}
+			}
+		}
+	}
+	&.state-valid, &.state-typing-valid {
+		+ label:not(:empty) {
+			a {
+				svg {
+					circle {
+						transition: all 150ms ease-in-out 500ms;
+						fill: $moxie;
+						stroke: $moxie;
+					}
+					path {
+						transition: all 150ms ease-in-out 500ms;
+						stroke: white;
+					}
+				}
+			}
+			.input-icon {
+				* {
+					stroke: $moxie;
+				}
+				.success-1, .success-2 {
+					opacity: 1;
+				}
+				.success-1 {
+					stroke-dashoffset: 0;
+					transition: stroke-dashoffset 250ms ease-out 500ms, opacity 25ms ease 500ms, stroke 250ms ease-out 250ms;
+				}
+				.success-2 {
+					stroke-dashoffset: 4;
+					transition: stroke-dashoffset 500ms cubic-bezier(.17,.67,.78,1.37) 750ms, opacity 25ms ease 750ms, stroke 250ms ease-out 250ms;
+				}
+				.email, .name {
+					stroke-dashoffset: -145.3;
+					transform: rotate(-67.5deg);
+					transition: stroke-dashoffset 1000ms ease-out, transform 500ms ease-out 500ms, stroke 250ms ease-out 250ms;
+				}
+			}
+			.label {
+				color: $moxie;
+			}
+			> div {
+				background: rgba($moxie,.1);
+				div {
+					&:after {
+						background: $moxie;
+						opacity: 1;
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+	}
+	&.state-invalid, &.state-typing-invalid {
+		animation: shake-vertical 500ms ease-in-out 500ms both;
+		+ label:not(:empty) {
+			animation: shake-vertical 500ms ease-in-out 500ms both;
+			a {
+				svg {
+					circle {
+						transition: all 150ms ease-in-out 500ms;
+						fill: $crimson;
+						stroke: $crimson;
+					}
+					path {
+						transition: all 150ms ease-in-out 500ms;
+						stroke: white;
+					}
+				}
+			}
+			.input-icon {
+				* {
+					stroke: $crimson;
+				}
+				.error-1, .error-2 {
+					stroke-dashoffset: 0;
+					opacity: 1;
+				}
+				.error-1 {
+					transition: stroke-dashoffset 350ms ease-out 500ms, opacity 35ms ease 500ms, stroke 250ms ease-out 250ms;
+				}
+				.error-2 {
+					transition: stroke-dashoffset 350ms ease-out 750ms, opacity 35ms ease 750ms, stroke 250ms ease-out 250ms;
+				}
+				.email, .name {
+					stroke-dashoffset: -145.3;
+					transform: rotate(-67.5deg);
+					transition: stroke-dashoffset 1000ms ease-out, transform 500ms ease-out 500ms, stroke 250ms ease-out 250ms;
+				}
+			}
+			.label {
+				color: $crimson;
+			}
+			> div {
+				background: rgba($crimson,.1);
+				div {
+					&:after {
+						background: $crimson;
+						opacity: 1;
+						transform: none;
+					}
+				}
+			}
+		}
+	}
+	&.state-disabled {
+		+ label:not(:empty) {
+			opacity: 0.5;
+			.label {
+				opacity: 0.75;
+			}
+		}
+	}
+	&.state-blur {
+		+ label:not(:empty) {
+			&:after {
+				transition: all 150ms ease-in-out 1000ms;
+				opacity: 1;
+			}
+			&:before {
+				transition: all 150ms ease-in-out 1000ms;
+				opacity: 0;
+			}
+			a {
+				opacity: 0;
+			}
+			.input-icon {
+				* {
+					stroke: lighten($slate, 15%);
+					transition: all 500ms ease 700ms;
+				}
+			}
+			.label {
+				transition: all 150ms ease-in-out 1000ms;
+				transform: translateY(-24px);
+			}
+			.input {
+				span {
+					&:after {
+						transition: all 150ms ease-in-out;
+						opacity: 0;
+						transform: translateY(100%);
+					}
+					&:last-child {
+						opacity: 0;
+						animation: none;
+					}
+				}
+			}
+			> div {
+				transform-origin: center bottom;
+				transform: rotateX(90deg);
+				opacity: 0;
+				transition: all 1000ms ease-out 1000ms;
+				div {
+					&:before {
+						opacity: 0;
+						transform: scaleX(0);
+					}
+					&:nth-child(1):before, &:nth-child(1):after {
+						transition: all 100ms ease-in-out 400ms;
+						transform: scaleX(0);
+					}
+					&:nth-child(2):before, &:nth-child(2):after {
+						transition: all 100ms ease-in-out 500ms;
+						transform: scaleY(0);
+					}
+					&:nth-child(3):before, &:nth-child(3):after {
+						transition: all 100ms ease-in-out 600ms;
+						transform: scaleX(0);
+					}
+					&:nth-child(4):before, &:nth-child(4):after {
+						transition: all 100ms ease-in-out 700ms;
+						transform: scaleY(0);
+					}
+				}
+			}
+		}
+	}
+	&.state-focus {
+		+ label:not(:empty) {
+			a {
+				opacity: 0.75;
+			}
+			&:before, &:after {
+				opacity: 0;
+			}
+			.input-icon {
+				* {
+					stroke: white;
+				}
+			}
+			.label {
+				transform: translateY(-36px);
+			}
+			.input {
+				span {
+					&:last-child {
+						opacity: 1;
+						animation: opacity 1000ms infinite alternate;
+					}
+				}
+			}
+			> div {
+				transform-origin: center bottom;
+				transform: rotateX(0);
+				opacity: 1;
+				transition: all 1000ms ease;
+				div:before {
+					opacity: 1;
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+	&.state-selected {
+		+ label:not(:empty) {
+			.input {
+				position: relative;
+				span {
+					background: white;
+					color: lighten($slate, 15%);
+					&:last-child {
+						opacity: 0;
+						animation: none;
+					}
+				}
+			}
+		}
+	}
+	&.state-invalid-clear {
+		+ label:not(:empty) {
+			.input {
+				span {
+					transition: all 150ms cubic-bezier(.25,-0.5,.75,1.5) 150ms;
+					opacity: 0;
+					transform: translateY(100%);
+					&:after {
+						transition: all 150ms ease-in-out;
+						opacity: 0;
+					}
+					&:last-child {
+						animation: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes opacity {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes shake-vertical {
+	15%,45%,75% { transform: translateY(-5px); }
+	30%,60% { transform: translateY(5px); }
+}
+
+@keyframes input-icon-success-2 {
+	0% { stroke-dashoffset: 50.2; opacity: 0; }
+	10% { opacity: 1; }
+	90% { stroke-dashoffset: 0; }
+	100% { stroke-dashoffset: 4; opacity: 1; }
+}
