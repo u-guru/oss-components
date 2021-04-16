@@ -12,3 +12,8 @@
 ## [Tooltips](https://codepen.io/u-guru/full/NWWPdYz)
 
 ![](gifs/tooltips.gif)
+
+
+## [Checkboxes](https://codepen.io/u-guru/full/AXRjvB)
+
+![](gifs/checkboxes.gif)
