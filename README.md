@@ -9,7 +9,7 @@
 
 ![](gifs/buttons.gif)
 
-## [Inputs](https://codepen.io/u-guru/pen/PoowWRO) 
+## [Inputs](https://codepen.io/u-guru/pen/PoowWRO)  
 
 ![](gifs/inputs.gif)
 
